@@ -9,7 +9,7 @@
 </span>
 
 
-An elegant \LaTeX\ resume template, compiled with \XeLaTeX. Inspired by 
+An elegant \LaTeX\ resume template, compiled with \XeLaTeX. Inspired by
 
 - [billryan/resume](https://github.com/billryan/resume)
 
@@ -24,10 +24,10 @@ An elegant \LaTeX\ resume template, compiled with \XeLaTeX. Inspired by
 ### Sample Output
 
 ![English](docs/resume.png)
-![Spanish](docs/resume-spanish.png)
+![Spanish](docs/resume-es-PE.png)
 
 - English PDF - /docs/resume.pdf
-- Spanish PDF - /docs/resume-zh_CN.pdf
+- Spanish PDF - /docs/resume-es-PE.pdf
 
 
 ## License
