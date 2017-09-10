@@ -109,3 +109,6 @@ dumps
 *.backup
 *.tfstate
 terraform.tfstate.d
+*.out
+*.log
+*.aux
