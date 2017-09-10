@@ -1,0 +1,28 @@
+# http://editorconfig.org
+root                     = true
+
+[*]
+indent_style             = space
+indent_size              = 2
+end_of_line              = lf
+trim_trailing_whitespace = true
+charset                  = utf-8
+insert_final_newline     = false
+max_line_length          = 80
+
+[*.{py,sh,sql}]
+indent_size              = 4
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Tabs
+[*.{less,css}]
+indent_style             = tab
+
+[Vagrantfile]
+indent_style             = tab
+
+[Makefile]
+indent_style             = tab
+indent_size              = 4

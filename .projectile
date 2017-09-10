@@ -1,0 +1,10 @@
+-/log
+-/tmp
+-/.git
+-/.vagrant
+-/vendor
+-/auto-save-list
+-*.cache
+-*.pyc
+-.wercker/*
+-projectile-bookmarks.eld
