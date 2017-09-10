@@ -28,11 +28,8 @@ UP = $(shell) $(SCRIPT_DIR)/up.sh
 
 build:  ## Build docker container by env
 	make clean
-	echo "Building environment: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(BUILD) || exit 2; \
-	fi
-	$(BUILD) "${env}"
+	@echo $(MESSAGE) "Building environment: ${env}"
+	$(BUILD) "${env}" && echo $(MESSAGE_HAPPY)
 
 clean: ## clean Files compiled
 	$(CLEAN)
@@ -43,11 +40,8 @@ documentation: ## Make Documentation
 
 down: ## remove containers docker by env
 	make clean
-	echo "Down Services: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(DOWN) || exit 2; \
-	fi
-	$(DOWN) "${env}"
+	@echo $(MESSAGE) "Down Services Environment: ${env}"
+	$(DOWN) "${env}" && echo $(MESSAGE_HAPPY)
 
 environment: ## Make environment for developer
 	$(PYENV)
@@ -60,21 +54,15 @@ env: ## Show envs available
 
 install: ## Install with var env Dependences
 	make clean
-	echo "Deployment environment: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(INSTALL) || exit 2; \
-	fi
-	$(INSTALL) "${env}"
+	@echo $(MESSAGE) "Deployment environment: ${env}"
+	$(INSTALL) "${env}" && echo $(MESSAGE_HAPPY)
 
 list: ## List of current active services by env
 	make clean
-	echo "List Services: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(LIST) || exit 2; \
-	fi
-	$(LIST) "${env}"
+	@echo $(MESSAGE) "List Services: ${env}"
+	$(LIST) "${env}" && echo $(MESSAGE_HAPPY)
 
-lint: ## Clean files unnecesary
+lint: ## Make Lint Files
 	make clean
 	$(LINT)
 
@@ -85,13 +73,11 @@ test: ## make test
 up: ## Up application by env
 	make clean
 	make verify_network &> /dev/null
-	echo "Up Application environment: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(UP) || exit 2; \
-	fi
-	$(UP) "${env}"
+	@echo $(MESSAGE) "Up Application environment: ${env}"
+	$(UP) "${env}" && echo $(MESSAGE_HAPPY)
 
 restart: ## Reload services
+	@echo $(MESSAGE) "restart Application environment: ${env}"
 	docker-compose restart
 
 ssh: ## Connect to container
@@ -99,11 +85,8 @@ ssh: ## Connect to container
 
 stop: ## stop containers docker by env
 	make clean
-	echo "stop Services: ${env}"
-	@if [ "${env}" == '' ]; then \
-		$(STOP) || exit 2; \
-	fi
-	$(STOP) "${env}"
+	@echo $(MESSAGE) "Stop Services: ${env}"
+	$(STOP) "${env}" && echo $(MESSAGE_HAPPY)
 
 setup: ## Install dependences initial
 	make clean
