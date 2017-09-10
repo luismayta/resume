@@ -9,8 +9,6 @@ export PROJECT_NAME_TEST="${PROJECT_NAME}"-TEST
 export PYTHON_VERSION=3.6.1
 export PYENV_NAME="${PROJECT_NAME}"
 
-export DEPLOY_ACCOUNT=ubuntu
-
 export MESSAGE="༼ つ ◕_◕ ༽つ"
 
 # Vars Dir
@@ -19,6 +17,6 @@ ROOT_DIR=$(pwd)
 export RESOURCES_DIR="$ROOT_DIR/resources"
 export RESOURCES_DB_DIR="$RESOURCES_DIR/db"
 export PROVISION_DIR="$ROOT_DIR/provision/ansible"
-export SOURCE_DIR="${ROOT_DIR}/"
+export SOURCE_DIR="${ROOT_DIR}/src"
 export REQUIREMENTS_DIR="${ROOT_DIR}/requirements/"
 export FILE_README="${ROOT_DIR}/README.rst"

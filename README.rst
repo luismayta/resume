@@ -52,6 +52,7 @@ Actions:
       environment          Make environment for developer
       env                  Show envs available
       install              Install with var env Dependences
+      generate             Generate pdf
       list                 List of current active services by env
       lint                 Make Lint Files
       test                 make test
@@ -62,6 +63,7 @@ Actions:
       setup                Install dependences initial
       verify_network       Verify network
       help                 Show help text
+
 
 License
 =======
