@@ -31,7 +31,6 @@
     -   id: double-quote-string-fixer
     -   id: check-docstring-first
     -   id: debug-statements
-    -   id: detect-aws-credentials
     -   id: requirements-txt-fixer
     -   id: name-tests-test
     -   id: file-contents-sorter
