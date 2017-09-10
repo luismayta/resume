@@ -112,3 +112,4 @@ terraform.tfstate.d
 *.out
 *.log
 *.aux
+*.pdf
