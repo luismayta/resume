@@ -1,28 +1,24 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
 \name{Luis Mayta}
 
-\basicInfo{
-  \email{slovacus@gmail.com} \textperiodcentered\
-  \phone{(+51) 959-196-850} \textperiodcentered\
-  \linkedin[Linkedin]{https://www.linkedin.com/in/luismayta}
-  \github[Github]{https://github.com/luismayta}}
-
-\section{\faGraduationCap\ Education}
-
-\datedsubsection{\textbf{Udacity}, Lima, Peru}{2017 -- 2017}
-\textit{B.S.} DevOps, Computer Software Developer
-
-\datedsubsection{\textbf{Open Source College}, Lima, Peru}{2011 -- 2012}
-\textit{B.S.} Software Developer
-
-\datedsubsection{\textbf{ISTP Peruano Aleman}, Lima, Peru}{2002 -- 2007}
-\textit{B.S.} in Software Developer
+\Large{
+  \begin{tabu}{ c l r }
+   \multirow{5}{1in}{\includegraphics[width=0.88in]{avatar}} & \scshape{Luis Mayta} & \pbar{Python}{0.75} \\
+    & \email{slovacus@gmail.com} & \pbar{Golang}{0.6} \\
+    & \phone{(+51) 959-196-850} & \pbar{DevOps}{0.5} \\
+    & \linkedin[LuisMayta]{https://www.linkedin.com/in/luismayta} & \pbar{Cloud}{0.5} \\
+    & \github[github.com/luismayta]{https://github.com/luismayta} & \pbar{WebServices}{0.5}
+  \end{tabu}
+}
 
 \section{\faUsers\ Experience}
 \datedsubsection{\textbf{La Positiva Seguros} Lima, Peru}{June 2017 -- Present}
@@ -42,6 +38,8 @@ Brief introduction: xxx.
   \item Implement and Management of Monit
   \item Implement and Management of JMS ActiveMQ
   \item Make documentation with sphink
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
   \item Implement and Management ChatBot with Aws Lambda
 \end{itemize}
 
@@ -57,6 +55,8 @@ Brief introduction: xxx.
   \item Implement and Management of docker-compose
   \item Implement and Management of Wercker
   \item Implement and Management of Monit
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
 \end{itemize}
 
 \datedsubsection{\textbf{Ventorystack} Lima, Peru}{ January 2017 -- June 2017}
@@ -73,12 +73,34 @@ Brief introduction: xxx.
   \item Implement and Management of docker-compose
   \item Implement and Management of Wercker
   \item Implement and Management of Monit
-  \item Research Terraform, CloudFormation, TravisCI, GitlabCI.
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Research Terraform, CloudFormation, Jenkins, GitlabCI.
+  \item Implement and Management ChatBot with Aws Lambda
+\end{itemize}
+
+\datedsubsection{\textbf{Ventorystack} Lima, Peru}{ August 2015 -- January 2017}
+\role{DevOps/SRE}{}
+Brief introduction: xxx.
+\begin{itemize}
+  \item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Infrastructure as code with Ansible + AWS.
+  \item Implement TDD and BDD.
+  \item Implement CI with Wercker.
+  \item Implement and Management of Docker
+  \item Implement and Management of docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Research Terraform, Terraform, Jenkins, GitlabCI.
   \item Implement and Management ChatBot with Aws Lambda
 \end{itemize}
 
 \datedsubsection{\textbf{HadenLabs} Lima, Peru}{2014 -- Present}
-\role{DevOps}{}
+\role{DevOps/SRE}{}
 Brief introduction: xxx.
 \begin{itemize}
   \item Develop Ansible playbooks for provisioning servers environments
@@ -92,36 +114,68 @@ Brief introduction: xxx.
   \item Implement and Management of docker-compose
   \item Implement and Management of Wercker
   \item Implement and Management of Monit
-  \item Implement and Management of JMS ActiveMQ
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
   \item Make documentation with sphink
   \item Implement and Management ChatBot with Aws Lambda
 \end{itemize}
 
-\datedsubsection{\textbf{Pimienta Digital} Lima, Peru}{2014 -- 2015}
+\datedsubsection{\textbf{Pimienta Digital} Lima, Peru}{October 2014 -- July 2015}
 \role{Software Development Leader}{}
 Brief introduction: xxx.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Management servers Digital Ocean.
+  \item Implement and Management RabbitMQ.
+  \item Implement and Management AWS S3.
+  \item Implement and Management Puppet.
+  \item Implement and Management Vagrant For Local.
+  \item Implement Load Stress with Python.
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Management SalesForce.
 \end{itemize}
 
-\datedsubsection{\textbf{Grupo El Comercio} Lima, Peru}{2013 -- 2014}
+\datedsubsection{\textbf{Grupo El Comercio} Lima, Peru}{April 2013 -- October 2014}
 \role{Technical Leader}{}
 Brief introduction: xxx.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Implement and Management Apache Solr.
+  \item Implement and Management RabbitMQ.
+  \item Implement and Management MongoDB.
+  \item Implement and Webservices REST.
+  \item Implement and Management Puppet.
+  \item Implement and Management Vagrant For Local.
+  \item Implement TDD and BDD with python.
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
 \end{itemize}
 
-\datedsubsection{\textbf{Projects}}{Jan. 2015 -- Present}
-\role{Python, Golang, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
+\datedsubsection{\textbf{Grupo El Comercio} Lima, Peru}{March 2012 -- April 2013}
+\role{Software Developer}{}
+Brief introduction: xxx.
 \begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
+  \item Trainings Git.
+  \item Implement and Management Vagrant For Local.
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
+\end{itemize}
+
+\section{\faUsers\ Projects}
+\datedsubsection{\textbf{\github[Dotfiles]{https://github.com/luismayta/dotfiles}} Lima, Peru}{January 2013 -- Present}
+\role{Software Developer}{}
+Brief introduction: Utils for software development.
+\begin{itemize}
+  \item Implement Docker.
+  \item Implement Docker Compose.
+\end{itemize}
+
+\datedsubsection{\textbf{\github[Emacs]{https://github.com/luismayta/emacs.d}} Lima, Peru}{January 2015 -- Present}
+\role{Software Developer}{}
+Brief introduction: Settings for editor emacs.
+\begin{itemize}
+  \item Implement Docker.
+  \item Implement Docker Compose.
+  \item Install easy and fast.
 \end{itemize}
 
 \section{\faCogs\ Skills}
@@ -130,7 +184,21 @@ Brief introduction: xxx
   \item Platform: Linux, OSX
   \item Editor: Emacs, Vim
   \item Development: Web, Mobile, Desktop
+  \item Cloud: AWS
+  \item Provisioner: Ansible > Puppet
+  \item Infraestructure: Terraform
+  \item Version Projects: Git > Mercurial
+  \item WebServices: Rest, Graphql
 \end{itemize}
+
+\section{\faGraduationCap\ Education}
+
+\datedsubsection{\textbf{Udacity}, Lima, Peru}{2017 -- 2017}
+\textit{DevOps} Computer Software Developer
+\datedsubsection{\textbf{Open Source College}, Lima, Peru}{2011 -- 2012}
+\textit{B.S.} Software Developer
+\datedsubsection{\textbf{ISTP Peruano Aleman}, Lima, Peru}{2002 -- 2007}
+\textit{B.S.} in Software Developer
 
 \section{\faHeartO\ Honors and Awards}
 \datedline{\textit{\nth{1} Prize}, Eventec on ISTP Peruano Aleman }{Jun. 2007}
