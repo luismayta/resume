@@ -19,6 +19,7 @@ DOWN = $(shell) $(SCRIPT_DIR)/down.sh
 DEPLOY = $(shell) $(SCRIPT_DIR)/deploy.sh
 PYENV = $(shell) $(SCRIPT_DIR)/pyenv.sh
 INSTALL = $(shell) $(SCRIPT_DIR)/install.sh
+GENERATE = $(shell) $(SCRIPT_DIR)/generate.sh
 LIST = $(shell) $(SCRIPT_DIR)/list.sh
 LINT = $(shell) $(SCRIPT_DIR)/lint.sh
 TEST = $(shell) $(SCRIPT_DIR)/test.sh
@@ -56,6 +57,11 @@ install: ## Install with var env Dependences
 	make clean
 	@echo $(MESSAGE) "Deployment environment: ${env}"
 	$(INSTALL) "${env}" && echo $(MESSAGE_HAPPY)
+
+generate: ## Generate pdf
+	make clean
+	@echo $(MESSAGE) "Generate pdf:"
+	$(GENERATE) && echo $(MESSAGE_HAPPY)
 
 list: ## List of current active services by env
 	make clean
