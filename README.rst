@@ -53,7 +53,7 @@ Actions:
       env                  Show envs available
       install              Install with var env Dependences
       list                 List of current active services by env
-      lint                 Clean files unnecesary
+      lint                 Make Lint Files
       test                 make test
       up                   Up application by env
       restart              Reload services

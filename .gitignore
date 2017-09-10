@@ -100,6 +100,12 @@ provision/ansible/roles/contrib
 
 .autoenv.zsh*.retry
 *.retry
-.wercker
+.wercker/
 dumps
 *.retry
+;
+.terraform
+.backup
+*.backup
+*.tfstate
+terraform.tfstate.d
