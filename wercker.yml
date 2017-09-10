@@ -1,0 +1,141 @@
+box: python:3.6.1
+dev:
+  steps:
+    - script:
+        name: install shellcheck
+        code: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+    - script:
+        name: install dependences
+        code: make install env=dev
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+
+    - add-ssh-key:
+        keyname: GITHUB_KEY
+        host: github.com
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+
+    - script:
+        name: install shellcheck
+        code: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+    - script:
+        name: install dependences dev
+        code: |
+          make install env=dev
+    - script:
+        name: install dependences stage
+        code: |
+          make install env=stage
+    - script:
+        name: install dependences
+        code: |
+          make install
+    - script:
+        name: Lint Code
+        code: |
+          make lint
+
+  after-steps:
+    - install-packages:
+        packages: ruby
+
+    - script:
+        name: Show vars env
+        code: |
+            env
+
+# Testing definition
+test:
+  steps:
+
+    - add-ssh-key:
+        keyname: GITHUB_KEY
+        host: github.com
+
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+
+    - script:
+      name: Show vars env
+      code: |
+          env
+
+    - script:
+        name: install shellcheck
+        code: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+
+    - script:
+        name: install dependences
+        code: |
+          make install env=test
+
+    - script:
+        name: Run lint code
+        code: |
+          make lint
+
+    - script:
+        name: "Set environment variables"
+        code: |
+          export MY_VAR=you are happy
+
+    - script:
+        name: Run tests
+        code: |
+          make test
+
+  after-steps:
+    - install-packages:
+        packages: ruby
+
+    - script:
+        name: Show vars env
+        code: |
+            env
+
+# Documentation definition
+latex:
+
+  box:
+    id: labpositiva/latex:3.6.1
+    cmd: /bin/bash
+
+  steps:
+
+    - add-ssh-key:
+        keyname: GITHUB_KEY
+        host: github.com
+
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+
+    - script:
+      name: Show vars env
+      code: |
+          env
+
+    - script:
+        name: Execute Generate
+        code: |
+          make generate
+
+  after-steps:
+    - install-packages:
+        packages: ruby
+
+    - script:
+        name: Show vars env
+        code: |
+            env
