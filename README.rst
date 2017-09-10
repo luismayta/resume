@@ -13,9 +13,7 @@ Resume
     :local:
 
 An elegant `LaTeX`_ resume template, compiled with
-`XeLaTeX`_ . Inspired by
-
--  `billryan/resume`_
+`XeLaTeX`_ . Inspired by `billryan/resume`_
 
 Features
 ========
@@ -31,17 +29,17 @@ Features
 -  English PDF - /docs/resume.pdf
 -  Spanish PDF - /docs/resume-es-PE.pdf
 
-Requerimientos:
-===============
+Requirements:
+=============
 
-Esta es una lista de aplicaciones que son necesarias para instalar:
+List of applications:
 
 - `Python 3.6.1`_
 - `Docker`_
 - `Docker Compose`_
 
-Actions
-=======
+Actions:
+========
 
 .. code-block:: bash
 
@@ -87,10 +85,6 @@ Credits
 -  `author`_
 -  `contributors`_
 
---------------
-
-Copyright © 2016, luismayta
-
 Made with ♥️and ☕️by `author`_ and `company`_.
 
 .. |code_climate| image:: https://codeclimate.com/github/luismayta/resume/badges/gpa.svg
@@ -117,9 +111,7 @@ Made with ♥️and ☕️by `author`_ and `company`_.
   :target: https://codeclimate.com/github/luismayta/resume/coverage
   :alt: Test Coverage
 
-..
-   Links
-
+.. Links
 .. _`changelog`: CHANGELOG.rst
 .. _`contributors`: AUTHORS
 .. _`contributing`: CONTRIBUTING.rst
@@ -128,6 +120,7 @@ Made with ♥️and ☕️by `author`_ and `company`_.
 .. _`company`: https://github.com/hadenlabs
 .. _`author`: https://github.com/luismayta
 .. _`billryan/resume`: https://github.com/billryan/resume
+
 .. dependences
 .. _Python 3.6.1: https://www.python.org/downloads/release/python-361
 .. _Docker: https://www.docker.com/
