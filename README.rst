@@ -1,7 +1,7 @@
 Resume
 ######
 
-|build_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
+|build_status| |wercker_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
 
 :Version: 0.0.0
 :Web: https://github.com/luismayta/resume
@@ -100,6 +100,12 @@ Made with ♥️and ☕️by `author`_ and `company`_.
 .. |build_status| image:: https://travis-ci.org/luismayta/resume.svg
   :target: https://travis-ci.org/luismayta/resume
   :alt: Build Status Tag
+
+.. |wercker_status| image::
+                    https://app.wercker.com/status/2040327c395b07be15b2031426ec92f1/s/master"wercker
+                    status"
+  :target: https://app.wercker.com/project/byKey/2040327c395b07be15b2031426ec92f1
+  :alt: wercker status
 
 .. |github_issues| image:: https://img.shields.io/github/issues/luismayta/resume.svg
   :target: https://github.com/luismayta/resume/resume/issues
