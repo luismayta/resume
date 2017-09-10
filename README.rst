@@ -21,13 +21,7 @@ Features
 -  Easy to be further customized or extended
 -  Full support for unicode characters (e.g. CJK) with
    `XeLaTeX`_
--  Perfect Simplified Chinese fonts support with Adobefonts
 -  FontAwesome 4.5.0 support (alias not support yet)
-
-|English| |Spanish|
-
--  English PDF - /docs/resume.pdf
--  Spanish PDF - /docs/resume-es-PE.pdf
 
 Requirements:
 =============
@@ -37,6 +31,33 @@ List of applications:
 - `Python 3.6.1`_
 - `Docker`_
 - `Docker Compose`_
+
+Quick Start
+===========
+
+- Fork this repository
+- Add information about you directly in GitHub
+- Compile TeX file to PDF with [LaTeX.Online](https://latexonline.cc/)
+
+Sample OutPut
+-------------
+
+- `English`_
+
+Usage
+-----
+
+- Install dependences
+
+.. code-block:: bash
+
+  λ make setup
+
+- Compile tex on your Computer
+
+.. code-block:: bash
+
+  λ docker-compose run --rm app make generate
 
 Actions:
 ========
@@ -120,6 +141,7 @@ Made with ♥️and ☕️by `author`_ and `company`_.
   :alt: Test Coverage
 
 .. Links
+.. _`English`: https://latexonline.cc/compile?git=https://github.com/luismayta/resume&target=src/resume.tex&command=xelatex
 .. _`changelog`: CHANGELOG.rst
 .. _`contributors`: AUTHORS
 .. _`contributing`: CONTRIBUTING.rst
