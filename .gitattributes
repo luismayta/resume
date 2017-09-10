@@ -134,3 +134,4 @@ bin/* text eol=lf
 *.pdf       binary
 *.bz2       binary
 *.sh linguist-language=go
+*.jar binary
