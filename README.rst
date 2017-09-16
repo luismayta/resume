@@ -122,9 +122,7 @@ Made with ♥️and ☕️by `author`_ and `company`_.
   :target: https://travis-ci.org/luismayta/resume
   :alt: Build Status Tag
 
-.. |wercker_status| image::
-                    https://app.wercker.com/status/2040327c395b07be15b2031426ec92f1/s/master"wercker
-                    status"
+.. |wercker_status| image:: https://app.wercker.com/status/2040327c395b07be15b2031426ec92f1/s/master "wercker status"
   :target: https://app.wercker.com/project/byKey/2040327c395b07be15b2031426ec92f1
   :alt: wercker status
 
