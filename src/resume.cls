@@ -48,7 +48,7 @@
 \setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
-\titleformat{\section}         % Customise the \section command 
+\titleformat{\section}         % Customise the \section command
   {\Large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
@@ -91,26 +91,26 @@
 \newcommand{\phone}[1]{\faPhone\ {#1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
-\newcommand{\linkedin}[2][]{\faLinkedin\ 
+\newcommand{\linkedin}[2][]{\faLinkedin\
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 % defines one's GitHub
 % usage: \github{<github>}
-\newcommand{\github}[2][]{\faGithub\ 
+\newcommand{\github}[2][]{\faGithub\
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 % defines one's homepage
 % usage: \homepage{<homepage>}
-\newcommand{\homepage}[2][]{\faLink\ 
+\newcommand{\homepage}[2][]{\faLink\
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 
 % defines progress bar with text
 % usage: \pbar[3][width]{Text}{percentage}
-\newcommand{\pbar}[3][10em]{{#2}\ 
+\newcommand{\pbar}[3][10em]{{#2}\
   \progressbar[heightr=1, width=#1, borderwidth=0pt, roundnessr=0.45, filledcolor=green!40, subdivisions=1]{#3}
 }
 
