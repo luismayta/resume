@@ -11,7 +11,7 @@
     rm -rf -- **/**/**/*_pycache__
     rm -rf -- **/**/**/*.pyc
     rm -rf -- **/**/**/*.swp
-	find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete
+    find . -regex "\(.*__pycache__.*\|*.py[co]\)" -delete
     rm -rf -- **/*.pdf
 } >> /dev/null 2>&1
 

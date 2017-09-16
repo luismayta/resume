@@ -73,6 +73,7 @@ lint: ## Make Lint Files
 	$(LINT)
 
 test: ## make test
+	@echo $(MESSAGE) "This is going to be out of control"
 	make clean
 	$(TEST)
 

@@ -1,15 +1,16 @@
 -   repo: https://github.com/pre-commit/pre-commit-hooks.git
     sha: v0.9.3
     hooks:
+    -   id: trailing-whitespace
+        language_version: python3
+    -   id: end-of-file-fixer
+        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
     -   id: detect-private-key
         files: ^(?!\.?git-crypt)
     -   id: check-merge-conflict
-    -   id: trailing-whitespace
-        language_version: python3
         files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
     -   id: end-of-file-fixer
-        files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
-        language_version: python3
+        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
     -   id: check-added-large-files
         files: ^tf|-|\.(py|env|yml|yaml)$
     -   id: check-case-conflict
@@ -20,6 +21,7 @@
     -   id: check-yaml
         language_version: python3
     -   id: check-case-conflict
+    -   id: check-byte-order-marker
     -   id: check-ast
         language_version: python3
     -   id: debug-statements
@@ -32,7 +34,9 @@
     -   id: check-docstring-first
     -   id: debug-statements
     -   id: requirements-txt-fixer
+    -   id: check-symlinks
     -   id: name-tests-test
+        args: [--django]
     -   id: file-contents-sorter
     -   id: fix-encoding-pragma
     -   id: sort-simple-yaml
@@ -54,16 +58,14 @@
         - --disable=no-name-in-module,import-error
         - --ignore=settings_test, migrations
 -   repo: https://github.com/pre-commit/pre-commit.git
-    sha: v0.15.4
+    sha: v1.1.0
     hooks:
-    -   id: validate_config
     -   id: validate_manifest
--   repo: https://github.com/FalconSocial/pre-commit-python-sorter.git
-    sha: 1.0.4
+-   repo: https://github.com/asottile/reorder_python_imports.git
+    sha: v0.3.5
     hooks:
-    -   id: python-import-sorter
-        args:
-        - --silent-overwrite
+    -   id: reorder-python-imports
+        language_version: python3
 -   repo: https://github.com/detailyang/pre-commit-shell.git
     sha: 1.0.2
     hooks:
@@ -85,3 +87,7 @@
     -   id: python-bandit-vulnerability-check
         args: []
         files: .py$
+-   repo: https://github.com/asottile/add-trailing-comma
+    sha: v0.6.4
+    hooks:
+    -   id: add-trailing-comma
