@@ -2,5 +2,8 @@
 # See ./CONTRIBUTING.rst
 #
 
+DOCKER_RUN := docker-compose -f docker-compose.yml run --rm app
+
 resume.make: clean
-	cd "$(SOURCE_DIR)" && xelatex resume.tex
+	$(DOCKER_RUN) \
+		bash -c "cd src && xelatex resume.tex";
