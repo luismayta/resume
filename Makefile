@@ -52,7 +52,6 @@ help:
 	@echo ''
 	@echo '        test                       Run All tests with coverage'
 	@echo '        test.lint                  Run all pre-commit'
-	@echo '        test.syntax                Run all syntax in code'
 	@echo ''
 
 clean:
