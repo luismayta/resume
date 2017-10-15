@@ -26,3 +26,7 @@ indent_style             = tab
 [Makefile]
 indent_style             = tab
 indent_size              = 4
+
+[*.{make,mk}]
+indent_style             = tab
+indent_size              = 4
