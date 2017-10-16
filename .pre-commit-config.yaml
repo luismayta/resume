@@ -10,7 +10,7 @@
     -   id: check-merge-conflict
         files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
     -   id: end-of-file-fixer
-        files: ^\.(py|env|yml|yaml|pem|key|mock)$
+        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
     -   id: check-added-large-files
         files: ^\.(py|env|yml|yaml)$
         exclude: ^migrations/.*\.py$
