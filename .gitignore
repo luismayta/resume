@@ -112,8 +112,8 @@ terraform.tfstate.d
 *.out
 *.log
 *.aux
-*.pdf
 *.bbl
 *.bcf
 *.blg
+src/examples/*.run.xml
 _build
