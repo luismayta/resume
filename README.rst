@@ -1,6 +1,8 @@
 Resume
 ######
 
+|resume| |cv|
+
 |build_status| |wercker_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
 
 :Version: 0.1.0
@@ -39,10 +41,6 @@ Quick Start
 - Add information about you directly in GitHub
 - Compile TeX file to PDF with [LaTeX.Online](https://latexonline.cc/)
 
-Sample OutPut
--------------
-
-- `English`_
 
 Usage
 -----
@@ -57,7 +55,8 @@ Usage
 
 .. code-block:: bash
 
-  λ docker-compose run --rm app make generate
+  λ make docker.build
+  λ make resume.make
 
 Actions:
 ========
@@ -65,25 +64,31 @@ Actions:
 .. code-block:: bash
 
   λ make
-    ༼ つ ◕_◕ ༽つ Commands
-      build                Build docker container by env
-      clean                clean Files compiled
-      documentation        Make Documentation
-      down                 remove containers docker by env
-      environment          Make environment for developer
-      env                  Show envs available
-      install              Install with var env Dependences
-      generate             Generate pdf
-      list                 List of current active services by env
-      lint                 Make Lint Files
-      test                 make test
-      up                   Up application by env
-      restart              Reload services
-      ssh                  Connect to container
-      stop                 stop containers docker by env
-      setup                Install dependences initial
-      verify_network       Verify network
-      help                 Show help text
+      ༼ つ ◕_◕ ༽つ Makefile for resume
+
+      Usage:
+          environment                  create environment with pyenv
+          install                      install dependences python by env
+          clean                        remove files of build
+          setup                        install requirements
+
+          Docker:
+
+              docker.build              build all services with docker-compose
+              docker.down               down services docker-compose
+              docker.ssh                connect by ssh to container
+              docker.stop               stop services by env
+              docker.verify_network     verify network
+              docker.up                 up services of docker-compose
+              docker.list               list services of docker
+
+          Resume:
+              resume.make               Run All tests with coverage
+
+          Tests:
+
+              test                      Run All tests with coverage
+              test.lint                 Run all pre-commit
 
 
 License
@@ -137,6 +142,16 @@ Made with ♥️and ☕️by `author`_ and `company`_.
 .. |test_coverage| image:: https://codeclimate.com/github/luismayta/resume/badges/coverage.svg
   :target: https://codeclimate.com/github/luismayta/resume/coverage
   :alt: Test Coverage
+
+.. resume
+
+.. |resume| image:: https://img.shields.io/badge/resume-pdf-green.svg
+  :target: https://raw.githubusercontent.com/luismayta/resume/master/examples/resume.pdf
+  :alt: Resume
+
+.. |cv| image:: https://img.shields.io/badge/cv-pdf-green.svg
+  :target: https://raw.githubusercontent.com/luismayta/resume/master/examples/cv.pdf
+  :alt: CV
 
 .. Links
 .. _`English`: https://latexonline.cc/compile?git=https://github.com/luismayta/resume&target=src/resume.tex&command=xelatex
