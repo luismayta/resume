@@ -113,3 +113,6 @@ terraform.tfstate.d
 *.log
 *.aux
 *.pdf
+*.bbl
+*.bcf
+*.blg
