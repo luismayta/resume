@@ -26,6 +26,17 @@
 
 \RequirePackage[margin=2cm]{geometry}
 \RequirePackage{fontawesome}
+% loading fonts
+\RequirePackage{fontspec}
+% Main document font
+\setmainfont[
+  Path = fonts/ ,
+  Extension = .ttf ,
+  UprightFont = *-regular ,
+  BoldFont = *-bold ,
+  ItalicFont = *-italic ,
+  BoldItalicFont = *-bolditalic
+]{Lato}
 
 %% v1.1: Optionally load academicons
 \if@academicons
