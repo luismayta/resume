@@ -5,7 +5,7 @@ Resume
 
 |build_status| |wercker_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
 
-:Version: 0.2.0
+:Version: 0.2.1
 :Web: https://github.com/luismayta/resume
 :Download: http://github.com/luismayta/resume
 :Source: http://github.com/luismayta/resume
@@ -146,11 +146,11 @@ Made with ♥️and ☕️by `author`_ and `company`_.
 .. resume
 
 .. |resume| image:: https://img.shields.io/badge/resume-pdf-green.svg
-  :target: https://raw.githubusercontent.com/luismayta/resume/master/examples/resume.pdf
+  :target: https://raw.githubusercontent.com/luismayta/resume/master/src/examples/resume.pdf
   :alt: Resume
 
 .. |cv| image:: https://img.shields.io/badge/cv-pdf-green.svg
-  :target: https://raw.githubusercontent.com/luismayta/resume/master/examples/cv.pdf
+  :target: https://raw.githubusercontent.com/luismayta/resume/master/src/examples/cv.pdf
   :alt: CV
 
 .. Links
