@@ -12,6 +12,6 @@ services:
       context: .
       dockerfile: docker/app/Dockerfile
     volumes:
-      - .:/app
+      - .:/usr/src
     env_file:
       - .env

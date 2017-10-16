@@ -1,4 +1,4 @@
-version = '0.1.0'
+version = '0.2.0'
 
 [[files."CHANGELOG.rst"]]
 search = """
@@ -21,6 +21,6 @@ search = """
 .. _`Unreleased`: https://github.com/luismayta/resume/compare/{{old_version}}...HEAD
 """
 replace = """
-.. _`Unreleased`: https://github.com/luismayta/resume/mobility-api/compare/{{new_version}}...HEAD
+.. _`Unreleased`: https://github.com/luismayta/resume/compare/{{new_version}}...HEAD
 .. _`{{new_version}}`: https://github.com/luismayta/resume/compare/{{old_version}}...{{new_version}}
 """
