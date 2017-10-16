@@ -12,7 +12,7 @@
     -   id: end-of-file-fixer
         files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
     -   id: check-added-large-files
-        files: ^tf|-|\.(py|env|yml|yaml)$
+        files: ^tf|-|\.(py|env|yml|yaml|ttf)$
     -   id: check-case-conflict
     -   id: check-json
         language_version: python3
