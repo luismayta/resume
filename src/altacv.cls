@@ -49,17 +49,6 @@
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}
-%% \RequirePackage{fontspec}
-%% \setmainfont[
-%%   Path = fonts/Main/ ,
-%%   Extension = .otf ,
-%%   UprightFont = *-regular ,
-%%   BoldFont = *-bold ,
-%%   ItalicFont = *-italic ,
-%%   BoldItalicFont = *-bolditalic ,
-%%   SmallCapsFont = Fontin-SmallCaps
-%% ]{texgyretermes}
-\RequirePackage{titlesec}
 \RequirePackage{enumitem}
 \setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,after=\vskip0.25\baselineskip}
 \setlist[itemize]{label=\itemmarker}
