@@ -1,6 +1,10 @@
 FROM labpositiva/latex:3.6.1
 MAINTAINER Luis Mayta <@slovacus>
 
+RUN apt-get update -y \
+  && apt-get install -y texlive-bibtex-extra \
+  biber
+
 COPY requirements.txt /usr/src/
 COPY requirements/*.txt /usr/src/requirements/
 
