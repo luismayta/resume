@@ -1,0 +1,267 @@
+% !TEX program = xelatex
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options.
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Luis Mayta}
+\tagline{Site Reliability Engineer \& Proud Geek}
+\photo{2.5cm}{avatar.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{slovacus@gmail.com}
+  \phone{(+51) 959-196-850}
+  \location{Lima, Peru}
+  \homepage{github.com/luismayta}
+  \twitter{@slovacus}
+  \linkedin{linkedin.com/in/luismayta}
+  \github{github.com/luismayta} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{Cloud Architect}{\textbf{La Positiva Seguros}}{June 2017 -- Present}{Lima, Peru}
+\begin{itemize}
+  \item Develop Ansible playbooks for provisioning servers environments
+  \item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Config as code with Vault.
+  \item Infrastructure as code with Terraform + Ansible + AWS.
+  \item Implement CI with Wercker.
+  \item Implement and Management of Docker and docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement and Management of JMS ActiveMQ
+  \item Make documentation with sphink
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Implement and Management ChatBot with Aws Lambda
+\end{itemize}
+
+\divider
+
+\cvevent{DevOps/SRE}{\textbf{Fashion Bag Peru}}{April 2017 -- Present}{Lima, Peru}
+\begin{itemize}
+\item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Infrastructure as code with Terraform + Ansible + AWS.
+  \item Implement and Management of Docker
+  \item Implement and Management of docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
+\end{itemize}
+
+\divider
+
+\cvevent{Software Architect}{\textbf{Ventorystack}}{January 2017 -- June 2017}{Lima, Peru}
+\begin{itemize}
+  \item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Infrastructure as code with Terraform + Ansible + AWS.
+  \item Implement TDD and BDD.
+  \item Implement CI with Wercker.
+  \item Implement and Management of Docker
+  \item Implement and Management of docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Research Terraform, CloudFormation, Jenkins, GitlabCI.
+  \item Implement and Management ChatBot with Aws Lambda
+\end{itemize}
+
+\divider
+
+\cvevent{DevOps/SRE}{\textbf{Ventorystack}}{August 2015 -- January 2017}{Lima, Peru}
+\begin{itemize}
+  \item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Infrastructure as code with Ansible + AWS.
+  \item Implement TDD and BDD.
+  \item Implement CI with Wercker.
+  \item Implement and Management of Docker
+  \item Implement and Management of docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Research Terraform, Terraform, Jenkins, GitlabCI.
+  \item Implement and Management ChatBot with Aws Lambda
+\end{itemize}
+
+\divider
+
+\cvevent{DevOps/SRE}{\textbf{HadenLabs}}{August 2014 -- Present}{Lima, Peru}
+\begin{itemize}
+  \item Develop Ansible playbooks for provisioning servers environments
+  \item AWS Cloud Adoption Tester.
+  \item AWS Architect Design
+  \item AWS Dev Operations.
+  \item Config as code with Vault.
+  \item Infrastructure as code with Terraform + Ansible + AWS.
+  \item Implement CI with Wercker.
+  \item Implement and Management of Docker
+  \item Implement and Management of docker-compose
+  \item Implement and Management of Wercker
+  \item Implement and Management of Monit
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Make documentation with sphink
+  \item Implement and Management ChatBot with Aws Lambda
+\end{itemize}
+
+\divider
+
+\cvevent{Software Development Leader}{\textbf{Pimienta Digital}}{October 2014 -- July 2015}{Lima, Peru}
+\begin{itemize}
+  \item Management servers Digital Ocean.
+  \item Implement and Management RabbitMQ.
+  \item Implement and Management AWS S3.
+  \item Implement and Management Puppet.
+  \item Implement and Management Vagrant For Local.
+  \item Implement Load Stress with Python.
+  \item Implement Management of git with Git Flow.
+  \item Implement Sem Version for projects.
+  \item Management SalesForce.
+\end{itemize}
+
+\divider
+
+\cvevent{Technical Leader}{\textbf{Grupo El Comercio}}{April 2013 -- October 2014}{Lima, Peru}
+\begin{itemize}
+  \item Implement and Management Apache Solr.
+  \item Implement and Management RabbitMQ.
+  \item Implement and Management MongoDB.
+  \item Implement and Webservices REST.
+  \item Implement and Management Puppet.
+  \item Implement and Management Vagrant For Local.
+  \item Implement TDD and BDD with python.
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
+\end{itemize}
+\divider
+
+\cvevent{Software Developer}{\textbf{Grupo El Comercio}}{March 2012 -- April 2013}{Lima, Peru}
+\begin{itemize}
+  \item Trainings Git.
+  \item Implement and Management Vagrant For Local.
+  \item Implement Sem Version for projects.
+  \item Implement Management of git with Git Flow.
+\end{itemize}
+
+\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.5cm}{0.5cm}{%
+  20/13em/accent!30/Sleeping \& dreaming about work,
+  25/9em/accent!60/Resolving issues of code,
+  10/12em/accent!40/Spending time with family,
+  20/9em/accent/Research of tools and solutions,
+  10/8em/accent!20/Relearning in automation,
+  15/8em/accent!20/Resolving issues public in Github
+}
+
+\clearpage
+
+\cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
