@@ -117,3 +117,4 @@ terraform.tfstate.d
 *.blg
 src/examples/*.run.xml
 _build
+.DS_Store
