@@ -5,7 +5,7 @@ Resume
 
 |build_status| |wercker_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
 
-:Version: 0.2.1
+:Version: 0.2.2
 :Web: https://github.com/luismayta/resume
 :Download: http://github.com/luismayta/resume
 :Source: http://github.com/luismayta/resume
