@@ -1,9 +1,10 @@
 Resume
-######
+======
 
 |resume| |cv|
 
-|build_status| |wercker_status| |code_climate| |github_tag| |github_issues| |test_coverage| |license|
+|Build Status| |GitHub issues| |GitHub license|
+
 
 :Version: 0.3.1
 :Web: https://github.com/luismayta/resume
@@ -18,19 +19,19 @@ An elegant `LaTeX`_ resume template, compiled with
 `XeLaTeX`_ . Inspired by `billryan/resume`_
 
 Features
-========
+--------
 
 -  Easy to be further customized or extended
 -  Full support for unicode characters (e.g. CJK) with
    `XeLaTeX`_
 -  FontAwesome 4.5.0 support (alias not support yet)
 
-Requirements:
-=============
+Dependencies
+------------
 
 List of applications:
 
-- `Python 3.6.1`_
+- `Python 3.6.4`_
 - `Docker`_
 - `Docker Compose`_
 
@@ -58,112 +59,114 @@ Usage
   λ make docker.build
   λ make resume.make
 
-Actions:
-========
+
+Support
+-------
+
+If you want to support this project, i only accept ``IOTA`` :p.
 
 .. code-block:: bash
 
-  λ make
-      ༼ つ ◕_◕ ༽つ Makefile for resume
+    Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
 
-      Usage:
-          environment                  create environment with pyenv
-          install                      install dependences python by env
-          clean                        remove files of build
-          setup                        install requirements
 
-          Docker:
+Team
+----
 
-              docker.build              build all services with docker-compose
-              docker.down               down services docker-compose
-              docker.ssh                connect by ssh to container
-              docker.stop               stop services by env
-              docker.verify_network     verify network
-              docker.up                 up services of docker-compose
-              docker.list               list services of docker
-
-          Resume:
-              resume.make               Run All tests with coverage
-
-          Tests:
-
-              test                      Run All tests with coverage
-              test.lint                 Run all pre-commit
-
++---------------+
+| |Luis Mayta|  |
++---------------+
+| `luis mayta`_ |
++---------------+
 
 License
-=======
+-------
 
 MIT
 
 Changelog
-=========
+---------
 
 Please see `CHANGELOG`_ for more information what
 has changed recently.
 
 Contributing
-============
+------------
 
-Please see `CONTRIBUTING`_ for details.
+Contributions are welcome!
 
-Credits
-=======
+Review the `CONTRIBUTING`_ for details on how to:
 
--  `author`_
--  `contributors`_
+* Submit issues
+* Submit pull requests
 
-Made with ♥️and ☕️by `author`_ and `company`_.
+Contact Info
+------------
 
-.. |code_climate| image:: https://codeclimate.com/github/luismayta/resume/badges/gpa.svg
-  :target: https://codeclimate.com/github/luismayta/resume
-  :alt: Code Climate
+Feel free to contact me to discuss any issues, questions, or comments.
 
-.. |github_tag| image:: https://img.shields.io/github/tag/luismayta/resume.svg?maxAge=2592000
-  :target: https://github.com/luismayta/resume
-  :alt: Github Tag
+* `Email`_
+* `Twitter`_
+* `GitHub`_
+* `LinkedIn`_
+* `Website`_
+* `PGP`_
 
-.. |build_status| image:: https://travis-ci.org/luismayta/resume.svg
-  :target: https://travis-ci.org/luismayta/resume
-  :alt: Build Status Tag
+|linkedin| |beacon| |made|
 
-.. |wercker_status| image:: https://app.wercker.com/status/2040327c395b07be15b2031426ec92f1/s/master "wercker status"
-  :target: https://app.wercker.com/project/byKey/2040327c395b07be15b2031426ec92f1
-  :alt: wercker status
+Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
-.. |github_issues| image:: https://img.shields.io/github/issues/luismayta/resume.svg
-  :target: https://github.com/luismayta/resume/resume/issues
-  :alt: Github Issues
+.. Links
+.. _`changelog`: CHANGELOG.rst
+.. _`contributors`: AUTHORS
+.. _`contributing`: CONTRIBUTING.rst
 
-.. |license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-  :target: LICENSE
-  :alt: License
+.. _`hadenlabs`: https://github.com/hadenlabs
+.. _`luis mayta`: https://github.com/luismayta
 
-.. |test_coverage| image:: https://codeclimate.com/github/luismayta/resume/badges/coverage.svg
-  :target: https://codeclimate.com/github/luismayta/resume/coverage
-  :alt: Test Coverage
+.. _`Github`: https://github.com/luismayta
+.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Email`: slovacus@gmail.com
+    :target: mailto:slovacus@gmail.com
+.. _`Twitter`: https://twitter.com/slovacus
+.. _`Website`: http://luismayta.github.io
+.. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
+
+.. |Build Status| image:: https://travis-ci.org/luismayta/resume.svg
+   :target: https://travis-ci.org/luismayta/resume
+.. |GitHub issues| image:: https://img.shields.io/github/issues/luismayta/resume.svg
+   :target: https://github.com/luismayta/resume/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
 
 .. resume
 .. |resume| image:: https://img.shields.io/badge/resume-pdf-green.svg
   :target: https://github.com/luismayta/resume/raw/master/src/examples/resume.pdf
   :alt: Resume
-
 .. |cv| image:: https://img.shields.io/badge/cv-pdf-green.svg
   :target: https://github.com/luismayta/resume/raw/master/src/examples/cv.pdf
   :alt: CV
 
+.. Team:
+.. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
+   :target: https://github.com/luismayta
+
 .. Links
 .. _`English`: https://latexonline.cc/compile?git=https://github.com/luismayta/resume&target=src/resume.tex&command=xelatex
-.. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
-.. _`contributing`: CONTRIBUTING.rst
-
+.. _`XeLaTeX`: https://www.overleaf.com/learn/latex/XeLaTeX
 .. _`LaTeX`: https://www.latex-project.org/about/
-.. _`company`: https://github.com/hadenlabs
-.. _`author`: https://github.com/luismayta
 .. _`billryan/resume`: https://github.com/billryan/resume
 
-.. dependences
-.. _Python 3.6.1: https://www.python.org/downloads/release/python-361
+.. Footer:
+.. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
+   :target: http://pe.linkedin.com/in/luismayta
+.. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/luismayta/resume/readme
+   :target: https://github.com/luismayta/resume
+.. |made| image:: https://img.shields.io/badge/Made%20with-Latex-1f425f.svg
+   :target: https://www.latex-project.org/about/
+
+.. Dependences:
+
+.. _Python 3.6.4: https://www.python.org/downloads/release/python-364
 .. _Docker: https://www.docker.com/
 .. _Docker Compose: https://docs.docker.com/compose/
