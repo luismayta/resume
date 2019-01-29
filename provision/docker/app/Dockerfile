@@ -5,10 +5,10 @@ RUN apt-get update -y \
   && apt-get install -y texlive-bibtex-extra \
   biber
 
-COPY requirements.txt /usr/src/
-COPY requirements/*.txt /usr/src/requirements/
+COPY ./requirements/ /usr/src/requirements/
+COPY ./requirements.txt /usr/src/requirements.txt
 
 # set working directory to /usr/src
 WORKDIR /usr/src
 
-RUN pip install --no-cache -r /usr/src/requirements/test.txt
+RUN pip install --no-cache -r /usr/src/requirements.txt
