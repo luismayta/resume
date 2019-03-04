@@ -49,7 +49,7 @@
         - --exclude=docs,migrations
     -   id: check-executables-have-shebangs
 -   repo: https://github.com/pre-commit/pre-commit.git
-    sha: v1.14.2
+    sha: v1.14.4
     hooks:
     -   id: validate_manifest
 -   repo: https://github.com/detailyang/pre-commit-shell.git
@@ -60,7 +60,7 @@
         args:
         - --exclude=SC1072,SC1073,SC2068
 -   repo: https://github.com/asottile/add-trailing-comma
-    sha: v0.7.1
+    sha: v0.8.0
     hooks:
     -   id: add-trailing-comma
 -   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
@@ -94,7 +94,7 @@
         args:
         - --settings-path=.isort.cfg
 -   repo: https://github.com/pre-commit/mirrors-pylint.git
-    sha: v2.3.0.dev1
+    sha: v2.3.1
     hooks:
     -   id: pylint
         exclude: __pycache__|migrations|conf.py|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
