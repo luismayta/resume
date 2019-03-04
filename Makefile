@@ -12,10 +12,10 @@ PYTHON_VERSION=3.6.4
 PYENV_NAME="${PROJECT}"
 
 # Configuration.
-SHELL := /bin/bash
+SHELL ?= /bin/bash
 ROOT_DIR=$(shell pwd)
 MESSAGE:=🍺️
-MESSAGE_HAPPY:="${MESSAGE} Happy Coding"
+MESSAGE_HAPPY:="Done! ${MESSAGE} | Now Happy Coding"
 SOURCE_DIR=$(ROOT_DIR)/
 REQUIREMENTS_DIR=$(ROOT_DIR)/requirements
 PROVISION_DIR:=$(ROOT_DIR)/provision
@@ -54,6 +54,7 @@ endif
 	@echo
 
 setup: clean
+	@echo "=====> Install Setup..."
 	$(pip_install) "${REQUIREMENTS_DIR}/setup.txt"
 	@if [ -e "${REQUIREMENTS_DIR}/private.txt" ]; then \
 			$(pip_install) "${REQUIREMENTS_DIR}/private.txt"; \
@@ -63,11 +64,9 @@ setup: clean
 	@if [ ! -e ".env" ]; then \
 		cp -rf .env-sample .env;\
 	fi
+	@echo ${MESSAGE_HAPPY}
 
 environment: clean
-	@if [ -e "$(HOME)/.pyenv" ]; then \
-		eval "$(pyenv init -)"; \
-		eval "$(pyenv virtualenv-init -)"; \
-	fi
-	pyenv virtualenv ${PYTHON_VERSION} ${PYENV_NAME} >> /dev/null 2>&1 || echo $(MESSAGE_HAPPY)
-	pyenv activate ${PYENV_NAME} >> /dev/null 2>&1 || echo $(MESSAGE_HAPPY)
+	@echo "=====> loading virtualenv ${PYENV_NAME}..."
+	@pyenv virtualenv ${PYTHON_VERSION} ${PYENV_NAME} >> /dev/null 2>&1 || echo ${MESSAGE_HAPPY}
+	@pyenv activate ${PYENV_NAME} >> /dev/null 2>&1 || echo ${MESSAGE_HAPPY}
