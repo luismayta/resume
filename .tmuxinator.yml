@@ -1,17 +1,31 @@
 # ~/.tmuxinator/resume.yml
 name: resume
 root: <%= ENV["PROJECTS"] %>/latex/resume
-tmux_options: -2
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
-pre:
-    - make environment
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+
+# Runs on project start, always
+on_project_start: make environment
+
+# Run on project start, the first time
+# on_project_first_start: command
+
+# Run on project start, after the first time
+# on_project_restart: command
+
+# Run on project exit ( detaching from tmux session )
+on_project_exit: make docker.down
+
+# Run on project stop
+on_project_stop: make docker.down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre_window: pyenv activate resume
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -20,40 +34,26 @@ pre:
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: logs
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
-
-# Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t resume
+startup_window: docker
 
 windows:
   - editor:
       layout: even-horizontal
       panes:
         - editor:
-            - pyenv activate resume
         - pwd:
-            - pyenv activate resume
         - pwd:
-            - pyenv activate resume
   - python:
       layout: main-vertical
       panes:
-        - python:
-            - pyenv activate resume
+        - ipython:
   - databases:
       layout: main-vertical
       panes:
+        - postgresql:
         - ls:
-            - pyenv activate resume
-        - ls:
-            - pyenv activate resume
   - docker:
       layout: main-vertical
       panes:
-        - ls:
-            - pyenv activate resume
-        - ls:
-            - pyenv activate resume
+        - webserver:
+        - databases:
