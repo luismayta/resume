@@ -6,7 +6,7 @@ Resume
 |Build Status| |GitHub issues| |GitHub license|
 
 
-:Version: 0.3.1
+:Version: 0.3.2
 :Web: https://github.com/luismayta/resume
 :Download: http://github.com/luismayta/resume
 :Source: http://github.com/luismayta/resume
