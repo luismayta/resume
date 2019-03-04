@@ -19,6 +19,7 @@ MESSAGE_HAPPY:="Done! ${MESSAGE} | Now Happy Coding"
 SOURCE_DIR=$(ROOT_DIR)/
 REQUIREMENTS_DIR=$(ROOT_DIR)/requirements
 PROVISION_DIR:=$(ROOT_DIR)/provision
+PATH_DOCKER_COMPOSE:=$(PROVISION_DIR)/docker-compose
 FILE_README:=$(ROOT_DIR)/README.rst
 PATH_DOCKER_COMPOSE:=provision/docker-compose
 

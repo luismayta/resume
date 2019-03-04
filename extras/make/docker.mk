@@ -1,6 +1,5 @@
 # Docker
 .PHONY: docker.help docker.build docker.test docker.pkg
-PATH_DOCKER_COMPOSE:=provision/docker-compose
 DOCKER_NETWORK = $(PROJECT)_network
 
 docker: docker.help
