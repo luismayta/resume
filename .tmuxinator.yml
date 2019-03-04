@@ -52,11 +52,6 @@ windows:
       panes:
         - postgresql:
         - ls:
-  - aws:
-      layout: main-vertical
-      panes:
-        - webserver:
-        - databases:
   - docker:
       layout: main-vertical
       panes:
