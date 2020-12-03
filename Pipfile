@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ansible-vault = "*"
+docker-compose = "*"
+isort = "*"
+pylint = "*"
+tox = "*"
+ipython = "*"
+parso = "*"
+bumpversion = "*"
+bumplus = "*"
+pre-commit = "*"
+doc8 = "*"
+pygments="*"
+Sphinx="*"
+sphinx-intl="*"
+sphinx-rtd-theme="*"
+sphinxcontrib-plantuml="*"
+
+[packages]
+
+
+[scripts]
+update = "pre-commit autoupdate"
+
+[requires]
+python_version = "3.8.0"
