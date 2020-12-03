@@ -125,7 +125,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 .. _`luis mayta`: https://github.com/luismayta
 
 .. _`Github`: https://github.com/luismayta
-.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Linkedin`: https://pe.linkedin.com/in/luismayta
 .. _`Email`: slovacus@gmail.com
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
@@ -159,7 +159,7 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
 .. Footer:
 .. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
-   :target: http://pe.linkedin.com/in/luismayta
+   :target: https://pe.linkedin.com/in/luismayta
 .. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/luismayta/resume/readme
    :target: https://github.com/luismayta/resume
 .. |made| image:: https://img.shields.io/badge/Made%20with-Latex-1f425f.svg
