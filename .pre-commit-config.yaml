@@ -1,110 +1,140 @@
--   repo: https://github.com/pre-commit/pre-commit-hooks.git
-    sha: v2.1.0
+exclude: 'provision/ansible/prod/roles/contrib|provision/ansible/dev/roles/contrib|vendor|docs|.serverless|.serveless_nextjs|node_modules|migrations|.git|.tox|.gen'
+default_language_version:
+  # force all unspecified python hooks to run python3
+  python: python3.8.0
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit
+    rev: v2.8.1
     hooks:
-    -   id: detect-private-key
-        files: ^(?!\.?git-crypt)
-    -   id: check-merge-conflict
-    -   id: trailing-whitespace
-        language_version: python3
-        files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
-    -   id: end-of-file-fixer
-        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
-    -   id: check-added-large-files
-        files: ^tf|-|\.(py|env|yml|yaml)$
-    -   id: check-case-conflict
-    -   id: check-json
-    -   id: pretty-format-json
-        args:
-        - --autofix
-    -   id: check-xml
-        language_version: python3
-    -   id: check-yaml
-    -   id: check-case-conflict
-    -   id: check-byte-order-marker
-    -   id: check-ast
-        language_version: python3
-    -   id: debug-statements
-    -   id: autopep8-wrapper
-        args:
-        - -i
-        - --ignore=E501,D205
-        language_version: python3
-    -   id: double-quote-string-fixer
-    -   id: check-docstring-first
-    -   id: detect-aws-credentials
-    -   id: requirements-txt-fixer
-    -   id: check-symlinks
-    -   id: name-tests-test
-        exclude: (src/tests/steps/*)
-        args:
-        - --django
-    -   id: file-contents-sorter
-    -   id: fix-encoding-pragma
-    -   id: sort-simple-yaml
-    -   id: flake8
-        files: ^src/.*\.py$
-        args:
-        - --max-line-length=80
-        - --diff
-        - --exclude=docs,migrations
-    -   id: check-executables-have-shebangs
--   repo: https://github.com/pre-commit/pre-commit.git
-    sha: v1.14.4
+      - id: validate_manifest
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+    rev: v1.1.3
     hooks:
-    -   id: validate_manifest
--   repo: https://github.com/detailyang/pre-commit-shell.git
-    sha: 1.0.4
+      - id: python-safety-dependencies-check
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
+    rev: v1.0.4
     hooks:
-    -   id: shell-lint
-        exclude: ^extras/script/wait-for-it.sh$
-        args:
-        - --exclude=SC1072,SC1073,SC2068
--   repo: https://github.com/asottile/add-trailing-comma
-    sha: v0.8.0
-    hooks:
-    -   id: add-trailing-comma
--   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    sha: v1.1.0
-    hooks:
-    -   id: python-safety-dependencies-check
--   repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-    sha: v1.0.3
-    hooks:
-    -   id: python-bandit-vulnerability-check
+      - id: python-bandit-vulnerability-check
         args: []
         files: .py$
--   repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
-    sha: v1.1.0
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup
+    rev: v1.0.0
     hooks:
-    -   id: markdown-toc
--   repo: git://github.com/Lucas-C/pre-commit-hooks-markup
-    sha: v1.0.0
-    hooks:
-    -   id: rst-linter
+      - id: rst-linter
         exclude: (docs/*|tests/*)
--   repo: https://github.com/pricematch/pricematch-pre-commit-hooks
-    sha: 93f5296d960021ee1f507a59a0bca1fe8f73c285
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.6.0
     hooks:
-    -   id: do_not_commit
--   repo: git://github.com/luismayta/pre-commit-isort
-    sha: 1.0.1
-    hooks:
-    -   id: isort
-        exclude: __pycache__|migrations|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
-        args:
-        - --settings-path=.isort.cfg
--   repo: https://github.com/pre-commit/mirrors-pylint.git
-    sha: v2.3.1
-    hooks:
-    -   id: pylint
+      - id: pylint
         exclude: __pycache__|migrations|conf.py|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
         args:
-        - --rcfile=.pylintrc
-        - --disable=no-name-in-module,import-error,ungrouped-imports
-        - --ignore=settings_test, migrations
--   repo: https://github.com/luismayta/pre-commit-mypy.git
-    sha: 0.1.1
+          - --rcfile=.pylintrc
+          - --disable=no-name-in-module,import-error,ungrouped-imports
+          - --ignore=settings_test, migrations
+  - repo: https://github.com/ambv/black
+    rev: 20.8b1
     hooks:
-    -   id: mypy
+      - id: black
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.790
+    hooks:
+      - id: mypy
         args:
-        - --ignore-missing-imports
+          - --ignore-missing-imports
+        exclude: migrations|conf.py|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.3.0
+    hooks:
+      - id: detect-private-key
+        files: ^(?!\.?git-crypt)
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+        files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
+      - id: end-of-file-fixer
+        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
+      - id: check-added-large-files
+        files: ^tf|-|\.(py|env|yml|yaml)$
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-xml
+      - id: check-yaml
+      - id: check-byte-order-marker
+      - id: check-ast
+      - id: debug-statements
+      - id: check-docstring-first
+      - id: requirements-txt-fixer
+      - id: check-symlinks
+      - id: name-tests-test
+        args:
+          - --django
+      - id: file-contents-sorter
+      - id: fix-encoding-pragma
+      - id: sort-simple-yaml
+      - id: mixed-line-ending
+        fix: lr
+      - id: check-executables-have-shebangs
+  - repo: https://github.com/tcassou/python-pre-commit-hooks
+    rev: 3383e2f83463370cf4651040fb697a636bb0374e
+    hooks:
+      - id: do_not_commit
+  - repo: https://github.com/asottile/blacken-docs
+    rev: v1.8.0
+    hooks:
+      - id: blacken-docs
+        additional_dependencies:
+          - black
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.43.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.7.1.1
+    hooks:
+      - id: shellcheck
+        exclude: (^provision/script/wait-for-it.sh$|^provision/git/hooks/prepare-commit-msg$)
+        args:
+          - --exclude=SC1072,SC1073,SC2068
+  - repo: https://github.com/IamTheFij/docker-pre-commit
+    rev: v2.0.0
+    hooks:
+      - id: docker-compose-check
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        language: system
+        entry: ./node_modules/prettier/bin-prettier.js
+        args:
+          - '--write=true'
+          - '--list-different'
+          - '--config=prettier.config.js'
+        files: \.(js?(on),ts?(x),scss,md,y?(a)ml,gql,graphql?(s),less,mjml,html)$
+        exclude: lib|node_modules
+      - id: eslint
+        name: eslint
+        language: system
+        pass_filenames: true
+        entry: node_modules/eslint/bin/eslint.js --config=.eslintrc.js --ignore-path=.eslintignore --color
+        args:
+          - '--fix'
+        files: \.(js|jsx|ts|tsx|mjs|d.ts)$
+      - id: stylint
+        name: stylint
+        language: system
+        pass_filenames: true
+        entry: node_modules/stylelint/bin/stylelint.js --config=.stylintrc --syntax less **/*.less
+        args: [--fix]
+        files: \.(less)$
+      - id: dockerfile-provides-entrypoint
+        name: hadolint
+        description: Lint Dockerfiles with hadolint
+        language: docker_image
+        entry: --entrypoint /bin/hadolint hadolint/hadolint:latest --ignore DL3008 --ignore DL3013 --ignore DL3018 --ignore DL3008 --ignore DL4006 --ignore SC2001 --ignore SC2086 --ignore SC2102 -
+        types: [file]
+        files: Dockerfile(.*)
