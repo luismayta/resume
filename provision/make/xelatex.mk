@@ -18,12 +18,12 @@ xelatex.help:
 xelatex:
 	make xelatex.help
 
-xelatex.make: latex.resume latex.cv
+xelatex.make: xelatex.resume xelatex.cv
 
 xelatex.resume:
-	$(docker-dev-run) \
+	@$(docker-dev-run) \
 		bash -c "cd src && $(CC) -output-directory=$(EXAMPLES_DIR) resume.tex";
 
 xelatex.cv:
-	$(docker-dev-run) \
+	@$(docker-dev-run) \
 		bash -c "cd src && $(CC) -output-directory=$(EXAMPLES_DIR) cv.tex";
