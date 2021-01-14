@@ -5,14 +5,25 @@ CC = xelatex
 EXAMPLES_DIR = examples
 RESUME_DIR = examples/resume
 CV_DIR = examples/cv
-DOCKER_RUN := $(docker-compose) -f "${PATH_DOCKER_COMPOSE}"/dev.yml run --rm app
 
-latex.make: clean latex.resume latex.cv
+xelatex.help:
+	@echo '    xelatex:'
+	@echo ''
+	@echo '        xelatex          show help'
+	@echo '        xelatex.make     make resume and cv'
+	@echo '        xelatex.resume   make resume'
+	@echo '        xelatex.cv       make cv'
+	@echo ''
 
-latex.resume: clean
-	$(DOCKER_RUN) \
-		bash -c "cd src &&  $(CC) -output-directory=$(EXAMPLES_DIR) resume.tex";
+xelatex:
+	make xelatex.help
 
-latex.cv: clean
-	$(DOCKER_RUN) \
-		bash -c "cd src &&  $(CC) -output-directory=$(EXAMPLES_DIR) cv.tex";
+xelatex.make: latex.resume latex.cv
+
+xelatex.resume:
+	$(docker-dev-run) \
+		bash -c "cd src && $(CC) -output-directory=$(EXAMPLES_DIR) resume.tex";
+
+xelatex.cv:
+	$(docker-dev-run) \
+		bash -c "cd src && $(CC) -output-directory=$(EXAMPLES_DIR) cv.tex";
