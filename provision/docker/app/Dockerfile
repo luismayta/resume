@@ -1,14 +1,28 @@
-FROM labpositiva/latex:3.6.1
+FROM hadenlabs/latex:18.04
+
 MAINTAINER Luis Mayta <@slovacus>
 
-RUN apt-get update -y \
-  && apt-get install -y texlive-bibtex-extra \
-  biber
+ARG stage
 
-COPY ./requirements/ /usr/src/requirements/
-COPY ./requirements.txt /usr/src/requirements.txt
+LABEL NAME resume-app-$stage
 
-# set working directory to /usr/src
-WORKDIR /usr/src
+ENV PACKAGES bash \
+    biber \
+    texlive-bibtex-extra
 
-RUN pip install --no-cache -r /usr/src/requirements.txt
+
+COPY Pipfile* /usr/src/
+
+# set working directory to /usr/src/
+WORKDIR /usr/src/
+
+RUN  groupadd -g 500 -r python \
+  && groupadd developer \
+  && useradd -m -g developer -G python developer \
+  && chown -R developer:python /usr/local/bin \
+  && mkdir -p /usr/src \
+  && chown -R developer /usr/src \
+  && apt-get update -y \
+  && apt-get install -y $PACKAGES \
+  && apt-get purge \
+  && rm -rf /var/lib/apt/lists/*
