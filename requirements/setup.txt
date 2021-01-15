@@ -4,7 +4,6 @@ pre-commit==0.15.2
 pylint==1.7.4
 twine==1.9.1
 yapf==0.18.0
-restview==2.7.0
 twine==1.9.1
 yapf==0.18.0
 restview>=2.8.1
