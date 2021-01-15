@@ -2,8 +2,8 @@ bumpversion==0.5.3
 docker-compose
 pre-commit==0.15.2
 pylint==1.7.4
-twine==1.9.1
+twine==3.3.0
 yapf==0.18.0
-twine==1.9.1
+twine==3.3.0
 yapf==0.18.0
 restview>=2.8.1
