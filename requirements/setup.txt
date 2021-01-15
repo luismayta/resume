@@ -1,4 +1,4 @@
-bumpversion==0.5.3
+bumpversion==0.6.0
 docker-compose
 pre-commit==0.15.2
 pylint==1.7.4
