@@ -1,10 +1,7 @@
 Resume
 ======
 
-|resume| |cv|
-
 |Build Status| |GitHub issues| |GitHub license|
-
 
 :Version: 0.3.2
 :Web: https://github.com/luismayta/resume
@@ -31,9 +28,8 @@ Dependencies
 
 List of applications:
 
-- `Python 3.6.4`_
+- `Pyenv`_
 - `Docker`_
-- `Docker Compose`_
 
 Quick Start
 ===========
@@ -52,14 +48,6 @@ Usage
 
   λ make setup
 
-- Compile tex on your Computer
-
-.. code-block:: bash
-
-  λ make docker.build
-  λ make resume.make
-
-
 Support
 -------
 
@@ -76,7 +64,7 @@ Team
 +---------------+
 | |Luis Mayta|  |
 +---------------+
-| `luis mayta`_ |
+| `Luis Mayta`_ |
 +---------------+
 
 License
@@ -114,22 +102,23 @@ Feel free to contact me to discuss any issues, questions, or comments.
 
 |linkedin| |beacon| |made|
 
-Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
+Made with :coffee: and :pizza: by `Luis Mayta`_ and `hadenlabs`_.
 
 .. Links
 .. _`changelog`: CHANGELOG.rst
-.. _`contributors`: AUTHORS
-.. _`contributing`: CONTRIBUTING.rst
+.. _`contributors`: docs/source/AUTHORS.rst
+.. _`contributing`: docs/source/CONTRIBUTING.rst
 
 .. _`hadenlabs`: https://github.com/hadenlabs
-.. _`luis mayta`: https://github.com/luismayta
+.. _`Luis Mayta`: https://github.com/luismayta
+
 
 .. _`Github`: https://github.com/luismayta
 .. _`Linkedin`: https://pe.linkedin.com/in/luismayta
 .. _`Email`: slovacus@gmail.com
     :target: mailto:slovacus@gmail.com
 .. _`Twitter`: https://twitter.com/slovacus
-.. _`Website`: http://luismayta.github.io
+.. _`Website`: https://luismayta.github.io
 .. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Build Status| image:: https://travis-ci.org/luismayta/resume.svg
@@ -138,14 +127,8 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
    :target: https://github.com/luismayta/resume/issues
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
-
-.. resume
-.. |resume| image:: https://img.shields.io/badge/resume-pdf-green.svg
-  :target: https://github.com/luismayta/resume/raw/master/src/examples/resume.pdf
-  :alt: Resume
-.. |cv| image:: https://img.shields.io/badge/cv-pdf-green.svg
-  :target: https://github.com/luismayta/resume/raw/master/src/examples/cv.pdf
-  :alt: CV
+.. |Fossa| image:: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fluismayta%2Fresume.svg?type=shield
+   :target: https://app.fossa.io/projects/git%2Bgithub.com%2Fluismayta%2Fresume?ref=badge_shield
 
 .. Team:
 .. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
@@ -167,6 +150,5 @@ Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
 
 .. Dependences:
 
-.. _Python 3.6.4: https://www.python.org/downloads/release/python-364
+.. _Pyenv: https://github.com/pyenv/pyenv
 .. _Docker: https://www.docker.com/
-.. _Docker Compose: https://docs.docker.com/compose/
