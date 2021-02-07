@@ -1,6 +1,6 @@
 bumpversion==0.5.3
 docker-compose
-pre-commit==0.15.2
+pre-commit==2.10.1
 pylint==1.7.4
 twine==1.9.1
 yapf==0.18.0
