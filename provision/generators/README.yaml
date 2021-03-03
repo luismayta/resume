@@ -1,0 +1,69 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: resume
+
+company:
+  name: hadenlabs
+  description: |-
+    company labs
+  url: https://hadenlabs.com
+  github: https://github.com/hadenlabs
+  email: support@hadenlabs.com
+
+copyright:
+  name: Hadenlabs
+  url: https://hadenlabs.com
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'MIT'
+
+# Canonical GitHub repo
+github_repo: luismayta/resume
+
+# Badges to display
+badges:
+  - name: 'Build Status'
+    image: 'https://travis-ci.org/luismayta/resume.svg?branch=main'
+    url: 'https://travis-ci.org/luismayta/resume'
+  - name: 'Issues'
+    image: 'https://img.shields.io/github/issues/luismayta/resume.svg'
+    url: 'https://github.com/luismayta/resume/issues'
+  - name: 'Latest Release'
+    image: 'https://img.shields.io/github/release/luismayta/resume.svg'
+    url: 'https://travis-ci.org/luismayta/resume/releases'
+
+# Bulleted features to display
+features:
+  - "Easy to be further customized or extended"
+  - "Full support for unicode characters (e.g. CJK) with [XeLaTeX]()"
+  - "FontAwesome 4.5.0 support (alias not support yet)"
+
+# Short description of this project
+description: |-
+  An elegant [LaTeX]() resume template, compiled with [XeLaTeX]() . Inspired by [billryan/resume]()
+
+requirements: |-
+
+  This is a list of applications that need to be installed previously to enjoy all the goodies of this configuration:
+
+  - [Pyenv](https://github.com/pyenv/pyenv)
+  - [Docker](https://www.docker.com/)
+
+# How to use this project
+usage: |-
+  ```bash
+
+    make setup
+
+  ```
