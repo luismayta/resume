@@ -1,6 +1,4 @@
-FROM hadenlabs/latex:18.04
-
-MAINTAINER Luis Mayta <@slovacus>
+FROM hadenlabs/xelatex:18.04
 
 ARG stage
 
