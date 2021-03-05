@@ -2,8 +2,6 @@
 # See ./docs/contributing.md
 #
 CC = xelatex
-EXAMPLES_DIR = examples
-RESUME_DIR = examples/resume
 
 xelatex.help:
 	@echo '    xelatex:'
@@ -20,4 +18,4 @@ xelatex.make: xelatex.resume
 
 xelatex.resume:
 	@$(docker-dev-run) \
-		bash -c "cd src && $(CC) -output-directory=$(EXAMPLES_DIR) resume.tex";
+		bash -c "cd src && $(CC) -output-directory=$(BUILD_DIR) resume.tex";
