@@ -7,14 +7,16 @@ on:
 env:
   IMAGE: hadenlabs/xelatex:18.04
 
-# docker run --rm -it -v "${PWD}":/data hadenlabs/xelatex:18.04 -output-directory=./ resume.tex
-
 jobs:
   build:
     runs-on: Ubuntu-20.04
+    container:
+      image: ${{ env.IMAGE }}
+      volumes:
+        - $pwd:/root
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: build resume
         run: |
-          docker run --rm -it -v "${PWD}":/data ${{ env.IMAGE }} -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
+          xelatex -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
