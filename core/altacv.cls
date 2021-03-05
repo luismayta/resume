@@ -58,7 +58,7 @@
 \RequirePackage{fontspec}
 % Main document font
 \setmainfont[
-  Path = fonts/ ,
+  Path = static/fonts/ ,
   Extension = .ttf ,
   UprightFont = *-regular ,
   BoldFont = *-bold ,
