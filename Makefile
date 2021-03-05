@@ -28,7 +28,7 @@ PROJECT_PORT := 3000
 PYTHON_VERSION=3.8.0
 NODE_VERSION=14.15.5
 PYENV_NAME="${PROJECT}"
-GIT_IGNORES:=python,node,go
+GIT_IGNORES:=python,node,go,latex
 GI:=gi
 
 # Configuration.
@@ -36,9 +36,9 @@ SHELL ?=/bin/bash
 ROOT_DIR=$(shell pwd)
 MESSAGE:=🍺️
 MESSAGE_HAPPY?:="Done! ${MESSAGE}, Now Happy Hacking"
-SOURCE_DIR=$(ROOT_DIR)
 PROVISION_DIR:=$(ROOT_DIR)/provision
 DOCS_DIR:=$(ROOT_DIR)/docs
+BUILD_DIR:=$(ROOT_DIR)/build
 README_TEMPLATE:=$(PROVISION_DIR)/templates/README.md.tmpl
 
 export README_FILE ?= README.md
