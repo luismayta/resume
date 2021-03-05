@@ -9,8 +9,6 @@ jobs:
     runs-on: Ubuntu-20.04
     container:
       image: hadenlabs/xelatex:18.04
-      volumes:
-        - $pwd:/root
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
