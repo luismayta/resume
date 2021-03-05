@@ -1,5 +1,5 @@
 #
-# See ./CONTRIBUTING.rst
+# See ./docs/contributing.md
 #
 CC = xelatex
 EXAMPLES_DIR = examples
