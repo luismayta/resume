@@ -18,4 +18,4 @@ xelatex.make: xelatex.resume
 
 xelatex.resume:
 	@$(docker-dev-run) \
-		bash -c "$(CC) -output-directory=build resume.tex";
+		bash -c "$(CC) -output-directory=./ resume.tex";
