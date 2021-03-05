@@ -1,7 +1,7 @@
 name: build and deploy resume
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
 env:
@@ -20,3 +20,12 @@ jobs:
       - name: build resume
         run: |
           xelatex -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
+      - name: commit resume pdf
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "ci: generate resume"
+          branch: develop
+          commit_options: '--no-verify --signoff'
+          commit_user_name: "@slovacus"
+          commit_user_email: "slovacus@gmail.com"
+          commit_author: "slovacus <slovacus@gmail.com>"
