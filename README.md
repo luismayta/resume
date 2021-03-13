@@ -14,7 +14,7 @@
 
 # resume
 
-[![Lint](https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![License](https://img.shields.io/github/license/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Issues](https://img.shields.io/github/issues/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Latest Release](https://img.shields.io/github/release/luismayta/resume.svg)](https://github.com/luismayta/resume/releases)
+[![Lint](https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![Build](https://github.com/luismayta/resume/actions/workflows/resume.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![License](https://img.shields.io/github/license/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Issues](https://img.shields.io/github/issues/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Latest Release](https://img.shields.io/github/release/luismayta/resume.svg)](https://github.com/luismayta/resume/releases)
 
 An elegant [LaTeX]() resume template, compiled with [XeLaTeX]() . Inspired by [billryan/resume]()
 
