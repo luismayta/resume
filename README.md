@@ -14,13 +14,13 @@
 
 # resume
 
-[![Build Status](https://travis-ci.org/luismayta/resume.svg?branch=main)](https://travis-ci.org/luismayta/resume) [![Issues](https://img.shields.io/github/issues/luismayta/resume.svg)](https://github.com/luismayta/resume/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/resume.svg)](https://travis-ci.org/luismayta/resume/releases)
+[![Lint](https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![License](https://img.shields.io/github/license/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Issues](https://img.shields.io/github/issues/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Latest Release](https://img.shields.io/github/release/luismayta/resume.svg)](https://github.com/luismayta/resume/releases)
 
 An elegant [LaTeX]() resume template, compiled with [XeLaTeX]() . Inspired by [billryan/resume]()
 
-This project is part of our comprehensive [hadenlabs](https://hadenlabs.com) dockerfile.
+## :page_facing_up: License
 
-It's 100% Open Source and licensed under the [MIT](LICENSE).
+resume is an open-sourced software licensed under the [MIT license](LICENSE.md).
 
 ## :sparkles: Features
 
@@ -47,7 +47,7 @@ This is a list of applications that need to be installed previously to enjoy all
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/luismayta/resume/issues), send us an [email][email] or join our [Slack Community][slack].
+File a GitHub [issue](https://github.com/luismayta/resume/issues), send us an [email](email) or join our [Slack Community](slack).
 
 ## Contributing
 
@@ -56,8 +56,6 @@ File a GitHub [issue](https://github.com/luismayta/resume/issues), send us an [e
 Please use the [issue tracker](https://github.com/luismayta/resume/issues) to report any bugs or file feature requests.
 
 ### Developing
-
-If you are interested in being a contributor and want to get involved in developing this project or [help out](https://hadenlabs.com) with our other projects, we would love to hear from you! Shoot us an [email](mailto:support@hadenlabs.com).
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -69,32 +67,18 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
 
-### Versioning
+#### Versioning
 
-Releases are managed using github release feature. We use \[Semantic Versioning\](<http://semver.org>) for all the releases. Every change made to the code base will be referred to in the release notes (except for cleanups and refactorings).
+Releases are managed using github release feature. We use [Semantic Versioning](http://semver.org) for all the releases. Every change made to the code base will be referred to in the release notes (except for cleanups and refactorings).
 
 ## Copyright
 
 Copyright © 2018-2021 [Hadenlabs](https://hadenlabs.com)
 
-## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-The MIT License (MIT)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Source: <https://opensource.org/licenses/MIT>
-
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
 
-## About
+## Don't forget to 🌟 Star 🌟 the repo if you like resume
 
-This project is maintained and funded by [Hadenlabs][https://hadenlabs.com]. Like it? Please let us know at <support@hadenlabs.com>
+[Your feedback is appreciated](https://github.com/luismayta/resume/issues)
