@@ -24,6 +24,9 @@ badges:
   - name: Lint
     image: https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/luismayta/resume/actions
+  - name: Build
+    image: https://github.com/luismayta/resume/actions/workflows/resume.yml/badge.svg?branch=develop
+    url: https://github.com/luismayta/resume/actions
   - name: License
     image: https://img.shields.io/github/license/luismayta/resume.svg
     url: https://github.com/luismayta/resume
