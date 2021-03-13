@@ -21,6 +21,6 @@ RUN  groupadd -g 500 -r python \
   && mkdir -p /usr/src \
   && chown -R developer /usr/src \
   && apt-get update -y \
-  && apt-get install -y $PACKAGES \
+  && apt-get install -y --no-install-recommends $PACKAGES \
   && apt-get purge \
   && rm -rf /var/lib/apt/lists/*
