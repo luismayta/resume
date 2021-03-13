@@ -7,18 +7,6 @@
 # Name of this project
 name: resume
 
-company:
-  name: hadenlabs
-  description: |-
-    company labs
-  url: https://hadenlabs.com
-  github: https://github.com/hadenlabs
-  email: support@hadenlabs.com
-
-copyright:
-  name: Hadenlabs
-  url: https://hadenlabs.com
-
 email:
   support: support@hadenlabs.com
 
@@ -33,15 +21,18 @@ github_repo: luismayta/resume
 
 # Badges to display
 badges:
-  - name: 'Build Status'
-    image: 'https://travis-ci.org/luismayta/resume.svg?branch=main'
-    url: 'https://travis-ci.org/luismayta/resume'
-  - name: 'Issues'
-    image: 'https://img.shields.io/github/issues/luismayta/resume.svg'
-    url: 'https://github.com/luismayta/resume/issues'
-  - name: 'Latest Release'
-    image: 'https://img.shields.io/github/release/luismayta/resume.svg'
-    url: 'https://travis-ci.org/luismayta/resume/releases'
+  - name: Lint
+    image: https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/luismayta/resume/actions
+  - name: License
+    image: https://img.shields.io/github/license/luismayta/resume.svg
+    url: https://github.com/luismayta/resume
+  - name: Issues
+    image: https://img.shields.io/github/issues/luismayta/resume.svg
+    url: https://github.com/luismayta/resume
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/resume.svg
+    url: https://github.com/luismayta/resume/releases
 
 # Bulleted features to display
 features:
