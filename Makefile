@@ -46,19 +46,6 @@ export README_YAML ?= provision/generators/README.yaml
 export README_INCLUDES ?= $(file://$(shell pwd)/?type=text/plain)
 
 FILE_README:=$(ROOT_DIR)/README.md
-PATH_DOCKER_COMPOSE:=docker-compose.yml -f provision/docker-compose
-
-DOCKER_SERVICE_DEV:=app
-DOCKER_SERVICE_TEST:=app
-
-docker-compose:=$(PIPENV_RUN) docker-compose
-
-docker-test:=$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/test.yml
-docker-dev:=$(docker-compose) -f ${PATH_DOCKER_COMPOSE}/dev.yml
-
-docker-test-run:=$(docker-test) run --rm ${DOCKER_SERVICE_TEST}
-docker-dev-run:=$(docker-dev) run --rm --service-ports ${DOCKER_SERVICE_DEV}
-docker-yarn-run:=$(docker-dev) run --rm --service-ports ${DOCKER_SERVICE_YARN}
 
 include provision/make/*.mk
 
@@ -71,7 +58,6 @@ help:
 	@echo '    readme                    build README'
 	@echo ''
 	@make xelatex.help
-	@make docker.help
 	@make docs.help
 	@make git.help
 	@make python.help
