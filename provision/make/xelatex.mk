@@ -1,8 +1,6 @@
 #
 # See ./docs/contributing.md
 #
-CC = xelatex
-
 xelatex.help:
 	@echo '    xelatex:'
 	@echo ''
@@ -17,5 +15,4 @@ xelatex:
 xelatex.make: xelatex.resume
 
 xelatex.resume:
-	@$(docker-dev-run) \
-		bash -c "$(CC) -output-directory=./ resume.tex";
+	docker run --rm -v "${PWD}":/root hadenlabs/xelatex:18.04 -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
