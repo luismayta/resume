@@ -47,7 +47,7 @@ This is a list of applications that need to be installed previously to enjoy all
 
 For additional context, refer to some of these links.
 
-- [billryan resume](https://github.com/billryan/resume) - Inspired by billryan/resume
+- [billryan resume](https://github.com/billryan/resume) - Inspiration
 
 ## Help
 
