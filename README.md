@@ -16,7 +16,7 @@
 
 [![Lint](https://github.com/luismayta/resume/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![Build](https://github.com/luismayta/resume/actions/workflows/resume.yml/badge.svg?branch=develop)](https://github.com/luismayta/resume/actions) [![License](https://img.shields.io/github/license/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Issues](https://img.shields.io/github/issues/luismayta/resume.svg)](https://github.com/luismayta/resume) [![Latest Release](https://img.shields.io/github/release/luismayta/resume.svg)](https://github.com/luismayta/resume/releases)
 
-An elegant [LaTeX]() resume template, compiled with [XeLaTeX]() . Inspired by [billryan/resume]()
+An elegant [LaTeX](https://www.latex-project.org/) resume template, compiled with [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX)
 
 ## :page_facing_up: License
 
@@ -25,8 +25,8 @@ resume is an open-sourced software licensed under the [MIT license](LICENSE.md).
 ## :sparkles: Features
 
 - Easy to be further customized or extended
-- Full support for unicode characters (e.g. CJK) with [XeLaTeX]()
-- FontAwesome 4.5.0 support (alias not support yet)
+- Full support for unicode characters
+- FontAwesome 5 support
 
 ## Requirements
 
@@ -39,9 +39,15 @@ This is a list of applications that need to be installed previously to enjoy all
 
 ```bash
 
-  make setup
+  make xelatex.resume
 
 ```
+
+## :blue_book: References
+
+For additional context, refer to some of these links.
+
+- [billryan resume](https://github.com/billryan/resume) - Inspired by billryan/resume
 
 ## Help
 
