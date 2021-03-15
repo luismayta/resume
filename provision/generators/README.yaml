@@ -37,15 +37,21 @@ badges:
     image: https://img.shields.io/github/release/luismayta/resume.svg
     url: https://github.com/luismayta/resume/releases
 
+# Short description of this project
+description: |-
+  An elegant [LaTeX](https://www.latex-project.org/) resume template, compiled with [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX)
+
 # Bulleted features to display
 features:
   - "Easy to be further customized or extended"
-  - "Full support for unicode characters (e.g. CJK) with [XeLaTeX]()"
-  - "FontAwesome 4.5.0 support (alias not support yet)"
+  - "Full support for unicode characters"
+  - "FontAwesome 5 support"
 
-# Short description of this project
-description: |-
-  An elegant [LaTeX]() resume template, compiled with [XeLaTeX]() . Inspired by [billryan/resume]()
+references:
+  - name: 'billryan resume'
+    url: 'https://github.com/billryan/resume'
+    description: 'Inspiration'
+
 
 requirements: |-
 
@@ -58,6 +64,6 @@ requirements: |-
 usage: |-
   ```bash
 
-    make setup
+    make xelatex.resume
 
   ```
