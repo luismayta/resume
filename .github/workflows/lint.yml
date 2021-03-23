@@ -1,4 +1,4 @@
-name: lint code with pre-commit
+name: lint code
 
 on:
   schedule:
@@ -19,9 +19,9 @@ env:
   LC_ALL: en_US.UTF-8
 
 jobs:
-  lint:
-    name: lint validation with pre-commit
-    runs-on: Ubuntu-20.04
+  precommit:
+    name: build
+    runs-on: ubuntu-20.04
     env:
       LANG: en_US.UTF-8
       LC_ALL: en_US.UTF-8
