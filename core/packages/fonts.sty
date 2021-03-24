@@ -1,0 +1,17 @@
+% Configure a directory location for fonts(default: 'fonts/')
+\newcommand*{\fontdir}[1][assets/fonts/]{\def\@fontdir{#1}}
+\fontdir
+
+
+% Set the FontAwesome font to be up-to-date.
+\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+
+% Main document font
+\setmainfont[
+  Path=\@fontdir ,
+  Extension = .ttf ,
+  UprightFont = *-regular ,
+  BoldFont = *-bold ,
+  ItalicFont = *-italic ,
+  BoldItalicFont = *-bolditalic
+]{Lato}
