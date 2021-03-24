@@ -60,25 +60,6 @@
   \fi
 \fi
 
-% Configure a directory location for fonts(default: 'fonts/')
-\newcommand*{\fontdir}[1][static/fonts/]{\def\@fontdir{#1}}
-\fontdir
-
-
-% Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
-
-% Main document font
-\setmainfont[
-  Path=\@fontdir ,
-  Extension = .ttf ,
-  UprightFont = *-regular ,
-  BoldFont = *-bold ,
-  ItalicFont = *-italic ,
-  BoldItalicFont = *-bolditalic
-]{Lato}
-
-
 \ifxetexorluatex
   \RequirePackage{fontspec}
 \else
@@ -233,16 +214,6 @@
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
-\NewInfoField{email}{\faAt}[mailto:]
-\NewInfoField{mailaddress}{\faEnvelopeS}
-\NewInfoField{phone}{\faPhone}
-\NewInfoField{homepage}{\faGlobe}[https://]
-\NewInfoField{link}{\faGlobe}[https://]
-\NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedIn}[https://linkedin.com/in/]
-\NewInfoField{github}{\faGitHub}[https://github.com/]
-\NewInfoField{orcid}{\faOrcid}[https://orcid.org/]
-\NewInfoField{location}{\faMapMarker}
 
 % v1.2: Support for multiple photos
 \newlength{\altacv@photos@width}
@@ -308,73 +279,6 @@
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
-\newcommand{\cvsection}[2][]{%
-  \bigskip%
-  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-  {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
-  {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
-}
-
-\newcommand{\cvsubsection}[1]{%
-  \smallskip%
-  {\color{subheading}\cvsubsectionfont{#1}\par}\medskip
-}
-
-% v1.1.4: fixes inconsistent font size
-\newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-    \textbf{\color{accent}#2}\par
-    \smallskip
-  }
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendarR\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
-  \medskip\normalsize
-}
-
-\newcommand{\cvrole}[3]{%
-  \smallskip\normalsize
-  \ifstrequal{#1}{}{}{
-  \textbf{\color{accent}#1}\par
-  \smallskip}
-  \ifstrequal{#2}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendarR\hspace{0.5em}#2}}}%
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faGlobe\hspace{0.5em}#3}}}\par
-  \medskip\normalsize
-}
-
-
-\newcommand{\cvachievement}[3]{%
-  \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-  \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
-  & #3
-  \end{tabularx}%
-  \smallskip
-}
-
-\newcommand{\cvhonor}[5]{%
-  \begin{tabularx}
-    {\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-    \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2} \\
-    & \small\normalfont{#3} \\
-    & \small\normalfont{#4} \\
-    & \small\normalfont{#5}
-  %% & #3
-  \end{tabularx}%
-  \smallskip
-}
-
-\newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};\par
-}
-
-\newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{\textbf{#1}}\hfill
-\foreach \x in {1,...,5}{%
-  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}
-}\par
-}
-
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
 \newcommand{\wheelchart}[4][0]{%
     \begingroup\centering
@@ -430,39 +334,10 @@
     \endgroup
 }
 
-\newcommand{\cvref}[3]{%
-    \textcolor{emphasis}{\textbf{#1}}\par
-    \smallskip\normalsize
-    \ifstrequal{#2}{}{}{
-        {\small\email{#2}}\par
-        \smallskip
-    }
-    \ifstrequal{#3}{}{}{
-      {\small\normalfont{#3}}
-    }%
-    \medskip\normalsize
-}
-
-\newcommand\cvcert[1]{
-    \small
-    \textcolor{emphasis}{\textbf{#1}}\par
-    \medskip\normalsize
-}
-
-\newcommand{\cvtool}[1]{%
-      \ifbolded
-      \small\textcolor{hard}{\textbf{#1}}
-        \global\boldedfalse
-      \else
-        \small\textcolor{lite}{\normalfont{#1}}
-        \global\boldedtrue
-      \fi
-}
 
 \newcommand{\lildot}[0]{%
     \,\,\tiny\faCircleS\,\,
 }
-
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
