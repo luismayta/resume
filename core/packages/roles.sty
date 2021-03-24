@@ -1,0 +1,9 @@
+\newcommand{\cvrole}[3]{%
+  \smallskip\normalsize
+  \ifstrequal{#1}{}{}{
+  \textbf{\color{accent}#1}\par
+  \smallskip}
+  \ifstrequal{#2}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendarR\hspace{0.5em}#2}}}%
+  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faGlobe\hspace{0.5em}#3}}}\par
+  \medskip\normalsize
+}
