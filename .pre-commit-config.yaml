@@ -5,9 +5,20 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.11.1
+    rev: v2.12.1
     hooks:
       - id: validate_manifest
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.0.0
+    hooks:
+      - id: codespell
+        args: [--ignore-words=.codespell-ignores]
+        exclude: >
+          (?x)^(
+            .+\.vendor\/.*$|
+            .+\.node_modules\/.*$|
+            .+\.lock$|
+          )$
   - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
     rev: v1.2.1
     hooks:
@@ -19,7 +30,7 @@ repos:
         args: []
         files: .py$
   - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v2.7.2
+    rev: v3.0.0a1
     hooks:
       - id: pylint
         exclude: __pycache__|migrations|conf.py|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
@@ -32,7 +43,7 @@ repos:
     hooks:
       - id: black
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.0
+    rev: 3.9.1
     hooks:
       - id: flake8
   - repo: https://github.com/pre-commit/mirrors-mypy
@@ -70,31 +81,35 @@ repos:
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
-      - id: mixed-line-ending
-        fix: lr
       - id: check-executables-have-shebangs
-  - repo: https://github.com/tcassou/python-pre-commit-hooks
-    rev: 3383e2f83463370cf4651040fb697a636bb0374e
-    hooks:
-      - id: do_not_commit
   - repo: https://github.com/asottile/blacken-docs
     rev: v1.10.0
     hooks:
       - id: blacken-docs
         additional_dependencies:
           - black
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.45.0
+  - repo: https://github.com/hadenlabs/pre-commit-hooks
+    rev: c2b6aefa5f710fc1289b549ba81f1f83eb8cc137
     hooks:
-      - id: terraform_fmt
-      - id: terraform_docs
-  - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.7.1.1
-    hooks:
+      - id: do-not-commit
+      - id: markdown-link-check
+        exclude: \.tpl.md$
       - id: shellcheck
-        exclude: (^provision/script/wait-for-it.sh$|^provision/git/hooks/prepare-commit-msg$)
+        exclude: >
+          (?x)^(
+            .+\.provision/git/hooks/prepare-commit-msg$|
+            .+\.tpl.sh$|
+          )$
         args:
           - --exclude=SC1072,SC1073,SC2068
+
+      - id: checkov
+      - id: todocheck
+      - id: gitleaks
+        args:
+          - --path=.
+          - --repo-config-path=.github/linters/.gitleaks.toml
+          - --verbose
   - repo: local
     hooks:
       - id: prettier
