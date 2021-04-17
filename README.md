@@ -18,11 +18,7 @@
 
 An elegant [LaTeX](https://www.latex-project.org/) resume template, compiled with [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX)
 
-## :page_facing_up: License
-
-resume is an open-sourced software licensed under the [MIT license](LICENSE.md).
-
-## :sparkles: Features
+## Features
 
 - Easy to be further customized or extended
 - Full support for unicode characters
@@ -43,7 +39,7 @@ This is a list of applications that need to be installed previously to enjoy all
 
 ```
 
-## :blue_book: References
+## References
 
 For additional context, refer to some of these links.
 
@@ -53,7 +49,7 @@ For additional context, refer to some of these links.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/luismayta/resume/issues), send us an [email](email) or join our [Slack Community](slack).
+File a GitHub [issue](https://github.com/luismayta/resume/issues).
 
 ## Contributing
 
@@ -61,7 +57,7 @@ File a GitHub [issue](https://github.com/luismayta/resume/issues), send us an [e
 
 Please use the [issue tracker](https://github.com/luismayta/resume/issues) to report any bugs or file feature requests.
 
-### Developing
+### Development
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -73,9 +69,20 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
 
-#### Versioning
+## Module Versioning
 
-Releases are managed using github release feature. We use [Semantic Versioning](http://semver.org) for all the releases. Every change made to the code base will be referred to in the release notes (except for cleanups and refactorings).
+This Module follows the principles of [Semantic Versioning (SemVer)](https://semver.org/).
+
+Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following constructs:
+
+1. Use the `MAJOR` version for incompatible changes.
+1. Use the `MINOR` version when adding functionality in a backwards compatible manner.
+1. Use the `PATCH` version when introducing backwards compatible bug fixes.
+
+### Backwards compatibility in `0.0.z` and `0.y.z` version
+
+- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is increased. (Initial development)
+- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is increased. (Pre-release)
 
 ## Copyright
 
@@ -84,6 +91,10 @@ Copyright © 2018-2021 [Hadenlabs](https://hadenlabs.com)
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
+
+## License
+
+The code and styles are licensed under the LGPL-3.0 license [See project license.](LICENSE).
 
 ## Don't forget to 🌟 Star 🌟 the repo if you like resume
 
