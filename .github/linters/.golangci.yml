@@ -1,0 +1,81 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# GOLANG LINTER RULES EXAMPLE
+# ----------------------------------------------------------------------------------------------------------------------
+
+# configure golangci-lint
+# see https://github.com/golangci/golangci-lint/blob/master/.golangci.example.yml
+
+run:
+  skip-dirs:
+    - .gen
+    - node_modules
+  skip-files:
+    - ".*_gen\\.go$"
+    - ".resolvers\\.go$"
+
+linters-settings:
+  goimports:
+    local-prefixes: github.com/golangci/golangci-lint
+  golint:
+    min-confidence: 0
+  linters-settings.misspell:
+    locale: 'US'
+    ignore-words:
+      - cancelling
+  goconst:
+    # minimal length of string constant, 3 by default
+    min-len: 3
+    # minimal occurrences count to trigger, 3 by default
+    min-occurrences: 3
+  lll:
+    # max line length, lines longer will be reported. Default is 120.
+    # '\t' is counted as 1 character by default, and can be changed with the tab-width option
+    line-length: 140
+    # tab width in spaces. Default to 1.
+    tab-width: 1
+  dupl:
+    # tokens count to trigger issue, 150 by default
+    threshold: 100
+
+linters:
+  enable-all: true
+  disable:
+    - gomnd
+    - funlen
+    - maligned
+    - wsl
+    - testpackage
+    - goerr113
+    - interfacer
+    - scopelint
+
+    # Drives todos nuts
+    - godox
+
+output:
+  format: colored-line-number
+
+service:
+  prepare:
+    - GO111MODULE=on go mod vendor # required currently or golangci breaks
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - dupl
+        - gochecknoglobals
+        - gochecknoinits
+        - unused
+        - paralleltest
+        - staticcheck
+        - ineffassign
+        - unparam
+        - exhaustivestruct
+    - path: cmd/
+      linters:
+        - gocyclo
+        - dupl
+        - gochecknoglobals
+        - gochecknoinits
+        - exhaustivestruct
