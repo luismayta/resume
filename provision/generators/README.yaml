@@ -43,15 +43,14 @@ description: |-
 
 # Bulleted features to display
 features:
-  - "Easy to be further customized or extended"
-  - "Full support for unicode characters"
-  - "FontAwesome 5 support"
+  - 'Easy to be further customized or extended'
+  - 'Full support for unicode characters'
+  - 'FontAwesome 5 support'
 
 references:
   - name: 'billryan resume'
     url: 'https://github.com/billryan/resume'
     description: 'Inspiration'
-
 
 requirements: |-
 
