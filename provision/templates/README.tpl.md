@@ -44,7 +44,7 @@
 
 {{ if has (ds "config") "todo" }}
 
-## To-do
+## TODO
 
 {{ range $todo := (ds "config").todo }}
 {{ printf "* [%s](%s)" $todo.name $todo.url }}
