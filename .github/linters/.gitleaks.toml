@@ -117,6 +117,32 @@ title = "gitleaks config"
     tags = ["env"]
 
 [[rules]]
+    description = "Email"
+    regex = '''[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'''
+    tags = ["email"]
+    [rules.allowlist]
+        description = "ignore emails"
+        regexes = [
+            '''[a-zA-Z0-9._%+-]+@users.noreply.github.com''',
+            '''git@github.com''',
+            '''git@gitlab.com''',
+            '''slovacus@gmail.com''',
+            '''hola@hadenlabs.com''',
+            '''support@hadenlbas.com''',
+            '''support@hadenlabs.com''',
+            '''dum-u@hadenlabs.com''',
+            '''adrien+dev@schischi.me''',
+            '''honza@egoistic.biz''',
+            '''jdekoning@javydekoning.com''',
+            '''liantze@gmail.com''',
+            '''taboada.al@hotmail.com''',
+            '''xdanaux@gmail.com''',
+            '''xxx@luismayta.me''',
+            '''adrien+dev@schischi.me''',
+            '''yuanbin2014@gmail.com''',
+        ]
+
+[[rules]]
     description = "High Entropy"
     regex = '''[0-9a-zA-Z-_!{}/=]{4,120}'''
     file = '''(?i)(dump.sql|high-entropy-misc.txt)$'''
@@ -145,14 +171,19 @@ title = "gitleaks config"
 
 [[rules]]
     description = "Files with keys and credentials"
-    file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|ppk)'''
-    tags = ["key", "credentials"]
+    file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass)$'''
+    tags = ["key", "files"]
+
+[[rules]]
+    description = "Extension Files with keys and credentials"
+    file = '''(.*?)(pub|pem|ppk|key)$'''
+    tags = ["key", "files"]
 
 # Global allowlist
 [allowlist]
     description = "files allowlists"
     files = [
-      '''(.*?)(jpg|gif|doc|pdf|bin)$''',
+      '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
       '''^\.gitignore$''',
       '''^\.gitleaks.toml$''',
       '''^yarn.lock$''',
@@ -160,11 +191,15 @@ title = "gitleaks config"
     commits = [
       '''76e55a969c354aa750d8395d7cdf826b0390364c''',
       '''3c0abad64d38efe7dbb4d0bb327fa7bf32908a1c''',
+      '''31c8121a231bf422987b9f083234e53fb479d4b5''',
+      '''3281cc17eedaa8ca06dc6f7c92e0f897ef48694c''',
+      '''4fb67bddda294d95b10f34172a246e0c5ab747bf''',
     ]
 
 [whitelist]
-	description = "Ignore gitleaks config"
+	description = "Ignore"
 	files = [
+    '''(.*?)(jpg|gif|png|doc|pdf|bin|mp3|mp4|mov|ttf|woff|woff2|eot|lock)$''',
     '''^\.gitleaks.toml$''',
     '''^\.gitignore$''',
     '''^yarn.lock$''',
