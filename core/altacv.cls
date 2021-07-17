@@ -44,10 +44,6 @@
 % loading fonts
 \RequirePackage{fontspec}
 
-% Needed to use icons from font-awesome
-% (https://github.com/posquit0/latex-fontawesome)
-\RequirePackage{fontawesome}
-
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
 \ifxetex
