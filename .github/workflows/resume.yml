@@ -1,21 +1,33 @@
-name: build and deploy resume
+name: create-resume
 
 on:
+  schedule:
+    - cron: '0 0 * * *' # every day at midnight
+
+  push:
+    branches:
+      - develop
+
   pull_request:
     branches:
       - develop
+
 jobs:
   resume:
     runs-on: Ubuntu-20.04
     container:
       image: hadenlabs/xelatex:18.04
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v1
+      - name: checkout
+        if: ${{ !env.ACT }}
+        uses: actions/checkout@v2
+        with:
+          path: 'resume'
       - name: build resume
         run: |
           xelatex -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
       - name: commit resume pdf
+        if: ${{ !env.ACT }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'ci: generate resume'
