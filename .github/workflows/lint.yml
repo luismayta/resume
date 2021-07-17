@@ -16,7 +16,7 @@ jobs:
   pre-commit:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: checkout
         if: ${{ !env.ACT }}
         uses: actions/checkout@v2
         with:
