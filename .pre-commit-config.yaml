@@ -1,6 +1,9 @@
+default_stages:
+  - commit
+
 repos:
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.0.0
+    rev: v2.1.0
     hooks:
       - id: codespell
         args: [--ignore-words=.codespell-ignores]
@@ -10,17 +13,24 @@ repos:
             .+\.node_modules\/.*$|
             .+\.lock$|
           )$
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v5.0.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ['@hadenlabs/commitlint-config']
+        args:
+          - --config=.github/linters/.commitlintrc.json
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
       - id: detect-private-key
         files: ^(?!\.?git-crypt)
-        exclude: .github/linters/.gitleaks.toml
+        exclude: >
+          (?x)^(
+            .+\.gitleaks.toml$|
+          )$
       - id: check-merge-conflict
-      - id: trailing-whitespace
-        files: ^tf|-|\.(py|tfvars|tf|tfenv|env|yml|yaml|pem|key|mock)$
-      - id: end-of-file-fixer
-        files: ^tf|-|\.(py|env|yml|yaml|pem|key|mock)$
       - id: check-added-large-files
         files: ^tf|-|\.(py|env|yml|yaml)$
       - id: check-case-conflict
@@ -33,17 +43,16 @@ repos:
       - id: check-docstring-first
       - id: requirements-txt-fixer
       - id: check-symlinks
-      - id: name-tests-test
-        args:
-          - --django
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
   - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: f6cc97fd7683611087766bb542c9a11e70db2f92
+    rev: 1298041a5a096f910b544237c5df67747af2688f
     hooks:
       - id: do-not-commit
       - id: markdown-link-check
+        args:
+          - --config=.github/linters/markdown-link-config.json
         exclude: \.tpl.md$
       - id: shellcheck
         exclude: >
@@ -53,42 +62,9 @@ repos:
           )$
         args:
           - --exclude=SC1072,SC1073,SC2068
-
-      - id: checkov
       - id: todocheck
       - id: gitleaks
         args:
           - --path=.
           - --repo-config-path=.github/linters/.gitleaks.toml
           - --verbose
-
-  - repo: local
-    hooks:
-      - id: prettier
-        name: prettier
-        language: system
-        entry: ./node_modules/prettier/bin-prettier.js
-        args:
-          - '--write=true'
-          - '--config=.github/linters/prettier.config.js'
-          - '--ignore-path=.github/linters/.prettierignore'
-        files: \.(js|jsx|json|ts|tsx|mjs|d.ts|md|yml|yaml|gql|graphql|mjml)$
-        exclude: node_modules
-      - id: eslint
-        name: eslint
-        language: node
-        entry: node_modules/eslint/bin/eslint.js
-        args:
-          - '--fix'
-          - '--color'
-          - '--config=.github/linters/.eslintrc.js'
-          - '--ignore-path=.github/linters/.eslintignore'
-        files: \.(js|jsx|ts|tsx|mjs|d.ts)$
-        exclude: node_modules
-      - id: stylint
-        name: stylint
-        language: system
-        pass_filenames: true
-        entry: node_modules/stylelint/bin/stylelint.js --config=.github/linters/.stylintrc --syntax less **/*.less
-        args: [--fix]
-        files: \.(css|scss|sass|less)$
