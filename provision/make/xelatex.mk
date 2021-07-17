@@ -15,4 +15,4 @@ xelatex:
 xelatex.make: xelatex.resume
 
 xelatex.resume:
-	docker run --rm -v "${PWD}":/root hadenlabs/xelatex:18.04 -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
+	docker run --rm -v "${PWD}":/data hadenlabs/xelatex:4.1 -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
