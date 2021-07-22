@@ -133,9 +133,6 @@ acs-*.bib
 *.glg
 *.glo
 *.gls
-*.*-glg
-*.*-glo
-*.*-gls
 *.glsdefs
 *.lzo
 *.lzs
@@ -148,6 +145,7 @@ acs-*.bib
 
 # gregoriotex
 *.gaux
+*.glog
 *.gtex
 
 # htlatex
@@ -163,8 +161,8 @@ acs-*.bib
 
 # knitr
 *-concordance.tex
-# TODO Comment the next line if you want to keep your tikz graphics files
-*.tikz
+# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
+# *.tikz
 *-tikzDictionary
 
 # listings
@@ -182,7 +180,6 @@ acs-*.bib
 *.maf
 *.mlf
 *.mlt
-*.mtc
 *.mtc[0-9]*
 *.slf[0-9]*
 *.slt[0-9]*
@@ -194,6 +191,9 @@ _minted*
 
 # morewrites
 *.mw
+
+# newpax
+*.newpax
 
 # nomencl
 *.nlg
@@ -304,6 +304,9 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
+# xwatermark package
+*.xwm
+
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
@@ -323,6 +326,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -359,8 +363,8 @@ build/Release
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
-typings/
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
@@ -370,9 +374,6 @@ typings/
 
 # Optional eslint cache
 .eslintcache
-
-# Optional stylelint cache
-.stylelintcache
 
 # Microbundle cache
 .rpt2_cache/
@@ -392,7 +393,7 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
-.env*.local
+.env.production
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -400,18 +401,11 @@ typings/
 
 # Next.js build output
 .next
+out
 
 # Nuxt.js build / generate output
 .nuxt
 dist
-
-# Storybook build outputs
-.out
-.storybook-out
-storybook-static
-
-# rollup.js default build output
-dist/
 
 # Gatsby files
 .cache/
@@ -437,9 +431,12 @@ dist/
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-# Temporary folders
-tmp/
-temp/
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -453,14 +450,16 @@ __pycache__/
 .Python
 build/
 develop-eggs/
+dist/
 downloads/
 eggs/
 .eggs/
+lib/
+lib64/
 parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -489,7 +488,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-pytestdebug.log
+cover/
 
 # Translations
 *.mo
@@ -509,9 +508,9 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-doc/_build/
 
 # PyBuilder
+.pybuilder/
 target/
 
 # Jupyter Notebook
@@ -522,7 +521,9 @@ profile_default/
 ipython_config.py
 
 # pyenv
-.python-version
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
@@ -530,9 +531,6 @@ ipython_config.py
 #   having no cross-platform support, pipenv may install dependencies that don't work, or not
 #   install all needed dependencies.
 #Pipfile.lock
-
-# poetry
-#poetry.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
@@ -545,15 +543,12 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-# .env
-.env/
-.venv/
+.venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
-pythonenv*
 
 # Spyder project settings
 .spyderproject
@@ -576,15 +571,8 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
-# operating system-related files
-# file properties cache/storage on macOS
-*.DS_Store
-# thumbnail cache on Windows
-Thumbs.db
-
-# profiling data
-.prof
-
+# Cython debug symbols
+cython_debug/
 
 ### Zsh ###
 # Zsh compiled script + zrecompile backup
@@ -610,7 +598,6 @@ zsdoc/data
 
 # MichaelAquilina/zsh-autoswitch-virtualenv plugin's files
 # (for Zsh plugins using Python)
-.venv
 
 # Zunit tests' output
 /tests/_output/*
