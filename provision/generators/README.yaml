@@ -21,12 +21,15 @@ github_repo: luismayta/resume
 
 # Badges to display
 badges:
-  - name: GitHub release
-    image: https://img.shields.io/github/release/luismayta/resume?style=flat-square
-    url: https://github.com/luismayta/resume/releases/latest
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/resume
+    url: https://github.com/luismayta/resume/releases
   - name: Lint
     image: https://img.shields.io/github/workflow/status/luismayta/resume/lint-code
     url: https://github.com/luismayta/resume/actions?workflow=lint-code
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
