@@ -10,6 +10,10 @@ name: resume
 email:
   support: support@hadenlabs.com
 
+confluence:
+  space: Resume
+  title: Project
+
 # Logo for this project
 #logo: docs/logo.png
 
@@ -54,7 +58,8 @@ references:
 
 requirements: |-
 
-  This is a list of applications that need to be installed previously to enjoy all the goodies of this configuration:
+  This is a list of applications that need to be installed previously
+  to enjoy all the goodies of this configuration:
 
   - [Pyenv](https://github.com/pyenv/pyenv)
   - [Docker](https://www.docker.com/)
@@ -62,7 +67,5 @@ requirements: |-
 # How to use this project
 usage: |-
   ```bash
-
-    make xelatex.resume
-
+    task xelatex.resume
   ```
