@@ -27,6 +27,9 @@ tasks:
       - task: check
     cmds:
       - cmd: >-
-          docker run --rm -v "${PWD}":/data hadenlabs/xelatex:4.1
-            -output-directory=./ resume.tex
-            -file-line-error -interaction=nonstopmode
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume.tex
+          -file-line-error -interaction=nonstopmode
