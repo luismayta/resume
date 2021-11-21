@@ -1,13 +1,11 @@
 <!-- Space: Resume -->
 <!-- Parent: Project -->
-<!-- Title: Testing -->
+<!-- Title: Commands -->
 
-<!-- Label: Testing -->
+<!-- Label: Resume -->
+<!-- Label: Project -->
+<!-- Label: Commands -->
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
 
-# Testing
-
-## Running tests
-
-## Running tests Syntax
+## Commands
