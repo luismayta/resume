@@ -1,0 +1,32 @@
+version: '3'
+
+tasks:
+  check:
+    desc: Exist xelatex and dependences
+    run: once
+    deps:
+      - task: check:docker
+
+  check:docker:
+    desc: Exist docker
+    run: once
+    preconditions:
+      - sh: command -v docker
+        msg: 'Please Install docker'
+
+  make:
+    desc: execute make.
+    run: once
+    cmds:
+      - task: resume
+
+  resume:
+    desc: Generate resume using xelatex.
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: >-
+          docker run --rm -v "${PWD}":/data hadenlabs/xelatex:4.1
+            -output-directory=./ resume.tex
+            -file-line-error -interaction=nonstopmode
