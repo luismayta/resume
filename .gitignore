@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,latex,zsh
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,latex,zsh
+# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,latex,zsh,sonar
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,latex,zsh,sonar
 
 ### Go ###
 # Binaries for programs and plugins
@@ -438,6 +438,16 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+# Optional stylelint cache
+.stylelintcache
+
+# SvelteKit build / generate output
+.svelte-kit
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -574,6 +584,10 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+### Sonar ###
+#Sonar generated dir
+/.sonar/
+
 ### Zsh ###
 # Zsh compiled script + zrecompile backup
 *.zwc
@@ -603,4 +617,11 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-# End of https://www.toptal.com/developers/gitignore/api/python,node,go,latex,zsh
+# End of https://www.toptal.com/developers/gitignore/api/python,node,go,latex,zsh,sonar
+# custom git ignore files
+*.lock.hcl
+.scannerwork
+.secrets
+.task
+TMP_CHANGELOG.md
+bin
