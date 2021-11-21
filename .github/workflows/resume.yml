@@ -1,37 +1,45 @@
 name: create-resume
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # every day at midnight
+  workflow_run:
+    workflows:
+      - lint-code
+    types:
+      - completed
 
   push:
     branches:
       - develop
+      - main
 
-  pull_request:
-    branches:
-      - develop
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+      # https://semver.org/ proper release tags, more or less
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+      # prerelease tags, more or less
+      - 'v[0-9]+.[0-9]+.[0-9]+-*'
 
 jobs:
   resume:
-    runs-on: Ubuntu-20.04
-    container:
-      image: hadenlabs/xelatex:18.04
+    runs-on: ubuntu-20.04
     steps:
-      - name: checkout
+      - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
         uses: actions/checkout@v2
         with:
-          path: 'resume'
-      - name: build resume
-        run: |
-          xelatex -output-directory=./ resume.tex -file-line-error -interaction=nonstopmode
-      - name: commit resume pdf
+          fetch-depth: 2
+
+      - name: Install Task
+        uses: arduino/setup-task@v1
+
+      - name: Make Resume
+        run: task xelatex:resume
+
+      - name: Commit resume pdf
         if: ${{ !env.ACT }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'ci: generate resume'
-          branch: develop
           commit_options: '--no-verify --signoff'
           commit_user_name: '@slovacus'
           commit_user_email: 'slovacus@gmail.com'
