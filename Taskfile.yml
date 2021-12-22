@@ -79,7 +79,6 @@ tasks:
       - git:check
       - gitflow:check
       - docs:check
-      - sonar:check
 
   readme:
     run: once
@@ -110,3 +109,8 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: python:environment
+
+  resume:
+    desc: Generate resume
+    cmds:
+      - task: xelatex:resume
