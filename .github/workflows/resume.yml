@@ -41,6 +41,6 @@ jobs:
         with:
           commit_message: 'ci: generate resume'
           commit_options: '--no-verify --signoff'
-          commit_user_name: '@slovacus'
-          commit_user_email: 'slovacus@gmail.com'
-          commit_author: 'slovacus <slovacus@gmail.com>'
+          commit_user_name: 'Luis Mayta'
+          commit_user_email: 'luis@hadenlabs.com'
+          commit_author: 'Luis Mayta <luis@hadenlabs.com>'
