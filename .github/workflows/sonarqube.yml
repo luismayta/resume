@@ -6,13 +6,6 @@ on:
       - lint-code
     types:
       - completed
-
-  pull_request:
-    branches:
-      - develop
-      - main
-
-  push:
     branches:
       - develop
       - main
@@ -31,6 +24,7 @@ env:
 jobs:
   sonar-scan:
     runs-on: ubuntu-20.04
+
     steps:
       - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
