@@ -54,7 +54,7 @@ tasks:
       - task: check:go
 
   fmt:
-    desc: Setup go dependences.
+    desc: format files go.
     run: once
     cmds:
       - gofmt -s -l -w {{.GO_FILES}}
@@ -89,7 +89,7 @@ tasks:
     desc: Run go test against code.
     run: once
     cmds:
-      - go test -v ./...
+      - go test -v ./... -coverprofile cover.out
     deps:
       - task: check:go
 

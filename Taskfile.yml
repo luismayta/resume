@@ -2,14 +2,13 @@ version: '3'
 
 includes:
   changelog: ./provision/task/changelog.yml
+  confluence: ./provision/task/confluence.yml
   python: ./provision/task/python.yml
   git: ./provision/task/git.yml
   docs: ./provision/task/docs.yml
   docker: ./provision/task/docker.yml
-  plantuml: ./provision/task/plantuml.yml
-  gitflow: ./provision/task/gitflow.yml
   version: ./provision/task/version.yml
-  mark: ./provision/task/mark.yml
+  plantuml: ./provision/task/plantuml.yml
   prettier: ./provision/task/prettier.yml
   sonar: ./provision/task/sonar.yml
   xelatex: ./provision/task/xelatex.yml
@@ -77,7 +76,6 @@ tasks:
       - python:check
       - changelog:check
       - git:check
-      - gitflow:check
       - docs:check
 
   readme:
@@ -90,6 +88,7 @@ tasks:
         --out {{.README_FILE}}
         --datasource config={{.README_YAML}}
         --datasource includes={{.README_INCLUDES}}
+      - task: prettier
 
   prettier:
     run: once
@@ -100,10 +99,11 @@ tasks:
   setup:
     desc: Setup dependences of project
     cmds:
+      - >-
+        [ -e ".env" ] || cp -rf .env.example .env
       - task: python:setup
       - task: python:precommit
       - task: git:setup
-      - task: gitflow:setup
 
   environment:
     desc: Setup environment of project
