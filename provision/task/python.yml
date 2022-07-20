@@ -39,6 +39,20 @@ tasks:
       - task: check:python
       - task: check:pipenv
 
+  fmt:
+    desc: format black python.
+    run: once
+    cmds:
+      - cmd: >-
+          pipenv run black ./ {{.CLI_ARGS}}
+
+  test:
+    desc: run pytest.
+    run: once
+    cmds:
+      - cmd: >-
+          pipenv run pytest
+
   environment:
     desc: Generate environment python.
     run: once

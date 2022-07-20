@@ -1,6 +1,3 @@
- <!-- Space: Resume -->
-<!-- Title: Project -->
-
 <!--
 
 
@@ -36,8 +33,10 @@ This is a list of applications that need to be installed previously to enjoy all
 
 ## Usage
 
+# How to use this project
+
 ```bash
-  task xelatex.resume
+task xelatex.resume
 ```
 
 ## References
@@ -54,22 +53,7 @@ File a GitHub [issue](https://github.com/luismayta/resume/issues).
 
 ## Contributing
 
-### Bug Reports & Feature Requests
-
-Please use the [issue tracker](https://github.com/luismayta/resume/issues) to report any bugs or file feature requests.
-
-### Development
-
-In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
-
-1.  **Fork** the repo on GitHub
-2.  **Clone** the project to your own machine
-3.  **Commit** changes to your own branch
-4.  **Push** your work back up to your fork
-
-5.  Submit a **Pull Request** so that we can review your changes
-
-**NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
+See [Contributing](./docs/contributing.md).
 
 ## Module Versioning
 

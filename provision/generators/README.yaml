@@ -10,10 +10,6 @@ name: resume
 email:
   support: support@hadenlabs.com
 
-confluence:
-  space: Resume
-  title: Project
-
 # Logo for this project
 #logo: docs/logo.png
 
@@ -64,8 +60,5 @@ requirements: |-
   - [Pyenv](https://github.com/pyenv/pyenv)
   - [Docker](https://www.docker.com/)
 
-# How to use this project
-usage: |-
-  ```bash
-    task xelatex.resume
-  ```
+usages:
+  - docs/usage.md
