@@ -36,7 +36,7 @@ This is a list of applications that need to be installed previously to enjoy all
 # How to use this project
 
 ```bash
-task xelatex.resume
+task xelatex:resume
 ```
 
 ## References
