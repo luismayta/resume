@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
 <!-- Title: Components Resume -->
-
 <!-- Label: Resume -->
 <!-- Label: Project -->
 <!-- Label: Components -->
