@@ -45,9 +45,13 @@ vars:
     bin
     .scannerwork
     .secrets
+    public
     TMP_CHANGELOG.md
     .task
+    .terraform.lock.hcl
     *.lock.hcl
+    *.zip
+    .external_modules
 
 tasks:
   default:
@@ -95,6 +99,13 @@ tasks:
     desc: Execute prettier files
     cmds:
       - task: prettier:all
+
+  upgrade:
+    run: once
+    desc: Execute upgrade packages
+    cmds:
+      - >-
+        pipenv run pre-commit autoupdate
 
   setup:
     desc: Setup dependences of project
