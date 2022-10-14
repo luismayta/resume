@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
 <!-- Title: Contributing GitFlow Resume -->
-
 <!-- Label: Resume -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->

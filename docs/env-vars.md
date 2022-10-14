@@ -1,10 +1,9 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
-<!-- Title: Env Vars Resume -->
-
+<!-- Title: EnvVars Resume -->
 <!-- Label: Resume -->
 <!-- Label: Project -->
-<!-- Label: Env Vars -->
+<!-- Label: EnvVars -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
 
