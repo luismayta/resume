@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
 <!-- Title: Contributing Resume -->
-
 <!-- Label: Resume -->
 <!-- Label: Contributing -->
 <!-- Include: disclaimer.md -->

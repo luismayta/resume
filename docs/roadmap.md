@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
 <!-- Title: Roadmap Resume -->
-
 <!-- Label: Roadmap -->
 <!-- Include: disclaimer.md -->
 <!-- Include: ac:toc -->
