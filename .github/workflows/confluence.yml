@@ -1,11 +1,7 @@
 name: confluence
 
 on:
-  workflow_run:
-    workflows:
-      - lint-code
-    types:
-      - completed
+  push:
     branches:
       - develop
       - main
@@ -23,18 +19,19 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v17.1
+        uses: tj-actions/changed-files@v26
         with:
           files: |
-            *.md
+            docs/*.md
           files_ignore: |
             *.tpl.md
+            ^.terraform
 
       - name: Sync confluence
         uses: hadenlabs/action-confluence-sync@0.1.0

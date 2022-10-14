@@ -1,11 +1,7 @@
 name: sonarqube
 
 on:
-  workflow_run:
-    workflows:
-      - lint-code
-    types:
-      - completed
+  push:
     branches:
       - develop
       - main
@@ -28,7 +24,7 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         if: ${{ !env.ACT }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 2
 
