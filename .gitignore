@@ -168,9 +168,6 @@ acs-*.bib
 *.trc
 *.xref
 
-# hypdoc
-*.hd
-
 # hyperref
 *.brf
 
@@ -673,8 +670,12 @@ zsdoc/data
 # End of https://www.toptal.com/developers/gitignore/api/python,node,go,latex,zsh,sonar
 # custom git ignore files
 *.lock.hcl
+*.zip
+.external_modules
 .scannerwork
 .secrets
 .task
+.terraform.lock.hcl
 TMP_CHANGELOG.md
 bin
+public
