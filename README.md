@@ -12,7 +12,7 @@
 
   -->
 
-[![Latest Release](https://img.shields.io/github/release/luismayta/resume)](https://github.com/luismayta/resume/releases) [![Lint](https://img.shields.io/github/workflow/status/luismayta/resume/lint-code)](https://github.com/luismayta/resume/actions?workflow=lint-code) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
+[![Latest Release](https://img.shields.io/github/release/luismayta/resume)](https://github.com/luismayta/resume/releases) [![Lint](https://img.shields.io/github/workflow/status/luismayta/resume/lint-code)](https://github.com/luismayta/resume/actions?workflow=lint-code) [![CI](https://img.shields.io/github/workflow/status/luismayta/resume/ci)](https://github.com/luismayta/resume/actions?workflow=ci) [![Test](https://img.shields.io/github/workflow/status/luismayta/resume/test)](https://github.com/luismayta/resume/actions?workflow=test) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow)](https://conventionalcommits.org) [![KeepAChangelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange)](https://keepachangelog.com)
 
 # resume
 

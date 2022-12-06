@@ -1,7 +1,6 @@
 <!-- Space: Projects -->
 <!-- Parent: Resume -->
 <!-- Title: Security Resume -->
-
 <!-- Label: Resume -->
 <!-- Label: Security -->
 <!-- Include: docs/disclaimer.md -->

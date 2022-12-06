@@ -1,11 +1,11 @@
 {
-  "baseUrl": "https://github.com/hadenlabs/resume",
+  "baseUrl": "https://github.com/luismayta/resume",
   "ignorePatterns": [
     {
       "pattern": "^https://hadenlabs.com"
     },
     {
-      "pattern": "^https://github.com/hadenlabs/resume/compare"
+      "pattern": "^https://github.com/luismayta/resume/compare"
     }
   ],
   "replacementPatterns": [
