@@ -11,7 +11,7 @@ email:
   support: support@hadenlabs.com
 
 # Logo for this project
-#logo: docs/logo.png
+# logo: docs/logo.png
 
 # License of this project
 license: 'LGPL-3.0'
@@ -27,6 +27,12 @@ badges:
   - name: Lint
     image: https://img.shields.io/github/workflow/status/luismayta/resume/lint-code
     url: https://github.com/luismayta/resume/actions?workflow=lint-code
+  - name: CI
+    image: https://img.shields.io/github/workflow/status/luismayta/resume/ci
+    url: https://github.com/luismayta/resume/actions?workflow=ci
+  - name: Test
+    image: https://img.shields.io/github/workflow/status/luismayta/resume/test
+    url: https://github.com/luismayta/resume/actions?workflow=test
   - name: pre-commit
     image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     url: https://github.com/pre-commit/pre-commit
