@@ -18,6 +18,10 @@ repos:
         args: [--ignore-words=.codespell-ignores]
         exclude: >
           (?x)^(
+            .+\.vendor\/.*$|
+            .+\.node_modules\/.*$|
+            .+\.sops.*$|
+            .+\.lock$|
             go.mod|
             go.sum|
           )$
