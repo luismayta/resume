@@ -36,8 +36,7 @@ insert_final_newline = false
 indent_style = space
 indent_size = 2
 
-# 4 space indentation
-[*.{py}]
+[*.{js,jsx,ts,tsx,css,less,sass,scss,vue,py}]
 indent_style = space
 indent_size = 4
 

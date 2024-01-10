@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   check:
@@ -12,7 +12,7 @@ tasks:
     run: once
     preconditions:
       - sh: command -v ssh-keygen
-        msg: 'Please Install ssh-keygen'
+        msg: "Please Install ssh-keygen"
 
   make:pem:dev:
     desc: Make pem for stage dev
@@ -21,6 +21,14 @@ tasks:
       - task: make
         vars:
           STAGE: dev
+
+  make:pem:staging:
+    desc: Make pem for stage staging
+    run: once
+    cmds:
+      - task: make
+        vars:
+          STAGE: staging
 
   make:pem:testing:
     desc: Make pem for stage testing
@@ -43,3 +51,46 @@ tasks:
         openssl rsa -in {{.PROJECT_NAME}}-{{.STAGE}} -outform pem > {{.PROJECT_NAME}}-{{.STAGE}}.pem
       - >-
         chmod 0600 {{.PROJECT_NAME}}-{{.STAGE}}.pem
+    status:
+      - test -f {{.PROJECT_NAME}}-{{.STAGE}}.pem
+
+  export:
+    desc: export keys.
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - >-
+        mkdir -p {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/
+      - >-
+        mv {{.PROJECT_NAME}}-{{.STAGE}} {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/
+        mv {{.PROJECT_NAME}}-{{.STAGE}}.pub {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/
+        mv {{.PROJECT_NAME}}-{{.STAGE}}.pem {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/
+    status:
+      - test -f {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/{{.PROJECT_NAME}}-{{.STAGE}}
+      - test -f {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/{{.PROJECT_NAME}}-{{.STAGE}}.pub
+      - test -f {{.KEYBASE_PROJECT_PATH}}/{{.STAGE}}/keys/{{.PROJECT_NAME}}-{{.STAGE}}.pem
+
+  export:pem:dev:
+    desc: Export pem for stage dev
+    run: once
+    cmds:
+      - task: export
+        vars:
+          STAGE: dev
+
+  export:pem:staging:
+    desc: Export pem for stage staging
+    run: once
+    cmds:
+      - task: export
+        vars:
+          STAGE: staging
+
+  export:pem:prod:
+    desc: Export pem for stage prod
+    run: once
+    cmds:
+      - task: export
+        vars:
+          STAGE: prod

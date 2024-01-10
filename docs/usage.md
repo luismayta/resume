@@ -1,5 +1,11 @@
 # How to use this project
 
 ```bash
-task xelatex.resume
+task setup
+```
+
+## Start project
+
+```bash
+task start
 ```

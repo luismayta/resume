@@ -1,0 +1,129 @@
+[tool.poetry]
+name = "resume"
+version = "0.0.0"
+description = "resume"
+authors = ["Luis Mayta <luis@hadenlabs.com>"]
+license = "LGPL-3.0"
+readme = "README.md"
+repository = "https://github.com/luismayta/resume"
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.12"
+boto3 = "^1.34.9"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+bumpversion = "^0.6.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+pymdown-extensions = "^10.2.1"
+doc8 = "*"
+grip = "^4.6.1"
+mkdocs = "^1.5.2"
+mkdocs-material = "^9.2.6"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+mock = "^5.1.0"
+pytest-mock = "^3.11.1"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+freezegun = "^1.2.2"
+responses = "^0.23.3"
+pytest-asyncio = "^0.21.1"
+pyhamcrest = "^2.0.4"
+factory-boy = "^3.3.0"
+
+[tool.poetry.group.test_integration]
+optional = true
+
+[tool.poetry.group.test_integration.dependencies]
+torch = "^2.0.1"
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.lint.dependencies]
+pre-commit = "^3.3.3"
+ruff = "^0.0.286"
+types-toml = "^0.10.8.7"
+black = "^23.12.1"
+
+[tool.poetry.group.typing]
+optional = true
+
+[tool.poetry.group.typing.dependencies]
+mypy = "^1.5.1"
+
+[tool.mypy]
+ignore_missing_imports = "True"
+disallow_untyped_defs = "True"
+exclude = ["notebooks"]
+
+[tool.poetry.extras]
+docs = ["mkdocs", "mkdocs-material"]
+
+[tool.black]
+line-length = 90
+
+[tool.pyright]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+# enable subset of "strict"
+reportDuplicateImport = true
+reportInconsistentConstructor = true
+reportInvalidStubStatement = true
+reportOverlappingOverload = true
+reportPropertyTypeMismatch = true
+reportUntypedClassDecorator = true
+reportUntypedFunctionDecorator = true
+reportUntypedNamedTuple = true
+reportUnusedImport = true
+# disable subset of "basic"
+reportGeneralTypeIssues = false
+reportMissingModuleSource = false
+reportOptionalCall = false
+reportOptionalIterable = false
+reportOptionalMemberAccess = false
+reportOptionalOperand = false
+reportOptionalSubscript = false
+reportPrivateImportUsage = false
+reportUnboundVariable = false
+
+[tool.ruff]
+select = [
+  "E", # pycodestyle
+  "F", # pyflakes
+  "I", # isort
+]
+
+[tool.isort]
+line_length = 90
+atomic = true
+profile = "black"
+skip_gitignore = true
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+tests = []
+skips = []
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.poetry_bumpversion.file."sonar-project.properties"]
+search = 'sonar.projectVersion={current_version}'
+replace = 'sonar.projectVersion={new_version}'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
