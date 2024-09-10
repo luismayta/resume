@@ -13,11 +13,11 @@ on:
       - main
 
     tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
+      - "[0-9]+.[0-9]+.[0-9]+"
       # https://semver.org/ proper release tags, more or less
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - "v[0-9]+.[0-9]+.[0-9]+"
       # prerelease tags, more or less
-      - 'v[0-9]+.[0-9]+.[0-9]+-*'
+      - "v[0-9]+.[0-9]+.[0-9]+-*"
 
 jobs:
   resume:
@@ -39,8 +39,8 @@ jobs:
         if: ${{ !env.ACT }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'ci: generate resume'
-          commit_options: '--no-verify --signoff'
-          commit_user_name: 'Luis Mayta'
-          commit_user_email: 'luis@hadenlabs.com'
-          commit_author: 'Luis Mayta <luis@hadenlabs.com>'
+          commit_message: "ci: generate resume"
+          commit_options: "--no-verify --signoff"
+          commit_user_name: "Luis Mayta"
+          commit_user_email: "luis@hadenlabs.com"
+          commit_author: "Luis Mayta <luis@hadenlabs.com>"
