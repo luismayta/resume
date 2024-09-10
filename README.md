@@ -36,7 +36,19 @@ This is a list of applications that need to be installed previously to enjoy all
 # How to use this project
 
 ```bash
-task xelatex.resume
+task setup
+```
+
+## Start project
+
+```bash
+task start
+```
+
+## Generate Resume
+
+```bash
+task resume
 ```
 
 ## References
@@ -72,7 +84,7 @@ Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following co
 
 ## Copyright
 
-Copyright © 2018-2022 [Hadenlabs](https://hadenlabs.com)
+Copyright © 2018-2024 [Hadenlabs](https://hadenlabs.com)
 
 ## Trademarks
 
