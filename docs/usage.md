@@ -9,3 +9,9 @@ task setup
 ```bash
 task start
 ```
+
+## Generate Resume
+
+```bash
+task resume
+```

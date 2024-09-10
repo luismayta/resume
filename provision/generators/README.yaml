@@ -14,7 +14,7 @@ email:
 # logo: docs/logo.png
 
 # License of this project
-license: 'LGPL-3.0'
+license: "LGPL-3.0"
 
 # Canonical GitHub repo
 github_repo: luismayta/resume
@@ -49,14 +49,14 @@ description: |-
 
 # Bulleted features to display
 features:
-  - 'Easy to be further customized or extended'
-  - 'Full support for unicode characters'
-  - 'FontAwesome 5 support'
+  - "Easy to be further customized or extended"
+  - "Full support for unicode characters"
+  - "FontAwesome 5 support"
 
 references:
-  - name: 'billryan resume'
-    url: 'https://github.com/billryan/resume'
-    description: 'Inspiration'
+  - name: "billryan resume"
+    url: "https://github.com/billryan/resume"
+    description: "Inspiration"
 
 requirements: |-
 
