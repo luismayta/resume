@@ -10,14 +10,26 @@
   \medskip\normalsize
 }
 
-\newcommand{\cvexperience}[4]{%
+\newcommand{\cvexperience}[5]{%
+    % Job Title
     {\large\color{emphasis}\textbf{#1}\par}
-  \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-      \textbf{\color{accent}#2}\par
     \smallskip
-  }
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendarR\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\textbf{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}}\par
-  \medskip\normalsize
+
+    % Company (Optional)
+    \ifstrequal{#2}{}{}{
+      \textbf{\color{accent}#2}\par
+      \smallskip
+    }
+
+    % Time (Optional)
+    \ifstrequal{#3}{}{}{
+      \makebox[0.3\linewidth][l]{\small\faCalendarR\hspace{0.5em}#3}\par
+      \smallskip
+    }
+
+    % Time, Dates, and Location on a Single Line
+    \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\small\faCalendarR\hspace{0.5em}#4}}%
+    \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\small\textbf{\faMapMarker\hspace{0.5em}#5}}}\par
+
+    \medskip\normalsize
 }
