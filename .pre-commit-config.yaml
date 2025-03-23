@@ -68,14 +68,9 @@ repos:
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
-  - repo: https://github.com/psf/black
-    rev: 24.8.0
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.12.2
     hooks:
-      - id: black
-  - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: e50751c9323b0a03f27271c57513f5c389f6591b
-    hooks:
-      - id: do-not-commit
       - id: markdown-link-check
         args:
           - --config=.ci/linters/markdown-link-config.json
@@ -86,6 +81,11 @@ repos:
             docs\/include\/terraform.md$|
             .+\.tpl.md$|
           )$
+
+  - repo: https://github.com/hadenlabs/pre-commit-hooks
+    rev: e50751c9323b0a03f27271c57513f5c389f6591b
+    hooks:
+      - id: do-not-commit
 
       - id: shellcheck
         exclude: >
