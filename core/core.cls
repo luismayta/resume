@@ -18,6 +18,7 @@
 \usepackage{./core/packages/contacts}
 \usepackage{./core/packages/bibliography}
 \usepackage{./core/packages/achievement}
+\usepackage{./core/packages/commands}
 
 %% package settings
 \usepackage{./core/settings/fontsettings}
