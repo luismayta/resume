@@ -12,24 +12,24 @@
 
 \newcommand{\cvexperience}[5]{%
     % Job Title
-    {\large\color{emphasis}\textbf{#1}\par}
+    {\large\color{job}\textbf{#1}\par}
     \smallskip
 
     % Company (Optional)
     \ifstrequal{#2}{}{}{
-      \textbf{\color{accent}#2}\par
+      \textbf{\color{company}#2}\par
       \smallskip
     }
 
     % Time (Optional)
     \ifstrequal{#3}{}{}{
-      \makebox[0.3\linewidth][l]{\small\faCalendarR\hspace{0.5em}#3}\par
+      \makebox[0.3\linewidth][l]{\small\color{dates}\faCalendarR\hspace{0.5em}#3}\par
       \smallskip
     }
 
     % Time, Dates, and Location on a Single Line
-    \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\small\faCalendarR\hspace{0.5em}#4}}%
-    \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\small\textbf{\faMapMarker\hspace{0.5em}#5}}}\par
+    \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\small\color{dates}\faCalendarR\hspace{0.5em}#4}}%
+    \ifstrequal{#5}{}{}{\makebox[0.5\linewidth][l]{\small\color{emphasis}\textbf{\faMapMarker\hspace{0.5em}#5}}}\par
 
     \medskip\normalsize
 }
