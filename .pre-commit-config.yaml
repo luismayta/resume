@@ -19,7 +19,8 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
-        args: [--ignore-words=.codespell-ignores]
+        args:
+          - --ignore-words=.ci/linters/.codespell-ignores
         exclude: >
           (?x)^(
             go.mod|

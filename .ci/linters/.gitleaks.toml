@@ -162,7 +162,9 @@ title = "gitleaks config"
             '''host=HOST''',
             '''--private-key={{.PRIVATE_KEY_FILE}}''',
             '''PASSWORD=XXXXXX''',
+            '''password={password}''',
         ]
+
 
 [[rules]]
     description = "High Entropy"
@@ -224,7 +226,7 @@ title = "gitleaks config"
   paths = [
     '''^vendor/''',
     '''^bower_components/''',
-    '''^public/js/bower_components/''',
+    '''^public/''',
     '''^node_modules/''',
     '''^theme/''',
   ]
