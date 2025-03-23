@@ -6,6 +6,9 @@
     },
     {
       "pattern": "^https://github.com/luismayta/resume/compare"
+    },
+    {
+      "pattern": "^mailto:.*@hadenlabs\\.com"
     }
   ],
   "replacementPatterns": [

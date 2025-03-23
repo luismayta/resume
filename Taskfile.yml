@@ -4,6 +4,7 @@ version: "3"
 includes:
   xelatex: ./provision/task/xelatex.yml
   docs: ./provision/task/docs.yml
+
   ansible:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/ansible/Taskfile.yml"
   pre-commit:
@@ -16,8 +17,12 @@ includes:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/confluence/Taskfile.yml"
   python:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/python/Taskfile.yml"
+  node:
+    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/node/Taskfile.yml"
   git:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/git/Taskfile.yml"
+  # docs:
+  #   taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/docs/Taskfile.yml"
   docker:
     taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/main/docker/Taskfile.yml"
   version:
@@ -68,16 +73,16 @@ dotenv:
 vars:
   PROJECT_NAME: resume
   ORGANIZATION: luismayta
-  DOCKER_PLATFORM: linux/amd64
   REVIEWERS: luismayta
+  DOCKER_PLATFORM: linux/amd64
   PYTHON_VERSION: 3.11.5
-  NODE_VERSION: v18.20.4
+  NODE_VERSION: v20.18.3
   GIT_IGNORES: python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
   COMMIT: $(git rev-parse HEAD)
   RELEASE_DIR: ./release
   DATE: $(date +%s)
   GOLANGCI_VERSION: 1.42.0
-  TERRAFORM_VERSION: 1.10.2
+  TERRAFORM_VERSION: 1.10.5
   README_FILE: README.md
   GIT_IGNORES_CUSTOM: |
     bin
@@ -160,6 +165,7 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: python:environment
+      - task: node:environment
 
   resume:
     desc: Generate resume
