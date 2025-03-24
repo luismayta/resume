@@ -3,14 +3,14 @@
 }
 
 \newcommand{\cvskill}[2]{%
-\textcolor{emphasis}{\textbf{#1}}\hfill
+\emphasis{#1}\hfill
 \foreach \x in {1,...,5}{%
   \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}
 }\par
 }
 
 \newcommand{\cvref}[3]{%
-    \textcolor{emphasis}{\textbf{#1}}\par
+    \emphasis{#1}\par
     \smallskip\normalsize
     \ifstrequal{#2}{}{}{
         {\small\phone{#2}}\par
@@ -24,7 +24,7 @@
 
 \newcommand\cvcert[1]{
     \small
-    \textcolor{emphasis}{\textbf{#1}}\par
+    \emphasis{#1}\par
     \medskip\normalsize
 }
 
