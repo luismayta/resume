@@ -2,7 +2,7 @@ ci:
   autoupdate_schedule: monthly
 
 default_stages:
-  - commit
+  - pre-commit
 
 default_language_version:
   node: 18.18.1
@@ -23,11 +23,13 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
-        args: [--ignore-words=.ci/linters/.codespell-ignores]
+        args:
+          - --ignore-words=.ci/linters/.codespell-ignores
         exclude: >
           (?x)^(
             go.mod|
             go.sum|
+            app/ia/datasets\/.*$|
             openapi.yaml|
             resume.bcf|
             .+\.vendor\/.*$|
@@ -90,7 +92,6 @@ repos:
     rev: e50751c9323b0a03f27271c57513f5c389f6591b
     hooks:
       - id: do-not-commit
-
       - id: shellcheck
         exclude: >
           (?x)^(

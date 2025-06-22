@@ -165,7 +165,6 @@ title = "gitleaks config"
             '''password={password}''',
         ]
 
-
 [[rules]]
     description = "High Entropy"
     regex = '''[0-9a-zA-Z-_!{}/=]{4,120}'''
@@ -237,6 +236,7 @@ title = "gitleaks config"
     '''^yarn.lock$''',
     '''^vendor/(.*?)$''',
     '''^sonar-project.properties$''',
+    '''^test/fixtures/keys/.*-test.*$''',
     '''^node_modules/(.*?)$''',
   ]
   commits = [
