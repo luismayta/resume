@@ -1,11 +1,24 @@
 \ProvidesClass{core}[Luis Mayta class]
 
-% Pass all other (unknown) options to altacv to handle
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{altacv}}
 \ProcessOptions\relax
 
-%% Load AltaCV base class ~~~~~~~~~~~~~~~~~~~
 \LoadClass{./core/altacv}
+
+\usepackage{fontspec}
+
+\setmainfont[
+  Ligatures=TeX,
+  BoldFont=Lato-Bold,
+  ItalicFont=Lato-Italic,
+  BoldItalicFont=Lato-BoldItalic
+]{Lato}
+
+%% Icons
+\usepackage{fontawesome5}
+
+%% Utils
+\usepackage{xifthen}
 
 %% Package Control ~~~~~~~~~~~~~~~~~~~~~~~~~~
 \usepackage{./core/packages/fonts}
@@ -20,5 +33,5 @@
 \usepackage{./core/packages/achievement}
 \usepackage{./core/packages/commands}
 
-%% package settings
+%% Settings
 \usepackage{./core/settings/fontsettings}
