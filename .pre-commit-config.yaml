@@ -1,18 +1,18 @@
 ci:
   autoupdate_schedule: monthly
 
+default_language_version:
+  node: 24.11.1
+
 default_stages:
   - pre-commit
-
-default_language_version:
-  node: 18.18.1
-
 exclude: >
   (?x)^(
     ^(\/|)vendor\/(.*?)$|
     .+\.node_modules\/.*$|
     .+\.external_modules.*$|
     .+\.terraform.*$|
+    pnpm-lock.yaml|
     .+\.venv.*$|
     .+\.lock$|
     .+\.mdx$|
@@ -20,7 +20,7 @@ exclude: >
 
 repos:
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         args:
@@ -31,7 +31,6 @@ repos:
             go.sum|
             app/ia/datasets\/.*$|
             openapi.yaml|
-            resume.bcf|
             .+\.vendor\/.*$|
             .+\.node_modules\/.*$|
             .+\.sops.*$|
@@ -39,7 +38,7 @@ repos:
             .+\.mdx$|
           )$
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v9.20.0
+    rev: v9.24.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
@@ -47,7 +46,7 @@ repos:
         args:
           - --config=.ci/linters/.commitlintrc.json
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: detect-private-key
         files: ^(?!\.?git-crypt)
@@ -65,7 +64,6 @@ repos:
       - id: check-yaml
         args:
           - --allow-multiple-documents
-      - id: check-byte-order-marker
       - id: check-ast
       - id: debug-statements
       - id: check-docstring-first
@@ -74,8 +72,9 @@ repos:
       - id: file-contents-sorter
       - id: fix-encoding-pragma
       - id: sort-simple-yaml
+
   - repo: https://github.com/tcort/markdown-link-check
-    rev: v3.12.2
+    rev: v3.14.2
     hooks:
       - id: markdown-link-check
         args:
@@ -89,7 +88,7 @@ repos:
           )$
 
   - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: e50751c9323b0a03f27271c57513f5c389f6591b
+    rev: 0.6.0
     hooks:
       - id: do-not-commit
       - id: shellcheck

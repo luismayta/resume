@@ -59,7 +59,7 @@ For additional context, refer to some of these links.
 
 ## Help
 
-**Got a question?**
+### Got a question?
 
 File a GitHub [issue](https://github.com/luismayta/resume/issues).
 
@@ -84,7 +84,7 @@ Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following co
 
 ## Copyright
 
-Copyright © 2018-2025 [Hadenlabs](https://hadenlabs.com)
+Copyright © 2018-2026 [Hadenlabs](https://hadenlabs.com)
 
 ## Trademarks
 
@@ -97,10 +97,3 @@ The code and styles are licensed under the LGPL-3.0 license [See project license
 ## Don't forget to 🌟 Star 🌟 the repo if you like resume
 
 [Your feedback is appreciated](https://github.com/luismayta/resume/issues)
-
-
-<!-- Security scan triggered at 2025-09-02 15:58:26 -->
-
-<!-- Security scan triggered at 2025-09-09 06:04:13 -->
-
-<!-- Security scan triggered at 2025-09-28 16:14:49 -->

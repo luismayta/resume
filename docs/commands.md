@@ -79,6 +79,8 @@ task version:minor
 task version:patch
 ```
 
+## Infrastructure
+
 ### Terragrunt
 
 | Field |        Description        |
