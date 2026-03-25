@@ -1950,7 +1950,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/48/9c/6d8035cafa2d2d314
 
 [[package]]
 name = "resume"
-version = "0.1.0"
+version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
