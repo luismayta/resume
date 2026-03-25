@@ -3,50 +3,67 @@ version: "3"
 
 includes:
   pre-commit:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/pre-commit/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/pre-commit/Taskfile.yml"
   changelog:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/changelog/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/changelog/Taskfile.yml"
   confluence:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/confluence/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/confluence/Taskfile.yml"
   node:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/node/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/node/Taskfile.yml"
   python:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/python/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/python/Taskfile.yml"
   uv:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/uv/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/uv/Taskfile.yml"
   pnpm:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/pnpm/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/pnpm/Taskfile.yml"
   go:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/go/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/go/Taskfile.yml"
   gradle:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/gradle/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/gradle/Taskfile.yml"
   coursier:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/coursier/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/coursier/Taskfile.yml"
   git:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/git/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/git/Taskfile.yml"
   docs:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/docs/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/docs/Taskfile.yml"
   docker:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/docker/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/docker/Taskfile.yml"
   version:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/version/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/version/Taskfile.yml"
+  release:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/release/Taskfile.yml"
+  opencode:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/opencode/Taskfile.yml"
+  biome:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/biomejs/Taskfile.yml"
+  bun:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/bun/Taskfile.yml"
+  skills:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/skills/Taskfile.yml"
   plantuml:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/plantuml/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/plantuml/Taskfile.yml"
   prettier:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/prettier/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/prettier/Taskfile.yml"
   sonar:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/sonar/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/sonar/Taskfile.yml"
   keybase:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/keybase/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/keybase/Taskfile.yml"
   multipass:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/multipass/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/multipass/Taskfile.yml"
   ssh:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/ssh/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/ssh/Taskfile.yml"
   openssl:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/openssl/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/openssl/Taskfile.yml"
   terraform:
-    taskfile: "https://raw.githubusercontent.com/hadenlabs/tasks/refs/heads/main/src/terraform/Taskfile.yml"
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/terraform/Taskfile.yml"
+  terragrunt:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/terragrunt/Taskfile.yml"
+  ansible:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/ansible/Taskfile.yml"
+  lua:
+    taskfile: "https://raw.githubusercontent.com/InfosisARG/tasks/refs/heads/main/src/lua/Taskfile.yml"
   xelatex: ./provision/task/xelatex.yml
+
 
 env:
   DOCKER:
@@ -64,6 +81,8 @@ env:
   README_INCLUDES: file://
   TERRAFORM_PATH: ./
   PYTHON_PACKAGE_MANAGER: uv
+  SKILL_REPOS:
+    https://gitlab.infosisglobal.com/architecture/skills.git
 
 dotenv:
   - .env
@@ -84,6 +103,7 @@ vars:
   GOLANGCI_VERSION: 1.42.0
   TERRAFORM_VERSION: 1.11.4
   README_FILE: README.md
+  # NOTE: Agent workflow conventions live in `infobot.toml`.
   GIT_IGNORES_CUSTOM: |
     bin
     .project
@@ -135,9 +155,11 @@ tasks:
       - changelog:check
       - git:check
       - docs:check
+      - opencode:check
+      - bun:check
+      - skills:check
 
   readme:
-    run: once
     desc: Generate Readme
     silent: true
     cmds:
@@ -146,19 +168,13 @@ tasks:
         --out {{.README_FILE}}
         --datasource config={{.README_YAML}}
         --datasource includes={{.README_INCLUDES}}
-      - task: prettier
+      - task: format
 
-  prettier:
-    run: once
-    desc: Execute prettier files
+  format:
+    desc: Execute format files
     cmds:
-      - task: prettier:all
+      - task: biome:fix
       - task: uv:fmt
-
-  test:
-    desc: Execute of test
-    cmds:
-      - task: go:test
 
   upgrade:
     run: once
@@ -173,15 +189,32 @@ tasks:
       - >-
         [ -e ".env" ] || cp -rf .env.example .env
       - task: uv:setup
-      - task: uv:precommit
-      - task: git:setup
+      - task: bun:setup
+      - task: skills:setup
 
   environment:
     desc: Setup environment of project
     cmds:
-      - task: terraform:environment
       - task: uv:environment
+      - task: pre-commit:setup
+      - task: git:setup
+      - task: bun:setup
       - task: pnpm:environment
+
+  validate:
+    desc: "Run validate on all files"
+    cmds:
+      - task: pre-commit:lint
+
+  fix:
+    desc: "Run fix on all files"
+    cmds:
+      - task: biome:fix
+
+  test:
+    desc: "Run all tests"
+    cmds:
+      - task: pre-commit:lint
 
   resume:
     desc: Generate resume
