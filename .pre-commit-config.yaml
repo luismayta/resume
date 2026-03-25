@@ -41,7 +41,7 @@ repos:
           go.sum|
           openapi.yaml|
           provision/prompts\/.*$|
-          resume.bcf|
+          ^resume.*$|
           .+\.lock$|
           .+\.mdx$|
           .+\.node_modules\/.*$|
