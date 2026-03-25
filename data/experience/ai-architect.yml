@@ -1,0 +1,86 @@
+---
+# Experience entries for AI Architect profile
+experience:
+  - company: "Infosis"
+    role:
+      en: "AI Platform Architect / Lead ML Systems Engineer"
+      es: "Arquitecto de Plataformas AI / Lead ML Systems Engineer"
+    period: "Aug 2025 -- Present"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "mcp-server"
+      - "rag-pipelines"
+      - "vector-search"
+      - "kubernetes"
+    achievements:
+      en:
+        - "Led the design and implementation of an MCP Server (Model Context Protocol), orchestrating LLM-based services, RAG pipelines, and vector search (Qdrant) with scalability and high availability."
+        - "Delivered AI service interfaces and APIs, including a Discord-based assistant and production-grade REST/GraphQL endpoints (Go, Python)."
+        - "Defined and operated AI platform infrastructure on Kubernetes, applying IaC (Terraform, Terragrunt) with full observability and cost control on AWS."
+      es:
+        - "Lideró el diseño e implementación de un Servidor MCP (Model Context Protocol), orquestando servicios basados en LLM, pipelines RAG y búsqueda vectorial (Qdrant) con escalabilidad y alta disponibilidad."
+        - "Entregó interfaces de servicios de IA y APIs, incluyendo un asistente basado en Discord y endpoints REST/GraphQL de producción (Go, Python)."
+        - "Definió y operó infraestructura de plataforma de IA en Kubernetes, aplicando IaC (Terraform, Terragrunt) con observabilidad completa y control de costos en AWS."
+
+  - company: "Infosis"
+    role:
+      en: "Lead Software Architect"
+      es: "Lead Software Architect"
+    period: "Nov 2022 -- Aug 2025"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "ml-systems"
+      - "fullstack-platforms"
+      - "technical-leadership"
+    achievements:
+      en:
+        - "Designed and led end-to-end ML systems spanning computer vision, NLP, and LLM-based solutions with measurable business impact."
+        - "Architected scalable full-stack platforms combining GraphQL APIs, mobile clients, and cloud-native backends."
+        - "Provided technical leadership and architectural guidance to cross-functional teams, directly contributing to revenue growth."
+      es:
+        - "Diseñó y lideró sistemas ML de extremo a extremo que abarcan visión por computadora, NLP y soluciones basadas en LLM con impacto de negocio medible."
+        - "Arquitectó plataformas full-stack escalables combinando APIs GraphQL, clientes móviles y backends cloud-native."
+        - "Brindó liderazgo técnico y guía arquitectónica a equipos multifuncionales, contribuyendo directamente al crecimiento de ingresos."
+
+  - company: "Maker Development"
+    role:
+      en: "Machine Learning Engineer"
+      es: "Ingeniero de Machine Learning"
+    period: "Nov 2023 -- May 2024"
+    location: "Peru"
+    type: "Part-time"
+    emphasis:
+      - "ml-production"
+      - "computer-vision"
+      - "nlp"
+    achievements:
+      en:
+        - "Implemented production ML models for object recognition, facial recognition, NLP, and generative media use cases."
+        - "Collaborated on applied AI solutions focused on real-world deployment, performance, and user experience."
+      es:
+        - "Implementó modelos ML de producción para reconocimiento de objetos, reconocimiento facial, NLP y casos de uso de medios generativos."
+        - "Colaboró en soluciones de IA aplicadas enfocadas en despliegue en producción, rendimiento y experiencia del usuario."
+
+  - company: "Multiple Companies"
+    role:
+      en: "Senior SRE / DevOps Engineer"
+      es: "Senior SRE / Ingeniero DevOps"
+    period: "2017 -- 2022"
+    location: "LATAM"
+    type: "Full-time / Consulting"
+    emphasis:
+      - "kubernetes"
+      - "infrastructure"
+      - "observability"
+      - "ci-cd"
+    achievements:
+      en:
+        - "Designed and operated cloud-native platforms using Kubernetes, Terraform, and AWS at scale."
+        - "Built observability, CI/CD, and automation foundations enabling reliable production systems."
+        - "Optimized infrastructure cost and performance across multiple high-traffic environments."
+      es:
+        - "Diseñó y operó plataformas cloud-native usando Kubernetes, Terraform y AWS a escala."
+        - "Construyó cimientos de observabilidad, CI/CD y automatización permitiendo sistemas de producción confiables."
+        - "Optimizó costos y rendimiento de infraestructura en múltiples entornos de alto tráfico."

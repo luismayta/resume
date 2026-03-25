@@ -1,0 +1,65 @@
+---
+# Experience entries for Golang Developer profile
+experience:
+  - company: "Infosis"
+    role:
+      en: "Senior Backend Engineer / Golang Developer"
+      es: "Ingeniero Backend Senior / Desarrollador Golang"
+    period: "Nov 2022 -- Present"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "golang"
+      - "microservices"
+      - "api-design"
+    achievements:
+      en:
+        - "Developed high-performance microservices in Go serving millions of requests daily."
+        - "Designed and implemented RESTful and GraphQL APIs with authentication, rate limiting, and caching."
+        - "Applied Clean Architecture principles ensuring maintainability and testability of codebase."
+      es:
+        - "Desarrolló microservicios de alto rendimiento en Go sirviendo millones de solicitudes diarias."
+        - "Diseñó e implementó APIs RESTful y GraphQL con autenticación, rate limiting y caché."
+        - "Aplicó principios de Clean Architecture asegurando mantenibilidad y testabilidad del código."
+
+  - company: "Infosis"
+    role:
+      en: "Lead Software Architect"
+      es: "Lead Software Architect"
+    period: "Nov 2022 -- Aug 2025"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "backend"
+      - "api-design"
+      - "clean-architecture"
+    achievements:
+      en:
+        - "Architected scalable full-stack platforms combining GraphQL APIs, mobile clients, and cloud-native backends."
+        - "Provided technical leadership and architectural guidance to cross-functional teams."
+        - "Led backend modernization initiatives migrating legacy systems to Go microservices."
+      es:
+        - "Arquitectó plataformas full-stack escalables combinando APIs GraphQL, clientes móviles y backends cloud-native."
+        - "Brindó liderazgo técnico y guía arquitectónica a equipos multifuncionales."
+        - "Lideró iniciativas de modernización de backend migrando sistemas legacy a microservicios Go."
+
+  - company: "Multiple Companies"
+    role:
+      en: "Senior Software Engineer"
+      es: "Ingeniero de Software Senior"
+    period: "2017 -- 2022"
+    location: "LATAM"
+    type: "Full-time / Consulting"
+    emphasis:
+      - "golang"
+      - "backend"
+      - "performance"
+    achievements:
+      en:
+        - "Built and maintained production systems in Go, Python, and other languages."
+        - "Designed RESTful APIs and microservices architectures for high-scale applications."
+        - "Optimized performance and reliability of critical production services."
+      es:
+        - "Construyó y mantuvo sistemas de producción en Go, Python y otros lenguajes."
+        - "Diseñó APIs RESTful y arquitecturas de microservicios para aplicaciones de alta escala."
+        - "Optimizó rendimiento y confiabilidad de servicios críticos de producción."

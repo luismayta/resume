@@ -1,0 +1,42 @@
+---
+# Spanish translations
+labels:
+  # Personal
+  email: "Correo electrónico"
+  phone: "Teléfono"
+  location: "Ubicación"
+  homepage: "Sitio web"
+  
+  # Sections
+  skills: "Habilidades"
+  certifications: "Certificaciones"
+  education: "Educación"
+  languages: "Idiomas"
+  experience: "Experiencia"
+  recent_work_experience: "Experiencia Laboral Reciente"
+  honors: "Honores"
+  conferences: "Conferencias"
+  soft_skills: "Habilidades Blandas"
+  technical_domains: "Dominios Técnicos"
+  day_of_my_life: "Un Día de Mi Vida"
+  referess: "Referencias"
+  
+  # Experience
+  full_time: "Tiempo completo"
+  part_time: "Medio tiempo"
+  consulting: "Consultoría"
+  
+  # Skills subsections
+  ai_platform: "Plataformas AI & Tecnologías Emergentes"
+  cloud_infrastructure: "Cloud & Infraestructura"
+  software_engineering: "Ingeniería de Software"
+  programming_languages: "Lenguajes de Programación"
+  backend_apis: "Backend & APIs"
+  databases: "Bases de Datos"
+  frameworks_tools: "Frameworks & Herramientas"
+  devops_cloud: "DevOps & Cloud"
+  container_orchestration: "Orquestación de Contenedores"
+  infrastructure_as_code: "Infraestructura como Código"
+  observability: "Observabilidad"
+  cicd_automation: "CI/CD & Automatización"
+  cloud_platforms: "Plataformas Cloud"

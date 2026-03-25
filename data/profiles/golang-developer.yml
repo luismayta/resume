@@ -1,0 +1,28 @@
+---
+# Profile: Golang Developer
+profile:
+  id: golang-developer
+  name: "Golang Developer"
+  tagline:
+    en: "Senior Golang Developer | Backend Engineer | Microservices, APIs, Clean Architecture"
+    es: "Desarrollador Golang Senior | Ingeniero Backend | Microservicios, APIs, Clean Architecture"
+  
+personal:
+  name: "Luis Mayta"
+  photo: "./assets/images/me"
+  email: "luismayta4k@gmail.com"
+  phone: "(+51) 959-196-850"
+  location: "Lima, Peru"
+  homepage: "luismayta.github.io"
+  twitter: "slovacus"
+  linkedin: "luismayta"
+  github: "luismayta"
+  orcid: "0000-0003-0759-5687"
+
+emphasis:
+  - "golang"
+  - "microservices"
+  - "api-design"
+  - "clean-architecture"
+  - "backend"
+  - "performance"

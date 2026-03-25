@@ -1,0 +1,42 @@
+---
+# English translations
+labels:
+  # Personal
+  email: "Email"
+  phone: "Phone"
+  location: "Location"
+  homepage: "Homepage"
+  
+  # Sections
+  skills: "Skills"
+  certifications: "Certifications"
+  education: "Education"
+  languages: "Languages"
+  experience: "Experience"
+  recent_work_experience: "Recent Work Experience"
+  honors: "Honors"
+  conferences: "Conferences"
+  soft_skills: "Soft Skills"
+  technical_domains: "Technical Domains"
+  day_of_my_life: "Day of My Life"
+  referess: "References"
+  
+  # Experience
+  full_time: "Full-time"
+  part_time: "Part-time"
+  consulting: "Consulting"
+  
+  # Skills subsections
+  ai_platform: "AI Platform & Emerging Tech"
+  cloud_infrastructure: "Cloud & Infrastructure"
+  software_engineering: "Software Engineering"
+  programming_languages: "Programming Languages"
+  backend_apis: "Backend & APIs"
+  databases: "Databases"
+  frameworks_tools: "Frameworks & Tools"
+  devops_cloud: "DevOps & Cloud"
+  container_orchestration: "Container Orchestration"
+  infrastructure_as_code: "Infrastructure as Code"
+  observability: "Observability"
+  cicd_automation: "CI/CD & Automation"
+  cloud_platforms: "Cloud Platforms"

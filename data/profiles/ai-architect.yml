@@ -1,0 +1,28 @@
+---
+# Profile: AI Platform Architect
+profile:
+  id: ai-architect
+  name: "AI Platform Architect"
+  tagline:
+    en: "AI Platform Architect | Lead ML Systems Engineer | LLM, MCP, RAG, K8s, Go, Python"
+    es: "Arquitecto de Plataformas AI | Lead ML Systems Engineer | LLM, MCP, RAG, K8s, Go, Python"
+  
+personal:
+  name: "Luis Mayta"
+  photo: "./assets/images/me"
+  email: "luismayta4k@gmail.com"
+  phone: "(+51) 959-196-850"
+  location: "Lima, Peru"
+  homepage: "luismayta.github.io"
+  twitter: "slovacus"
+  linkedin: "luismayta"
+  github: "luismayta"
+  orcid: "0000-0003-0759-5687"
+
+emphasis:
+  - "mcp-server"
+  - "rag-pipelines"
+  - "vector-search"
+  - "kubernetes"
+  - "llm-orchestration"
+  - "ml-systems"

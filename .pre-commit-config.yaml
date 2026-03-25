@@ -82,7 +82,6 @@ repos:
       - id: requirements-txt-fixer
       - id: check-symlinks
       - id: file-contents-sorter
-      - id: fix-encoding-pragma
       - id: sort-simple-yaml
 
   - repo: https://github.com/tcort/markdown-link-check

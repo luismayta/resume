@@ -217,9 +217,77 @@ tasks:
       - task: pre-commit:lint
 
   resume:
-    desc: Generate resume
+    desc: "Generate resume (default: ai-architect-en)"
     cmds:
       - task: xelatex:resume
+
+  resume:profile:
+    desc: Generate resume for specific profile and language
+    vars:
+      PROFILE: '{{.PROFILE | default "ai-architect"}}'
+      LANG: '{{.LANG | default "en"}}'
+    cmds:
+      - cmd: python scripts/generate_resume.py --profile {{.PROFILE}} --lang {{.LANG}}
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-{{.PROFILE}}-{{.LANG}}.tex
+          -file-line-error -interaction=nonstopmode
+        desc: Build PDF for {{.PROFILE}}-{{.LANG}}
+
+  resume:all:
+    desc: Generate all 6 resume PDFs
+    cmds:
+      - cmd: python scripts/generate_resume.py --all
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-ai-architect-en.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-ai-architect-es.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-cloud-architect-en.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-cloud-architect-es.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-golang-developer-en.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./ resume-golang-developer-es.tex
+          -file-line-error -interaction=nonstopmode
+
+  resume:clean:
+    desc: Remove generated resume files
+    cmds:
+      - cmd: rm -f resume-*.tex resume-*.pdf
 
   help:
     cmds:

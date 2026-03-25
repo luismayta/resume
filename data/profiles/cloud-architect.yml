@@ -1,0 +1,28 @@
+---
+# Profile: Cloud Architect
+profile:
+  id: cloud-architect
+  name: "Cloud Architect"
+  tagline:
+    en: "Cloud Architect | Kubernetes Expert | AWS, Terraform, Infrastructure as Code"
+    es: "Arquitecto Cloud | Experto en Kubernetes | AWS, Terraform, Infraestructura como Código"
+  
+personal:
+  name: "Luis Mayta"
+  photo: "./assets/images/me"
+  email: "luismayta4k@gmail.com"
+  phone: "(+51) 959-196-850"
+  location: "Lima, Peru"
+  homepage: "luismayta.github.io"
+  twitter: "slovacus"
+  linkedin: "luismayta"
+  github: "luismayta"
+  orcid: "0000-0003-0759-5687"
+
+emphasis:
+  - "kubernetes"
+  - "aws"
+  - "terraform"
+  - "infrastructure"
+  - "cloud-native"
+  - "observability"

@@ -10,7 +10,7 @@ requires-python = ">=3.9"
 keywords = []
 authors = [{ name = "Luis Mayta", email = "luis@hadenlabs.com" }]
 
-dependencies = ["boto3>=1.26.130"]
+dependencies = ["boto3>=1.26.130", "pyyaml>=6.0"]
 
 [project.urls]
 Source = "https://github.com/luismayta/resume"
