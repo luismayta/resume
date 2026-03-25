@@ -1,6 +1,30 @@
 ---
 # Experience entries for Cloud Architect profile
 experience:
+  - company: "Infosis Arquitectura"
+    role:
+      en: "Cloud Architect / Multi-Agent Infrastructure Lead"
+      es: "Arquitecto Cloud / Lider de Infraestructura Multi-Agente"
+    period: "Mar 2025 -- Present"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "multi-agent"
+      - "kubernetes"
+      - "aws"
+      - "infrastructure"
+    achievements:
+      en:
+        - "Designed and implemented a multi-agent orchestration infrastructure (The Olympians) with 6 specialized AI agents supporting provider-agnostic LLM access (OpenAI, Anthropic, Gemini, Ollama)."
+        - "Built scalable agent execution environment on Kubernetes with auto-scaling, health monitoring, and graceful degradation."
+        - "Established secure inter-agent communication protocols with encrypted message passing and role-based access control."
+        - "Implemented cost optimization strategies through intelligent provider selection and dynamic resource allocation based on task complexity."
+      es:
+        - "Diseñó e implementó infraestructura de orquestación multi-agente (The Olympians) con 6 agentes IA especializados soportando acceso agnóstico a LLM (OpenAI, Anthropic, Gemini, Ollama)."
+        - "Construyó entorno de ejecución de agentes escalable en Kubernetes con auto-escalamiento, monitoreo de salud y degradación elegante."
+        - "Estableció protocolos de comunicación seguros entre agentes con paso de mensajes encriptado y control de acceso basado en roles."
+        - "Implementó estrategias de optimización de costos mediante selección inteligente de proveedores y asignación dinámica de recursos basada en complejidad de tareas."
+
   - company: "Infosis"
     role:
       en: "Lead Software Architect / Cloud Infrastructure Lead"

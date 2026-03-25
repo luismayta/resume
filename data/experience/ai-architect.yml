@@ -1,6 +1,29 @@
 ---
 # Experience entries for AI Architect profile
 experience:
+  - company: "Infosis Arquitectura"
+    role:
+      en: "AI Platform Architect / Multi-Agent Systems Lead"
+      es: "Arquitecto de Plataformas AI / Lider de Sistemas Multi-Agente"
+    period: "Mar 2025 -- Present"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "mcp-server"
+      - "llm-orchestration"
+      - "multi-agent"
+    achievements:
+      en:
+        - "Designed and implemented a multi-agent orchestration system (The Olympians) with 6 specialized AI agents: Zeus (Orchestrator), Hermes (Discovery), Apollo (Docs), Athena (Strategy), Aphrodite (UI/UX), Hephaestus (Execution)."
+        - "Built provider-agnostic architecture supporting OpenAI, Anthropic Claude, Google Gemini, and Ollama for flexible LLM selection and cost optimization."
+        - "Reduced development time by 40\\% through intelligent task routing and parallel agent execution with context preservation."
+        - "Implemented advanced orchestration patterns including sequential workflows, parallel execution, and conditional branching based on task complexity."
+      es:
+        - "Diseñó e implementó un sistema de orquestación multi-agente (The Olympians) con 6 agentes IA especializados: Zeus (Orquestador), Hermes (Descubrimiento), Apollo (Docs), Athena (Estrategia), Aphrodite (UI/UX), Hephaestus (Ejecución)."
+        - "Construyó arquitectura agnóstica de proveedores soportando OpenAI, Anthropic Claude, Google Gemini y Ollama para selección flexible de LLM y optimización de costos."
+        - "Reducó el tiempo de desarrollo en un 40\\% mediante enrutamiento inteligente de tareas y ejecución paralela de agentes con preservación de contexto."
+        - "Implementó patrones avanzados de orquestación incluyendo flujos de trabajo secuenciales, ejecución paralela y ramificación condicional basada en complejidad de tareas."
+
   - company: "Infosis"
     role:
       en: "AI Platform Architect / Lead ML Systems Engineer"

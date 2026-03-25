@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "last_run": "2026-03-25T20:59:46.806083Z",
+    "last_run": "2026-03-25T21:51:16.286022Z",
     "root": "/Users/luchomayta/Projects/src/github.com/luismayta/resume",
     "include_patterns": [
       "*.tex",
@@ -29,7 +29,7 @@
     "exceptions": []
   },
   "file_hashes": {
-    ".pre-commit-config.yaml": "de5c630ff105b77e47abe2604b005cbf",
+    ".pre-commit-config.yaml": "29b4cb782751dbf31922051ebc79b177",
     "Taskfile.yml": "07ac69c5bff1e31bbb1d926712bc722e",
     "config/color.tex": "087481bf5560582f955a2cf9df230963",
     "config/commands.tex": "8ea33300cee13424af5b0b2aeddd6d54",
@@ -53,12 +53,6 @@
     "page4sidebar.tex": "a7ccf67550593effb58510542f631589",
     "provision/diagrams/Taskfile.yml": "0e3595b25ff213adf0f0f10401982cb8",
     "provision/task/xelatex.yml": "1ec3cee6a843d7ba01c0a003a60777ce",
-    "resume-ai-architect-en.tex": "b33ce9dd272d15760c3492a9b24d272b",
-    "resume-ai-architect-es.tex": "5e02ddadca3d8aae6b3b5d4e2d97039b",
-    "resume-cloud-architect-en.tex": "ebe3c211774efae00ba652176c14d610",
-    "resume-cloud-architect-es.tex": "316b63779ea44d8d10af32750be5858f",
-    "resume-golang-developer-en.tex": "ac1de5aa70de4a904d743a25843344cd",
-    "resume-golang-developer-es.tex": "be5f447d0ed7f62ecc99a70722e4af46",
     "resume.tex": "36b63fa0407ea2c7a408b90d4c5073cd",
     "sections/day_of_my_life.tex": "54de58231fe875259cc41db44b97b460",
     "sections/experience.tex": "6b4cf1886431603838e19f94c90434e4",
@@ -77,19 +71,19 @@
     "sidebars/technical_domains.tex": "e72fb12ede0b7cf269d6f09b0bbe3c4b"
   },
   "folder_hashes": {
-    "data/sidebars/ai-architect": "79fd5885dc89b5edcd8d727361696b94",
-    "provision/diagrams": "d5bb1d6dea35da5174551c1b6ba3ebef",
-    "sidebars": "31d58bba7f52e1bef20e6e390cdfdffe",
-    "config": "8895101397f6e4c070e508f2e1900dd5",
-    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
-    "data": "7968cb1f3a810c56747a02aaf41b255d",
-    "data/sidebars/cloud-architect": "de638c413128a79413f374a1f683fe88",
     "openspec": "68f6e3a8a4b876bd3c810d1a46559f2c",
+    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
+    "data/sidebars/cloud-architect": "de638c413128a79413f374a1f683fe88",
     "sections": "3c95536cf0da000de887ef1c492147b0",
-    ".": "b505d59a21e98a64b12042ada5871633",
+    ".": "2cd88d458184cc1c62caf6b1e06bc55b",
+    "sidebars": "31d58bba7f52e1bef20e6e390cdfdffe",
+    "data": "7968cb1f3a810c56747a02aaf41b255d",
+    "data/sidebars/golang-developer": "9fa5e98efbb922ade4721b50678bbf9b",
+    "config": "8895101397f6e4c070e508f2e1900dd5",
+    "data/sidebars": "aef96b51a09f9905efad4432823a0207",
     "provision": "a25388f36ec9cb8219e79e97e7ce37d4",
     "provision/task": "86a7319ca16bd58eee04ce2888e83e79",
-    "data/sidebars/golang-developer": "9fa5e98efbb922ade4721b50678bbf9b",
-    "data/sidebars": "aef96b51a09f9905efad4432823a0207"
+    "provision/diagrams": "d5bb1d6dea35da5174551c1b6ba3ebef",
+    "data/sidebars/ai-architect": "79fd5885dc89b5edcd8d727361696b94"
   }
 }
