@@ -576,3 +576,15 @@ build
 vendor
 !uv.lock
 
+# Resume build artifacts
+resume-*.aux
+resume-*.bcf
+resume-*.log
+resume-*.out
+resume-*.run.xml
+resume-*.tex
+resume-*.pdf
+*.fls
+*.synctex
+*.synctex.gz
+
