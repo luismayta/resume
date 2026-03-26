@@ -227,7 +227,7 @@ tasks:
       PROFILE: '{{.PROFILE | default "ai-architect"}}'
       LANG: '{{.LANG | default "en"}}'
     cmds:
-      - cmd: python scripts/generate_resume.py --profile {{.PROFILE}} --lang {{.LANG}}
+      - cmd: python provision/scripts/generate_resume.py --profile {{.PROFILE}} --lang {{.LANG}}
       - cmd: >-
           docker run
           --platform linux/amd64
@@ -240,7 +240,7 @@ tasks:
   resume:all:
     desc: Generate all 6 resume PDFs
     cmds:
-      - cmd: python scripts/generate_resume.py --all
+      - cmd: python provision/scripts/generate_resume.py --all
       - cmd: >-
           docker run
           --platform linux/amd64

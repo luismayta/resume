@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 # Project root
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
 
 
@@ -63,10 +63,16 @@ def filter_experience_by_emphasis(
 ) -> list[dict]:
     """Filter experience entries by profile emphasis tags."""
     filtered = []
+    # Normalize profile emphasis to lowercase for case-insensitive matching
+    profile_emphasis_lower = [emp.lower() for emp in profile_emphasis]
+    
     for entry in experience_data.get("experience", []):
         entry_emphasis = entry.get("emphasis", [])
-        # Include if any emphasis matches
-        if any(emp in profile_emphasis for emp in entry_emphasis):
+        # Normalize entry emphasis to lowercase
+        entry_emphasis_lower = [emp.lower() for emp in entry_emphasis]
+        
+        # Include if any emphasis matches (case-insensitive)
+        if any(emp in profile_emphasis_lower for emp in entry_emphasis_lower):
             filtered.append(entry)
         # Also include if no emphasis specified (default include)
         elif not entry_emphasis:
@@ -79,7 +85,7 @@ def generate_personal_section(profile_data: dict, lang: str) -> str:
     # Get profile info (nested under "profile" key)
     profile_info = profile_data.get("profile", {})
     personal = profile_data.get("personal", {})
-    
+
     # Get tagline from nested profile
     tagline_data = profile_info.get("tagline", {})
     tagline = tagline_data.get(lang, tagline_data.get("en", ""))
@@ -144,7 +150,9 @@ def generate_experience_section(
             f"\\cvexperience{{{role}}}{{{company}}}{{{exp_type}}}{{{period}}}{{{location}}}"
         )
 
-        achievements = entry.get("achievements", {}).get(lang, entry.get("achievements", {}).get("en", []))
+        achievements = entry.get("achievements", {}).get(
+            lang, entry.get("achievements", {}).get("en", [])
+        )
         if achievements:
             lines.append("")
             lines.append("\\begin{itemize}")
@@ -182,9 +190,7 @@ def generate_sidebar_content(profile_id: str) -> str:
     return "\n".join(lines)
 
 
-def generate_resume_tex(
-    profile_id: str, lang: str, output_path: Path
-) -> None:
+def generate_resume_tex(profile_id: str, lang: str, output_path: Path) -> None:
     """Generate complete resume.tex file."""
     # Load data
     profile_data = load_profile(profile_id)
@@ -195,9 +201,7 @@ def generate_resume_tex(
 
     # Generate sections
     personal = generate_personal_section(profile_data, lang)
-    experience = generate_experience_section(
-        experience_data, profile_emphasis, lang
-    )
+    experience = generate_experience_section(experience_data, profile_emphasis, lang)
 
     # Build complete .tex content
     content = [
