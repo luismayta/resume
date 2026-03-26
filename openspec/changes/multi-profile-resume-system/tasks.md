@@ -40,4 +40,4 @@
 
 - [x] 6.1 Deprecate or remove old resume.tex structure
 - [x] 6.2 Update documentation (README.md, AGENTS.md)
-- [ ] 6.3 Verify task resume still works or update to new task names
+- [x] 6.3 Verify task resume still works or update to new task names
