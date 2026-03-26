@@ -15,7 +15,7 @@ from typing import Any
 
 # Project root
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = PROJECT_ROOT / "src" / "data"
 
 
 def load_yaml(filepath: Path) -> dict[str, Any]:
@@ -65,12 +65,12 @@ def filter_experience_by_emphasis(
     filtered = []
     # Normalize profile emphasis to lowercase for case-insensitive matching
     profile_emphasis_lower = [emp.lower() for emp in profile_emphasis]
-    
+
     for entry in experience_data.get("experience", []):
         entry_emphasis = entry.get("emphasis", [])
         # Normalize entry emphasis to lowercase
         entry_emphasis_lower = [emp.lower() for emp in entry_emphasis]
-        
+
         # Include if any emphasis matches (case-insensitive)
         if any(emp in profile_emphasis_lower for emp in entry_emphasis_lower):
             filtered.append(entry)
@@ -205,8 +205,8 @@ def generate_resume_tex(profile_id: str, lang: str, output_path: Path) -> None:
 
     # Build complete .tex content
     content = [
-        "\\documentclass[10pt,a4paper,ragged2e,withhyper]{./core/core}",
-        "\\input{./config/main.tex}",
+        "\\documentclass[10pt,a4paper,ragged2e,withhyper]{../core/core}",
+        "\\input{../config/main.tex}",
         "",
         "\\begin{document}",
         "",
@@ -251,7 +251,7 @@ def main():
     )
     parser.add_argument(
         "--output-dir",
-        default=str(PROJECT_ROOT),
+        default=str(PROJECT_ROOT / "src" / "resumes"),
         help="Output directory for .tex files",
     )
 

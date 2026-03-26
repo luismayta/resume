@@ -31,5 +31,5 @@ tasks:
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./build resume.tex
+          -output-directory=./build src/resumes/resume.tex
           -file-line-error -interaction=nonstopmode
