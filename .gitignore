@@ -577,6 +577,7 @@ vendor
 !uv.lock
 
 # Resume build artifacts
+build/
 resume-*.aux
 resume.aux
 resume-*.bcf

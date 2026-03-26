@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "last_run": "2026-03-25T22:18:27.568880Z",
+    "last_run": "2026-03-26T00:38:12.789305Z",
     "root": "/Users/luchomayta/Projects/src/github.com/luismayta/resume",
     "include_patterns": [
       "*.tex",
@@ -30,7 +30,7 @@
   },
   "file_hashes": {
     ".pre-commit-config.yaml": "29b4cb782751dbf31922051ebc79b177",
-    "Taskfile.yml": "28a50c6aa087f44d22a0ef7dfb690a97",
+    "Taskfile.yml": "ae9068a112e600e79fc9853cf51a433d",
     "config/color.tex": "087481bf5560582f955a2cf9df230963",
     "config/commands.tex": "8ea33300cee13424af5b0b2aeddd6d54",
     "config/config.tex": "1b6d65ed1929be0217b15531d751db33",
@@ -52,7 +52,7 @@
     "page3sidebar.tex": "ad00e272f8493d4ecca73efd9ad9dc18",
     "page4sidebar.tex": "a7ccf67550593effb58510542f631589",
     "provision/diagrams/Taskfile.yml": "0e3595b25ff213adf0f0f10401982cb8",
-    "provision/task/xelatex.yml": "1ec3cee6a843d7ba01c0a003a60777ce",
+    "provision/task/xelatex.yml": "a321d744184857263357057f5d053c36",
     "resume.tex": "36b63fa0407ea2c7a408b90d4c5073cd",
     "sections/day_of_my_life.tex": "54de58231fe875259cc41db44b97b460",
     "sections/experience.tex": "6b4cf1886431603838e19f94c90434e4",
@@ -71,19 +71,19 @@
     "sidebars/technical_domains.tex": "e72fb12ede0b7cf269d6f09b0bbe3c4b"
   },
   "folder_hashes": {
+    ".": "1b5e31dce8febc9beb723c915c3f243b",
+    "config": "8895101397f6e4c070e508f2e1900dd5",
     "data/sidebars/cloud-architect": "de638c413128a79413f374a1f683fe88",
-    "data/sidebars/golang-developer": "9fa5e98efbb922ade4721b50678bbf9b",
-    "provision/task": "86a7319ca16bd58eee04ce2888e83e79",
+    "data": "7968cb1f3a810c56747a02aaf41b255d",
+    "provision/task": "e25f63ec002b31ac0edb58b53c43a221",
+    "provision/diagrams": "d5bb1d6dea35da5174551c1b6ba3ebef",
     "sections": "3c95536cf0da000de887ef1c492147b0",
     "data/sidebars/ai-architect": "79fd5885dc89b5edcd8d727361696b94",
-    "config": "8895101397f6e4c070e508f2e1900dd5",
-    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
-    "openspec": "68f6e3a8a4b876bd3c810d1a46559f2c",
     "sidebars": "31d58bba7f52e1bef20e6e390cdfdffe",
-    "provision": "a25388f36ec9cb8219e79e97e7ce37d4",
-    "data": "7968cb1f3a810c56747a02aaf41b255d",
+    "data/sidebars/golang-developer": "9fa5e98efbb922ade4721b50678bbf9b",
     "data/sidebars": "aef96b51a09f9905efad4432823a0207",
-    "provision/diagrams": "d5bb1d6dea35da5174551c1b6ba3ebef",
-    ".": "4262246447bfd05cbf37caa3d450e48f"
+    "openspec": "68f6e3a8a4b876bd3c810d1a46559f2c",
+    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
+    "provision": "9aedc673b0545975f5c711a28dcc8307"
   }
 }

@@ -233,7 +233,7 @@ tasks:
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-{{.PROFILE}}-{{.LANG}}.tex
+          -output-directory=./build resume-{{.PROFILE}}-{{.LANG}}.tex
           -file-line-error -interaction=nonstopmode
         desc: Build PDF for {{.PROFILE}}-{{.LANG}}
 
@@ -246,48 +246,48 @@ tasks:
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-ai-architect-en.tex
+          -output-directory=./build resume-ai-architect-en.tex
           -file-line-error -interaction=nonstopmode
       - cmd: >-
           docker run
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-ai-architect-es.tex
+          -output-directory=./build resume-ai-architect-es.tex
           -file-line-error -interaction=nonstopmode
       - cmd: >-
           docker run
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-cloud-architect-en.tex
+          -output-directory=./build resume-cloud-architect-en.tex
           -file-line-error -interaction=nonstopmode
       - cmd: >-
           docker run
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-cloud-architect-es.tex
+          -output-directory=./build resume-cloud-architect-es.tex
           -file-line-error -interaction=nonstopmode
       - cmd: >-
           docker run
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-golang-developer-en.tex
+          -output-directory=./build resume-golang-developer-en.tex
           -file-line-error -interaction=nonstopmode
       - cmd: >-
           docker run
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./ resume-golang-developer-es.tex
+          -output-directory=./build resume-golang-developer-es.tex
           -file-line-error -interaction=nonstopmode
 
   resume:clean:
     desc: Remove generated resume files
     cmds:
-      - cmd: rm -f resume-*.tex resume-*.pdf
+      - cmd: rm -f resume-*.tex resume-*.pdf build/*.pdf build/*.aux build/*.bcf build/*.log build/*.out build/*.run.xml
 
   help:
     cmds:
