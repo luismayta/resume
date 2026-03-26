@@ -578,12 +578,18 @@ vendor
 
 # Resume build artifacts
 resume-*.aux
+resume.aux
 resume-*.bcf
+resume.bcf
 resume-*.log
+resume.log
 resume-*.out
+resume.out
 resume-*.run.xml
+resume.run.xml
 resume-*.tex
 resume-*.pdf
+resume.pdf
 *.fls
 *.synctex
 *.synctex.gz
