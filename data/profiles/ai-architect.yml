@@ -6,14 +6,14 @@ profile:
   tagline:
     en: "AI Platform Architect | Lead ML Systems Engineer | LLM, MCP, RAG, K8s, Go, Python"
     es: "Arquitecto de Plataformas AI | Lead ML Systems Engineer | LLM, MCP, RAG, K8s, Go, Python"
-  
+
 personal:
   name: "Luis Mayta"
   photo: "./assets/images/me"
   email: "luismayta4k@gmail.com"
   phone: "(+51) 959-196-850"
   location: "Lima, Peru"
-  homepage: "luismayta.github.io"
+  homepage: "lucho.hadenlabs.com"
   twitter: "slovacus"
   linkedin: "luismayta"
   github: "luismayta"

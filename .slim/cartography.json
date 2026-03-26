@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "last_run": "2026-03-25T21:51:16.286022Z",
+    "last_run": "2026-03-25T22:18:27.568880Z",
     "root": "/Users/luchomayta/Projects/src/github.com/luismayta/resume",
     "include_patterns": [
       "*.tex",
@@ -30,7 +30,7 @@
   },
   "file_hashes": {
     ".pre-commit-config.yaml": "29b4cb782751dbf31922051ebc79b177",
-    "Taskfile.yml": "07ac69c5bff1e31bbb1d926712bc722e",
+    "Taskfile.yml": "28a50c6aa087f44d22a0ef7dfb690a97",
     "config/color.tex": "087481bf5560582f955a2cf9df230963",
     "config/commands.tex": "8ea33300cee13424af5b0b2aeddd6d54",
     "config/config.tex": "1b6d65ed1929be0217b15531d751db33",
@@ -71,19 +71,19 @@
     "sidebars/technical_domains.tex": "e72fb12ede0b7cf269d6f09b0bbe3c4b"
   },
   "folder_hashes": {
-    "openspec": "68f6e3a8a4b876bd3c810d1a46559f2c",
-    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
     "data/sidebars/cloud-architect": "de638c413128a79413f374a1f683fe88",
-    "sections": "3c95536cf0da000de887ef1c492147b0",
-    ".": "2cd88d458184cc1c62caf6b1e06bc55b",
-    "sidebars": "31d58bba7f52e1bef20e6e390cdfdffe",
-    "data": "7968cb1f3a810c56747a02aaf41b255d",
     "data/sidebars/golang-developer": "9fa5e98efbb922ade4721b50678bbf9b",
-    "config": "8895101397f6e4c070e508f2e1900dd5",
-    "data/sidebars": "aef96b51a09f9905efad4432823a0207",
-    "provision": "a25388f36ec9cb8219e79e97e7ce37d4",
     "provision/task": "86a7319ca16bd58eee04ce2888e83e79",
+    "sections": "3c95536cf0da000de887ef1c492147b0",
+    "data/sidebars/ai-architect": "79fd5885dc89b5edcd8d727361696b94",
+    "config": "8895101397f6e4c070e508f2e1900dd5",
+    "core": "c04709f88dda4ab9cabb7e5ea97d3ed6",
+    "openspec": "68f6e3a8a4b876bd3c810d1a46559f2c",
+    "sidebars": "31d58bba7f52e1bef20e6e390cdfdffe",
+    "provision": "a25388f36ec9cb8219e79e97e7ce37d4",
+    "data": "7968cb1f3a810c56747a02aaf41b255d",
+    "data/sidebars": "aef96b51a09f9905efad4432823a0207",
     "provision/diagrams": "d5bb1d6dea35da5174551c1b6ba3ebef",
-    "data/sidebars/ai-architect": "79fd5885dc89b5edcd8d727361696b94"
+    ".": "4262246447bfd05cbf37caa3d450e48f"
   }
 }

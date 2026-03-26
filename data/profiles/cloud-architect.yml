@@ -6,14 +6,14 @@ profile:
   tagline:
     en: "Cloud Architect | Kubernetes Expert | AWS, Terraform, Infrastructure as Code"
     es: "Arquitecto Cloud | Experto en Kubernetes | AWS, Terraform, Infraestructura como Código"
-  
+
 personal:
   name: "Luis Mayta"
   photo: "./assets/images/me"
   email: "luismayta4k@gmail.com"
   phone: "(+51) 959-196-850"
   location: "Lima, Peru"
-  homepage: "luismayta.github.io"
+  homepage: "lucho.hadenlabs.com"
   twitter: "slovacus"
   linkedin: "luismayta"
   github: "luismayta"
