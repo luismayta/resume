@@ -21,7 +21,7 @@ tasks:
       - task: resume
 
   resume:
-    desc: Generate resume using xelatex.
+    desc: Generate resume using xelatex default ai-architect-en
     run: once
     deps:
       - task: check
@@ -31,5 +31,5 @@ tasks:
           --platform linux/amd64
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
-          -output-directory=./build src/resumes/resume.tex
+          -output-directory=./build src/resumes/resume-ai-architect-en.tex
           -file-line-error -interaction=nonstopmode

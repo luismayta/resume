@@ -6,9 +6,12 @@
 
 This is a professional resume/CV built with **LaTeX** (AltaCV class) featuring:
 - Multi-page layout with sidebar content
+- Multi-profile support (AI Architect, Cloud Architect, Golang Developer)
+- Multi-language support (English, Spanish)
 - Automated build via Docker + XeLaTeX
 - CI/CD automation with GitHub Actions
 - Task automation with go-task
+- YAML-based content management with Python converter
 
 ## Architecture & Code Navigation
 
@@ -30,55 +33,97 @@ This project uses Cartography to generate architectural maps. Codemaps provide:
 **Codemap locations:**
 ```
 ./codemap.md                  # Root - Repository Atlas
-./core/codemap.md            # LaTeX classes & packages
-./config/codemap.md          # Colors, margins, commands
-./sections/codemap.md        # Resume content sections
-./sidebars/codemap.md        # Sidebar content
-./data/codemap.md            # BibTeX bibliographies
-./provision/codemap.md       # Automation & CI/CD
-./provision/task/codemap.md  # XeLaTeX Docker builds
-./openspec/codemap.md        # OpenSpec config
+./src/core/codemap.md         # LaTeX classes & packages
+./src/config/codemap.md       # Colors, margins, commands
+./src/sections/codemap.md     # Resume content sections
+./src/sidebars/codemap.md     # Sidebar content
+./src/data/codemap.md         # YAML data files
+./provision/codemap.md        # Automation & CI/CD
+./provision/task/codemap.md   # XeLaTeX Docker builds
+./openspec/codemap.md         # OpenSpec config
 ```
 
 ### Directory Structure
 
 ```
 .
-├── resume.tex               # Main LaTeX entry point
-├── Taskfile.yml             # Task automation (go-task)
-├── core/                    # LaTeX document classes & packages
-│   ├── *.cls               # Document classes (altacv, core)
-│   ├── packages/           # Custom LaTeX packages
-│   └── settings/           # Font & section settings
-├── config/                  # LaTeX configuration
-│   ├── config.tex          # Package imports
-│   ├── color.tex           # Color palette
-│   ├── margin.tex          # Page geometry
-│   ├── commands.tex        # Custom commands
-│   └── main.tex            # Config aggregator
-├── sections/                # Resume content sections
-│   ├── personal.tex        # Header with contact info
-│   ├── experience.tex      # Work history
-│   ├── day_of_my_life.tex  # Visual wheel chart
-│   ├── part_time_roles.tex # Part-time work
-│   └── volunteer.tex       # Community involvement
-├── sidebars/                # Sidebar content per page
-│   ├── skills.tex          # Technical skills
-│   ├── soft_skills.tex     # Personal skills
-│   ├── certifications.tex  # Certifications
-│   ├── education.tex       # Education
-│   ├── languages.tex       # Languages
-│   ├── honors.tex          # Awards
-│   ├── conferences.tex     # Conferences
-│   └── referess.tex        # References
-├── data/                    # BibTeX files
-│   ├── skills.bib          # Skills database
-│   └── publications.bib    # Publications
+├── Taskfile.yml              # Task automation (go-task)
+├── src/                      # LaTeX source files (moved from root)
+│   ├── resumes/              # Generated .tex files per profile
+│   │   ├── resume-ai-architect-en.tex
+│   │   ├── resume-ai-architect-es.tex
+│   │   ├── resume-cloud-architect-en.tex
+│   │   ├── resume-cloud-architect-es.tex
+│   │   ├── resume-golang-developer-en.tex
+│   │   └── resume-golang-developer-es.tex
+│   ├── core/                 # LaTeX document classes & packages
+│   │   ├── *.cls            # Document classes (altacv, core)
+│   │   ├── packages/        # Custom LaTeX packages
+│   │   └── settings/        # Font & section settings
+│   ├── config/              # LaTeX configuration
+│   │   ├── config.tex       # Package imports
+│   │   ├── color.tex        # Color palette
+│   │   ├── margin.tex       # Page geometry
+│   │   ├── commands.tex     # Custom commands
+│   │   └── main.tex         # Config aggregator
+│   ├── sections/            # Resume content sections
+│   │   ├── personal.tex     # Header with contact info
+│   │   ├── experience.tex   # Work history
+│   │   ├── day_of_my_life.tex # Visual wheel chart
+│   │   ├── part_time_roles.tex # Part-time work
+│   │   └── volunteer.tex    # Community involvement
+│   ├── sidebars/            # Sidebar content per page
+│   │   ├── skills.tex       # Technical skills
+│   │   ├── soft_skills.tex  # Personal skills
+│   │   ├── certifications.tex # Certifications
+│   │   ├── education.tex    # Education
+│   │   ├── languages.tex    # Languages
+│   │   ├── honors.tex       # Awards
+│   │   ├── conferences.tex  # Conferences
+│   │   └── referess.tex     # References
+│   └── data/                # YAML data files
+│       ├── profiles/        # Profile metadata (ai-architect, cloud-architect, golang-developer)
+│       ├── experience/      # Experience data per profile
+│       ├── sidebars/       # Sidebar content per profile
+│       └── translations/    # en.yml, es.yml
 ├── provision/                # Automation
 │   ├── task/               # go-task definitions
-│   └── diagrams/           # PlantUML diagrams
+│   ├── scripts/            # Python scripts
+│   │   └── generate_resume.py # YAML to LaTeX converter
+│   └── diagrams/          # PlantUML diagrams
 ├── .github/workflows/       # CI/CD pipelines
 └── openspec/               # OpenSpec configuration
+```
+
+## Profile System
+
+The project supports multiple resume profiles:
+- **ai-architect**: AI Platform Architect
+- **cloud-architect**: Cloud Architect
+- **golang-developer**: Golang Developer
+
+Each profile can be generated in English (en) or Spanish (es), resulting in 6 possible PDFs.
+
+### Data Structure
+```
+src/data/
+├── profiles/
+│   ├── ai-architect.yml
+│   ├── cloud-architect.yml
+│   └── golang-developer.yml
+├── experience/
+│   ├── ai-architect.yml
+│   ├── cloud-architect.yml
+│   └── golang-developer.yml
+├── sidebars/
+│   ├── ai-architect/
+│   │   ├── skills.tex
+│   │   └── certifications.tex
+│   ├── cloud-architect/
+│   └── golang-developer/
+└── translations/
+    ├── en.yml
+    └── es.yml
 ```
 
 ## Setup Commands
@@ -97,14 +142,22 @@ task pre-commit:setup
 ## Build Commands
 
 ```bash
-# Generate resume PDF (main command)
+# Generate default resume (ai-architect-en)
 task resume
+
+# Generate specific profile and language
+task resume:profile PROFILE=ai-architect LANG=en
+task resume:profile PROFILE=cloud-architect LANG=es
+task resume:profile PROFILE=golang-developer LANG=en
+
+# Generate all 6 resume PDFs
+task resume:all
+
+# Clean generated files
+task resume:clean
 
 # Run in Docker container
 task xelatex:resume
-
-# Alternative: direct XeLaTeX (requires XeLaTeX installed)
-xelatex -halt-on-error -interaction=nonstopmode resume.tex
 ```
 
 ## Code Quality & Validation
@@ -125,7 +178,10 @@ task uv:fmt
 
 | Command | Description |
 |---------|-------------|
-| `task resume` | Compile resume.tex to PDF |
+| `task resume` | Generate default resume PDF |
+| `task resume:profile PROFILE=X LANG=Y` | Generate specific profile |
+| `task resume:all` | Generate all 6 PDFs |
+| `task resume:clean` | Clean generated files |
 | `task validate` | Run all pre-commit hooks |
 | `task fix` | Auto-fix linting issues |
 | `task readme` | Generate README from template |
@@ -136,20 +192,24 @@ task uv:fmt
 ## Code Style
 
 ### LaTeX Conventions
-- Use semantic color names defined in `config/color.tex`
+- Use semantic color names defined in `src/config/color.tex`
 - Follow modular pattern: one file per section
-- Use custom commands from `core/packages/` (e.g., `\cvskill`, `\cvevent`, `\cvsection`)
-- Keep content in `sections/` and `sidebars/` directories
+- Use custom commands from `src/core/packages/` (e.g., `\cvskill`, `\cvevent`, `\cvsection`)
+- Keep content in `src/sections/` and `src/sidebars/` directories
+
+### YAML Conventions
+- Profile data in `src/data/profiles/`
+- Experience data in `src/data/experience/` with emphasis tags
+- Use `emphasis` field to highlight relevant experience per profile
 
 ### Git Conventions
 - Follow Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`, `style:`, `test:`
 - Include issue key in commit messages (e.g., `feat: IN-123 add new skill`)
 - Use GitHub Flow: feature branches from `main`
 
-### YAML Conventions
-- Follow `.github/workflows/` patterns
-- Use `biome.json` for code formatting
-- Validate with `yamllint`
+### Python Conventions
+- Use `provision/scripts/generate_resume.py` for YAML to LaTeX conversion
+- Follow project Python style (ruff formatting)
 
 ## CI/CD Workflows
 
@@ -185,6 +245,8 @@ SKIP=yamllint,hadolint task validate
 - **XeLaTeX**: For PDF compilation (use Docker via `task resume`)
 - **go-task**: Task automation (`Taskfile.yml`)
 - **Docker**: Container for builds
+- **Python**: For YAML to LaTeX conversion (`generate_resume.py`)
+- **PyYAML**: Python YAML library
 - **Biome**: Code formatter/linter
 - **pre-commit**: Git hooks
 - **uv**: Python package manager
@@ -196,10 +258,10 @@ SKIP=yamllint,hadolint task validate
 ### PDF not compiling
 ```bash
 # Use Docker-based build
-task xelatex:resume
+task resume:profile PROFILE=ai-architect LANG=en
 
-# Check XeLaTeX is installed
-xelatex --version
+# Or generate all PDFs
+task resume:all
 ```
 
 ### Pre-commit failing

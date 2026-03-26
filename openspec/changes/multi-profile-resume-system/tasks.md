@@ -34,10 +34,10 @@
 - [x] 5.1 Run generator for all 6 profile-language combinations
 - [x] 5.2 Run xelatex to generate 6 PDF files
 - [x] 5.3 Verify all PDFs compile without errors
-- [ ] 5.4 Commit all generated .tex and .pdf files
+- [x] 5.4 Commit all generated .tex and .pdf files
 
 ## 6. Cleanup
 
-- [ ] 6.1 Deprecate or remove old resume.tex structure
-- [ ] 6.2 Update documentation (README.md, AGENTS.md)
+- [x] 6.1 Deprecate or remove old resume.tex structure
+- [x] 6.2 Update documentation (README.md, AGENTS.md)
 - [ ] 6.3 Verify task resume still works or update to new task names

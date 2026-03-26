@@ -33,6 +33,10 @@ An elegant [LaTeX](https://www.latex-project.org/) resume template, compiled wit
 - Easy to be further customized or extended
 - Full support for unicode characters
 - FontAwesome 5 support
+- Multi-profile support (AI Architect, Cloud Architect, Golang Developer)
+- Multi-language support (English, Spanish)
+- YAML-based content management
+- Automated PDF generation via Python script
 
 
 
