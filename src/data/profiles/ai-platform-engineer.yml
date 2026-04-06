@@ -1,0 +1,29 @@
+---
+# Profile: AI Platform Engineer
+profile:
+  id: ai-platform-engineer
+  name: "AI Platform Engineer"
+  tagline:
+    en: "AI Platform Engineer | MLOps & ML Infrastructure | Kubernetes, LLMs, Python, Go"
+    es: "Ingeniero de Plataformas AI | MLOps e Infraestructura ML | Kubernetes, LLMs, Python, Go"
+
+personal:
+  name: "Luis Mayta"
+  photo: "./assets/images/me"
+  email: "luismayta4k@gmail.com"
+  phone: "(+51) 959-196-850"
+  location: "Lima, Peru"
+  homepage: "lucho.hadenlabs.com"
+  twitter: "slovacus"
+  linkedin: "luismayta"
+  github: "luismayta"
+  orcid: "0000-0003-0759-5687"
+
+emphasis:
+  - "mlops"
+  - "kubernetes"
+  - "llm-infrastructure"
+  - "ai-platform"
+  - "ml-pipelines"
+  - "cloud-native"
+  - "infrastructure-automation"

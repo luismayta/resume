@@ -238,7 +238,7 @@ tasks:
         desc: Build PDF for {{.PROFILE}}-{{.LANG}}
 
   resume:all:
-    desc: Generate all 6 resume PDFs
+    desc: Generate all 8 resume PDFs
     cmds:
       - cmd: python provision/scripts/generate_resume.py --all
       - cmd: >-
@@ -282,6 +282,20 @@ tasks:
           --rm -v "${PWD}":/data
           hadenlabs/xelatex:4.1
           -output-directory=./build src/resumes/resume-golang-developer-es.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./build src/resumes/resume-ai-platform-engineer-en.tex
+          -file-line-error -interaction=nonstopmode
+      - cmd: >-
+          docker run
+          --platform linux/amd64
+          --rm -v "${PWD}":/data
+          hadenlabs/xelatex:4.1
+          -output-directory=./build src/resumes/resume-ai-platform-engineer-es.tex
           -file-line-error -interaction=nonstopmode
 
   resume:clean:

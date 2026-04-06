@@ -235,7 +235,12 @@ def main():
     parser = argparse.ArgumentParser(description="Generate resume from YAML data")
     parser.add_argument(
         "--profile",
-        choices=["ai-architect", "cloud-architect", "golang-developer"],
+        choices=[
+            "ai-architect",
+            "cloud-architect",
+            "golang-developer",
+            "ai-platform-engineer",
+        ],
         help="Profile to generate",
     )
     parser.add_argument(
@@ -247,7 +252,7 @@ def main():
     parser.add_argument(
         "--all",
         action="store_true",
-        help="Generate all 6 resumes",
+        help="Generate all 8 resumes",
     )
     parser.add_argument(
         "--output-dir",
@@ -257,7 +262,12 @@ def main():
 
     args = parser.parse_args()
 
-    profiles = ["ai-architect", "cloud-architect", "golang-developer"]
+    profiles = [
+        "ai-architect",
+        "cloud-architect",
+        "golang-developer",
+        "ai-platform-engineer",
+    ]
     langs = ["en", "es"]
 
     if args.all:

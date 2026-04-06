@@ -1,0 +1,71 @@
+---
+# Experience entries for AI Platform Engineer profile
+experience:
+  - company: "Infosis"
+    role:
+      en: "AI Platform Engineer / MLOps Lead"
+      es: "Ingeniero de Plataformas AI / Lead MLOps"
+    period: "Aug 2025 -- Present"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "mlops"
+      - "ai-platform"
+      - "kubernetes"
+    achievements:
+      en:
+        - "Designed and operated enterprise ML platforms on Kubernetes, implementing MLOps practices with MLflow, Kubeflow, and custom CI/CD pipelines for model training and deployment."
+        - "Built and maintained AI infrastructure supporting LLM fine-tuning, inference serving with Triton and TensorFlow Serving, and RAG pipelines with Qdrant vector database."
+        - "Implemented infrastructure-as-code using Terraform and Terragrunt on AWS/GCP, with full observability using Prometheus, Grafana, and Loki."
+        - "Led migration of ML workloads to cloud-native architectures, reducing inference latency by 40% and infrastructure costs by 25%."
+      es:
+        - "Diseñó y operó plataformas ML empresariales en Kubernetes, implementando prácticas MLOps con MLflow, Kubeflow y pipelines CI/CD personalizados para entrenamiento y despliegue de modelos."
+        - "Construyó y mantuvo infraestructura de IA soportando fine-tuning de LLMs, inference serving con Triton y TensorFlow Serving, y pipelines RAG con base de datos vectorial Qdrant."
+        - "Implementó infraestructura como código usando Terraform y Terragrunt en AWS/GCP, observabilidad completa usando Prometheus, Grafana y Loki."
+        - "Lideró migración de cargas de trabajo ML a arquitecturas cloud-nativas, reduciendo latencia de inferencia en 40% y costos de infraestructura en 25%."
+
+  - company: "Infosis"
+    role:
+      en: "Lead Platform Engineer / SRE"
+      es: "Lead Platform Engineer / SRE"
+    period: "Nov 2022 -- Aug 2025"
+    location: "Argentina"
+    type: "Full-time"
+    emphasis:
+      - "platform-engineering"
+      - "kubernetes"
+      - "observability"
+    achievements:
+      en:
+        - "Architected and maintained multi-cluster Kubernetes platforms across AWS and GCP, serving 50+ microservices with 99.99% uptime."
+        - "Implemented GitOps workflows using ArgoCD and Flux, reducing deployment friction and enabling 100+ deployments per week."
+        - "Built comprehensive observability stack (Prometheus, Grafana, Loki, Jaeger) providing real-time insights into system health and performance."
+        - "Established platform engineering practices, creating self-service tooling and documentation enabling teams to ship faster."
+      es:
+        - "Arquitectó y mantuvo plataformas Kubernetes multi-cluster en AWS y GCP, sirviendo 50+ microservicios con 99.99% de disponibilidad."
+        - "Implementó flujos de trabajo GitOps usando ArgoCD y Flux, reduciendo fricción de despliegues y habilitando 100+ despliegues por semana."
+        - "Construyó stack de observabilidad completo (Prometheus, Grafana, Loki, Jaeger) proporcionando insights en tiempo real sobre salud y rendimiento del sistema."
+        - "Estableció prácticas de ingeniería de plataformas, creando herramientas de autoservicio y documentación permitiendo a equipos entregar más rápido."
+
+  - company: "Multiple Companies"
+    role:
+      en: "Senior DevOps / Cloud Engineer"
+      es: "Senior DevOps / Ingeniero Cloud"
+    period: "2017 -- 2022"
+    location: "LATAM"
+    type: "Full-time / Consulting"
+    emphasis:
+      - "cloud-infrastructure"
+      - "ci-cd"
+      - "automation"
+    achievements:
+      en:
+        - "Designed and deployed cloud infrastructure on AWS, GCP, and Azure using Terraform, Ansible, and CloudFormation."
+        - "Built CI/CD pipelines using Jenkins, GitLab CI, and GitHub Actions, reducing release cycles from weeks to hours."
+        - "Implemented containerization strategies using Docker and Kubernetes, enabling rapid scaling and environment consistency."
+        - "Optimized cloud spend through right-sizing, reserved instances, and automated scaling policies."
+      es:
+        - "Diseñó e implementó infraestructura en la nube en AWS, GCP y Azure usando Terraform, Ansible y CloudFormation."
+        - "Construyó pipelines CI/CD usando Jenkins, GitLab CI y GitHub Actions, reduciendo ciclos de release de semanas a horas."
+        - "Implementó estrategias de containerización usando Docker y Kubernetes, habilitando escalamiento rápido y consistencia de entornos."
+        - "Optimizó gasto en nube mediante right-sizing, reserved instances y políticas de auto-escalamiento."
