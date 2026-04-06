@@ -1,0 +1,55 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{../core/core}
+\input{../config/main.tex}
+
+\begin{document}
+
+%% \cvsection{Personal}
+\name{Luis Mayta}
+\tagline{Ingeniero de Plataformas AI | MLOps e Infraestructura ML | Kubernetes, LLMs, Python, Go}
+\photoR{2.5cm}{./assets/images/me}
+\personalinfo{%
+  % Not all of these are required!
+  \email{luismayta4k@gmail.com}
+  \phone{(+51) 959-196-850}
+  \location{Lima, Peru}
+  \homepage{lucho.hadenlabs.com}
+  \twitter{slovacus}
+  \linkedin{luismayta}
+  \github{luismayta}
+  \orcid{0000-0003-0759-5687}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection[page1sidebar]{Experiencia Laboral Reciente}
+
+\cvexperience{Ingeniero de Plataformas AI / Lead MLOps}{Infosis}{Full-time}{Aug 2025 -- Present}{Argentina}
+
+\begin{itemize}
+  \item \emphasis{Diseñó y operó plataformas ML empresariales en Kubernetes, implementando prácticas MLOps con MLflow, Kubeflow y pipelines CI/CD personalizados para entrenamiento y despliegue de modelos.}
+  \item \emphasis{Construyó y mantuvo infraestructura de IA soportando fine-tuning de LLMs, inference serving con Triton y TensorFlow Serving, y pipelines RAG con base de datos vectorial Qdrant.}
+  \item \emphasis{Implementó infraestructura como código usando Terraform y Terragrunt en AWS/GCP, observabilidad completa usando Prometheus, Grafana y Loki.}
+  \item \emphasis{Lideró migración de cargas de trabajo ML a arquitecturas cloud-nativas, reduciendo latencia de inferencia en 40% y costos de infraestructura en 25%.}
+\end{itemize}
+
+\divider
+
+\cvexperience{Lead Platform Engineer / SRE}{Infosis}{Full-time}{Nov 2022 -- Aug 2025}{Argentina}
+
+\begin{itemize}
+  \item \emphasis{Arquitectó y mantuvo plataformas Kubernetes multi-cluster en AWS y GCP, sirviendo 50+ microservicios con 99.99% de disponibilidad.}
+  \item \emphasis{Implementó flujos de trabajo GitOps usando ArgoCD y Flux, reduciendo fricción de despliegues y habilitando 100+ despliegues por semana.}
+  \item \emphasis{Construyó stack de observabilidad completo (Prometheus, Grafana, Loki, Jaeger) proporcionando insights en tiempo real sobre salud y rendimiento del sistema.}
+  \item \emphasis{Estableció prácticas de ingeniería de plataformas, creando herramientas de autoservicio y documentación permitiendo a equipos entregar más rápido.}
+\end{itemize}
+
+\divider
+
+\clearpage
+\end{document}

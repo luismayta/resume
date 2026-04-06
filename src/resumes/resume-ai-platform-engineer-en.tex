@@ -1,0 +1,55 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{../core/core}
+\input{../config/main.tex}
+
+\begin{document}
+
+%% \cvsection{Personal}
+\name{Luis Mayta}
+\tagline{AI Platform Engineer | MLOps & ML Infrastructure | Kubernetes, LLMs, Python, Go}
+\photoR{2.5cm}{./assets/images/me}
+\personalinfo{%
+  % Not all of these are required!
+  \email{luismayta4k@gmail.com}
+  \phone{(+51) 959-196-850}
+  \location{Lima, Peru}
+  \homepage{lucho.hadenlabs.com}
+  \twitter{slovacus}
+  \linkedin{luismayta}
+  \github{luismayta}
+  \orcid{0000-0003-0759-5687}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection[page1sidebar]{Recent Work Experience}
+
+\cvexperience{AI Platform Engineer / MLOps Lead}{Infosis}{Full-time}{Aug 2025 -- Present}{Argentina}
+
+\begin{itemize}
+  \item \emphasis{Designed and operated enterprise ML platforms on Kubernetes, implementing MLOps practices with MLflow, Kubeflow, and custom CI/CD pipelines for model training and deployment.}
+  \item \emphasis{Built and maintained AI infrastructure supporting LLM fine-tuning, inference serving with Triton and TensorFlow Serving, and RAG pipelines with Qdrant vector database.}
+  \item \emphasis{Implemented infrastructure-as-code using Terraform and Terragrunt on AWS/GCP, with full observability using Prometheus, Grafana, and Loki.}
+  \item \emphasis{Led migration of ML workloads to cloud-native architectures, reducing inference latency by 40% and infrastructure costs by 25%.}
+\end{itemize}
+
+\divider
+
+\cvexperience{Lead Platform Engineer / SRE}{Infosis}{Full-time}{Nov 2022 -- Aug 2025}{Argentina}
+
+\begin{itemize}
+  \item \emphasis{Architected and maintained multi-cluster Kubernetes platforms across AWS and GCP, serving 50+ microservices with 99.99% uptime.}
+  \item \emphasis{Implemented GitOps workflows using ArgoCD and Flux, reducing deployment friction and enabling 100+ deployments per week.}
+  \item \emphasis{Built comprehensive observability stack (Prometheus, Grafana, Loki, Jaeger) providing real-time insights into system health and performance.}
+  \item \emphasis{Established platform engineering practices, creating self-service tooling and documentation enabling teams to ship faster.}
+\end{itemize}
+
+\divider
+
+\clearpage
+\end{document}
