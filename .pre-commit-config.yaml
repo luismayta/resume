@@ -29,18 +29,21 @@ repos:
           (?x)^(
           AGENTS.md|
           CHANGELOG.md|
-          .claude/skills/.*/SKILL\.md$|
-          .agents/skills/.*/SKILL\.md$|
-          .opencode/skills/.*/SKILL\.md$|
+          skills/.*/SKILL\.md$|
           app/components/sections\/.*$|
-          openspec\/.*$|
+          .claude/skills\/.*$|
+          .agents/skills\/.*$|
+          .opencode/skills\/.*$|
+          app/data\/.*$|
           app/ia/datasets\/.*$|
           app/routes\/.*$|
           data/patterns\/.*$|
+          openspec\/.*$|
           go.mod|
           go.sum|
           openapi.yaml|
           provision/prompts\/.*$|
+          docs/prompts/openspec\/.*$|
           ^resume.*$|
           .+\.lock$|
           .+\.mdx$|
@@ -72,6 +75,10 @@ repos:
         files: ^tf|-|\.(py|env|yml|yaml)$
       - id: check-case-conflict
       - id: check-json
+        exclude: >
+          (?x)^(
+            .zed/tasks.json$|
+          )$
       - id: check-xml
       - id: check-yaml
         args:
@@ -92,10 +99,11 @@ repos:
           - --config=.ci/linters/markdown-link-config.json
         exclude: >
           (?x)^(
-            .+\.docs/env-vars.md$|
-            docs/env-vars.md$|
-            docs\/include\/terraform.md$|
-            .+\.tpl.md$|
+          .+\.docs/env-vars.md$|
+          .+\.tpl.md$|
+          data/patterns\/.*$|
+          docs/env-vars.md$|
+          docs\/include\/terraform.md$|
           )$
 
   - repo: https://github.com/hadenlabs/pre-commit-hooks
@@ -107,6 +115,7 @@ repos:
           (?x)^(
             .+\.provision/git/hooks/prepare-commit-msg$|
             .+\.tpl.sh$|
+            .+\.envrc$|
           )$
         args:
           - --exclude=SC1072,SC1073,SC2068
