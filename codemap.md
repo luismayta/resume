@@ -6,20 +6,22 @@ A professional resume/CV built with **LaTeX** (AltaCV class), featuring a multi-
 
 ## System Entry Points
 
-- `resume.tex` - Main LaTeX document entry point
+- `src/resumes/` - Generated LaTeX files per profile/language
 - `Taskfile.yml` - Task automation for build, lint, release, and documentation generation
 - `biome.json` - Code formatter/linter configuration
-- `.pre-commit-config.yaml` - Pre-commit hooks
+- `.pre-commit-config.yaml` - Pre-commit hooks with commitlint validation
+- `commitlint.config.js` - Commit message validation rules
 
 ## Directory Map (Aggregated)
 
 | Directory | Responsibility Summary | Detailed Map |
 | --- | --- | --- |
-| `core/` | LaTeX document classes and custom packages | [View Map](core/codemap.md) |
-| `config/` | LaTeX configuration (colors, margins, commands) | [View Map](config/codemap.md) |
-| `sections/` | Resume content sections (experience, education) | [View Map](sections/codemap.md) |
-| `sidebars/` | Sidebar content per page (skills, certs) | [View Map](sidebars/codemap.md) |
-| `data/` | BibTeX bibliography files | [View Map](data/codemap.md) |
+| `src/core/` | LaTeX document classes and custom packages | [View Map](src/core/codemap.md) |
+| `src/config/` | LaTeX configuration (colors, margins, commands) | [View Map](src/config/codemap.md) |
+| `src/sections/` | Resume content sections (experience, education) | [View Map](src/sections/codemap.md) |
+| `src/sidebars/` | Sidebar content per page (skills, certs) | [View Map](src/sidebars/codemap.md) |
+| `src/data/` | YAML data files for profiles and translations | [View Map](src/data/codemap.md) |
+| `src/resumes/` | Generated .tex files per profile (ai-architect, cloud-architect, golang-developer) | - |
 | `provision/` | Automation: XeLaTeX builds, diagrams, docs | [View Map](provision/codemap.md) |
 | `provision/task/` | Task automation for XeLaTeX in Docker | [View Map](provision/task/codemap.md) |
 | `openspec/` | OpenSpec workflow configuration | [View Map](openspec/codemap.md) |

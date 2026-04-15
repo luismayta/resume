@@ -79,10 +79,9 @@ env:
   README_YAML: provision/generators/README.yaml
   README_TEMPLATE: provision/templates/README.tpl.md
   README_INCLUDES: file://
-  TERRAFORM_PATH: ./
   PYTHON_PACKAGE_MANAGER: uv
   SKILL_REPOS:
-    https://gitlab.infosisglobal.com/architecture/skills.git
+    https://github.com/hadenlabs/jasper
 
 dotenv:
   - .env
@@ -103,8 +102,9 @@ vars:
   GOLANGCI_VERSION: 1.42.0
   TERRAFORM_VERSION: 1.11.4
   README_FILE: README.md
-  # NOTE: Agent workflow conventions live in `infobot.toml`.
+  # NOTE: Agent workflow conventions live in `jasper.toml`.
   GIT_IGNORES_CUSTOM: |
+    .tmp*
     bin
     .project
     .scannerwork
@@ -115,16 +115,35 @@ vars:
     .terraform.lock.hcl
     build
     .task
+    .terraform.lock.hcl
     *.lock
     *.lock.hcl
     .cq/
-    *.lock
     *.zip
-    *.iml
+    package-lock.json
+    provision/ansible/*/roles/contrib
     .external_modules
-    .pmd
     vendor
-    !uv.lock
+    charts
+    .DS_Store
+    .obsidian/plugins/
+    .obsidian/themes/
+    .obsidian/workspace.json
+    Icon?
+    .jira-config.json
+
+  AI_IGNORE_CUSTOM: |
+    # Block specific paths
+    /secrets/**
+    /private/**
+    !/private/public-config.json
+
+    # Block directories anywhere
+    **/node_modules/**
+    **/dist/**
+    **/build/**
+    **/.cache/**
+    build
 
 tasks:
   default:
@@ -177,18 +196,17 @@ tasks:
       - task: uv:fmt
 
   upgrade:
-    run: once
     desc: Execute upgrade packages
     cmds:
       - uv update
-      - uv run pre-commit autoupdate
+      - task: pre-commit:update
 
   setup:
     desc: Setup dependences of project
     cmds:
       - >-
         [ -e ".env" ] || cp -rf .env.example .env
-      - task: uv:setup
+      - task: git:setup
       - task: bun:setup
       - task: skills:setup
 
@@ -196,9 +214,8 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: uv:environment
-      - task: pre-commit:setup
-      - task: git:setup
       - task: bun:setup
+      - task: pre-commit:setup
       - task: pnpm:environment
 
   validate:

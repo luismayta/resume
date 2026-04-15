@@ -1954,6 +1954,7 @@ version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
+    { name = "pyyaml" },
 ]
 
 [package.dev-dependencies]
@@ -2004,7 +2005,10 @@ types = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "boto3", specifier = ">=1.26.130" }]
+requires-dist = [
+    { name = "boto3", specifier = ">=1.26.130" },
+    { name = "pyyaml", specifier = ">=6.0" },
+]
 
 [package.metadata.requires-dev]
 dap = [{ name = "debugpy", specifier = ">=1.8.11" }]

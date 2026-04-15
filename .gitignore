@@ -555,6 +555,7 @@ zsdoc/data
 
 # End of https://www.toptal.com/developers/gitignore/api/python,node,go,zsh,sonar,java,maven,intellij+all,terraform,linux
 # custom git ignore files
+.tmp*
 bin
 .project
 .scannerwork
@@ -565,33 +566,20 @@ TMP_CHANGELOG.md
 .terraform.lock.hcl
 build
 .task
+.terraform.lock.hcl
 *.lock
 *.lock.hcl
 .cq/
-*.lock
 *.zip
-*.iml
+package-lock.json
+provision/ansible/*/roles/contrib
 .external_modules
-.pmd
 vendor
-!uv.lock
-
-# Resume build artifacts
-build/
-resume-*.aux
-resume.aux
-resume-*.bcf
-resume.bcf
-resume-*.log
-resume.log
-resume-*.out
-resume.out
-resume-*.run.xml
-resume.run.xml
-resume-*.tex
-resume-*.pdf
-resume.pdf
-*.fls
-*.synctex
-*.synctex.gz
+charts
+.DS_Store
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/workspace.json
+Icon?
+.jira-config.json
 
