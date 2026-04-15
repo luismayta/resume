@@ -1,6 +1,10 @@
 ---
 name: jira-start-task
-description: Skill para listar issues no terminadas asignadas al usuario en Jira usando `infobot.toml`, elegir una y crear un branch `feature/<ISSUE-KEY>`.
+description: Skill para listar issues no terminadas asignadas al usuario en Jira usando `jasper.toml`, elegir una y crear un branch `feature/<ISSUE-KEY>`.
+triggers:
+  - "Usa el skill `jira-start-task`"
+  - "Quiero empezar una tarea de Jira y crear el branch automáticamente"
+  - "Lista las tareas pendientes del proyecto configurado y crea un feature branch"
 metadata:
   opencode:
     emoji: 🎯
@@ -15,11 +19,11 @@ metadata:
 
 # Jira Start Task
 
-Usa este skill cuando quieras empezar trabajo en una tarea de Jira sin buscar manualmente el ticket ni escribir el branch a mano. El skill toma el `projectKey` desde `infobot.toml`, lista las issues no terminadas asignadas al usuario actual, deja que el usuario seleccione una y crea un branch con prefijo `feature/`.
+Usa este skill cuando quieras empezar trabajo en una tarea de Jira sin buscar manualmente el ticket ni escribir el branch a mano. El skill toma el `projectKey` desde `jasper.toml`, lista las issues no terminadas asignadas al usuario actual, deja que el usuario seleccione una y crea un branch con prefijo `feature/`.
 
 ## Overview
 
-1. Lee `infobot.toml` y obtiene `issueTracking.projectKey`.
+1. Lee `jasper.toml` y obtiene `issueTracking.projectKey`.
 2. Consulta Jira para identificar el usuario actual y listar issues del proyecto que:
    - estén asignadas al usuario actual,
    - no estén terminadas,
@@ -44,7 +48,7 @@ feature/AR-123
 
 ## Implementación esperada
 
-- Lee `infobot.toml` antes de consultar Jira. Si falta `issueTracking.projectKey`, detente y explícalo.
+- Lee `jasper.toml` antes de consultar Jira. Si falta `issueTracking.projectKey`, detente y explícalo.
 - Usa Jira Cloud mediante MCP.
 - Para detectar el usuario autenticado, usa la tool de identidad disponible antes de filtrar o usa JQL con `assignee = currentUser()` si aplica.
 - Usa una consulta equivalente a:
@@ -66,7 +70,7 @@ git checkout -b "feature/<ISSUE-KEY>"
 
 ## Reglas de comportamiento
 
-- No inventes el `projectKey`; siempre léelo desde `infobot.toml`.
+- No inventes el `projectKey`; siempre léelo desde `jasper.toml`.
 - No incluyas issues en estado terminado.
 - No crees branch si el usuario no ha seleccionado una tarea.
 - No uses un prefijo distinto de `feature/` salvo que el humano lo pida explícitamente.

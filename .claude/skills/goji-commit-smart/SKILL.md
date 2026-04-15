@@ -20,7 +20,7 @@ license: Proprietary
   - `scopes[]`
   - `subjectmaxlength`
   - `signoff`
-- `infobot.toml`
+- `jasper.toml`
   - `[issueTracking] provider + projectKey`
   - `[issueTracking.branch]` extraction regexes (derive key/id from branch name)
   - `[commit] style` (gitlab|jira)
@@ -37,18 +37,18 @@ license: Proprietary
 
 ## Commit style (gitlab|jira)
 
-Decide commit style from `infobot.toml` `[commit].style`.
+Decide commit style from `jasper.toml` `[commit].style`.
 
 - `jira`
   - Require a Jira key in the subject (example: `AR-123`).
   - Prefer: `<type>(<scope>): <JIRA-KEY> <subject>`.
-  - Derive `<JIRA-KEY>` from the current branch name using `infobot.toml` `[issueTracking].projectKey`.
+  - Derive `<JIRA-KEY>` from the current branch name using `jasper.toml` `[issueTracking].projectKey`.
     - Default extraction: `(<PROJECTKEY>-[0-9]+)` when `[issueTracking.branch].jiraKeyFromProjectKey = true`.
     - Override with `[issueTracking.branch].jiraKeyRegexOverride`.
 - `gitlab`
   - Allow referencing GitLab issues in the subject (example: `(#123)` at the end).
   - Optional commit body line: `Closes #123`.
-  - Derive `123` from the current branch name using `infobot.toml` `[issueTracking.branch].gitlabIssueNumberRegex`.
+  - Derive `123` from the current branch name using `jasper.toml` `[issueTracking.branch].gitlabIssueNumberRegex`.
 
 ## Commit format
 
@@ -101,12 +101,12 @@ git diff --name-only
 git diff --cached --name-only
 git rev-parse --abbrev-ref HEAD
 cat .goji.json
-cat infobot.toml
+cat jasper.toml
 ```
 
 2. Derive issue key/id from branch
 
-- Determine `style` from `infobot.toml` `[commit].style`.
+- Determine `style` from `jasper.toml` `[commit].style`.
 - Parse the current branch name (`git rev-parse --abbrev-ref HEAD`) and extract:
   - `jira`: `<PROJECTKEY>-<number>` (default derived from `[issueTracking].projectKey`)
   - `gitlab`: `<number>`

@@ -1,6 +1,10 @@
 ---
 name: jira-work-report
 description: Skill para generar un reporte de implementacion para el issue de Jira derivado del branch actual usando un template y un resumen basado en commits, y publicarlo como comentario.
+triggers:
+  - "Usa el skill `jira-work-report`"
+  - "Genera un reporte de implementacion para la tarea Jira actual y publcalo como comentario"
+  - "Completa el template de reporte Jira usando los commits del branch y subelo al issue"
 metadata:
   opencode:
     emoji: "📝"
@@ -16,13 +20,13 @@ metadata:
 
 # Jira Work Report
 
-Usa este skill cuando quieras dejar un comentario estructurado en Jira con el resumen de lo implementado sin redactarlo manualmente. El skill detecta si el proyecto usa Jira desde `infobot.toml`, obtiene el `projectKey`, deriva el issue key desde el branch actual, toma como base el template `.jira/issue_templates/jira-work-report.md`, resume los commits recientes del branch y publica el resultado como comentario en el issue derivado.
+Usa este skill cuando quieras dejar un comentario estructurado en Jira con el resumen de lo implementado sin redactarlo manualmente. El skill detecta si el proyecto usa Jira desde `jasper.toml`, obtiene el `projectKey`, deriva el issue key desde el branch actual, toma como base el template `.jira/issue_templates/jira-work-report.md`, resume los commits recientes del branch y publica el resultado como comentario en el issue derivado.
 
 Importante: para publicar en Jira, usa las tools del servidor MCP `jira` disponibles en la sesion. No uses CLI (`jira ...`) ni scripts locales de otros skills.
 
 ## Overview
 
-1. Lee `infobot.toml` y valida que `issueTracking.provider = "jira"`.
+1. Lee `jasper.toml` y valida que `issueTracking.provider = "jira"`.
 2. Obtiene `issueTracking.projectKey` y las reglas de `[issueTracking.branch]`.
 3. Lee el branch actual y deriva el issue key de Jira usando el `projectKey` o el regex override configurado.
 4. Lee el template `.jira/issue_templates/jira-work-report.md`.
@@ -44,7 +48,7 @@ AR-3589
 
 ## Implementacion esperada
 
-- Lee `infobot.toml` antes de cualquier otra accion. Si `issueTracking.provider` no es `jira`, detente y explicalo.
+- Lee `jasper.toml` antes de cualquier otra accion. Si `issueTracking.provider` no es `jira`, detente y explicalo.
 - Si falta `issueTracking.projectKey`, detente y explicalo.
 - Usa el branch actual con una forma equivalente a:
 
@@ -78,8 +82,8 @@ git rev-parse --abbrev-ref HEAD
 
 ## Reglas de comportamiento
 
-- No inventes si el proyecto usa Jira; siempre validalo desde `infobot.toml`.
-- No inventes el `projectKey`; siempre leelo desde `infobot.toml`.
+- No inventes si el proyecto usa Jira; siempre validalo desde `jasper.toml`.
+- No inventes el `projectKey`; siempre leelo desde `jasper.toml`.
 - No inventes el issue key; siempre derivalo desde el branch actual o pide aclaracion si falla.
 - No inventes el contenido del reporte si no hay commits suficientes para resumirlo; en ese caso pide un resumen manual.
 - No marques checks del template sin evidencia verificable.
